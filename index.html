@@ -844,14 +844,16 @@ I like c01, c04, and c07. Regenerate c02 and c09 with a tighter crop and more co
       <div class="step-card step-card-blue">
         <div class="step-header">
           <span class="num-badge track2">2</span>
-          <span class="step-title">Answer three opening questions</span>
+          <span class="step-title">Answer two opening questions</span>
         </div>
         <p>Claude will ask for:</p>
         <ol>
           <li><strong>Your product name</strong> — e.g. <em>Mat &amp; Vic's Premium Socks</em></li>
-          <li><strong>The direct buy/checkout URL</strong> — the link someone clicks to purchase. Must go to a product or checkout page, not your homepage.</li>
           <li><strong>A name for the funnel folder</strong> — short, no spaces, e.g. <code>cotton-socks-v2</code>. All files get saved here.</li>
         </ol>
+        <div class="info-box" style="margin-top:0.75rem;">
+          The buy buttons on your offer page will be built with a placeholder URL. When you run <code>/shopify-publish</code>, Claude will ask for your Shopify product page URL and swap it in before going live — that's the right moment to provide it, once the funnel is built and ready to deploy.
+        </div>
       </div>
 
       <div class="step-card step-card-white">
