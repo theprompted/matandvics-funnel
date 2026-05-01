@@ -42,7 +42,7 @@ Wait for both answers. Set:
 - `PRODUCT_NAME` = their answer to Q1
 - `FUNNEL_DIR` = their answer to Q2
 
-The buy buttons on the offer page will use `YOUR_PRODUCT_URL` as a placeholder — the actual product page URL gets filled in at publish time via `/shopify-publish`.
+The buy buttons on the offer page will use `YOUR_COLLECTION_URL` as a placeholder — the collection URL gets filled in at publish time via `/shopify-publish`. For most DTC Shopify stores this is a `/collections/all` or specific collection page, so customers can browse by style, length, etc.
 
 Every path in this skill resolves from `FUNNEL_DIR`. Never assume a path.
 
@@ -292,7 +292,7 @@ When starting each section, say: "Starting Section [N] — [name]." When done: "
   7. Bundle section: 3 tiers — Trial / Most Popular / Complete. Middle card gets popular badge.
   8. Second bundle CTA at bottom (dark background)
   9. FAQ: 5–6 questions
-- All buy button links: `YOUR_PRODUCT_URL` placeholder — never `href="#"`
+- All buy button links: `YOUR_COLLECTION_URL` placeholder — never `href="#"`
 - Back link to presell: `presell-v2.html` — relative link
 - Save as `[FUNNEL_DIR]/artifacts/offer-page-copy.md`
 - Self-check: grep "criterion\|criteria\|specifically engineered" → nothing; grep `href="#"` → nothing
@@ -350,7 +350,7 @@ When starting each section, say: "Starting Section [N] — [name]." When done: "
 - Convert section by section — do not rewrite, only convert
 - Product image: embed as placeholder `<div style="background:#f5f5f5;height:400px;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#999;font-size:14px;">Add product photo here</div>` if no image path was provided
 - Bundle cards: 3-column desktop, stacked mobile. Middle card: popular badge + highlighted border + teal CTA. Others: dark (#121212) CTA
-- All buy buttons: `href="YOUR_PRODUCT_URL"` placeholder
+- All buy buttons: `href="YOUR_COLLECTION_URL"` placeholder
 - Promo banner: mid-page, positioned after credibility bar — NOT at page top
 - Testimonials: 6 cards, CSS grid 2-column. Each card retains its `<!-- PLACEHOLDER -->` HTML comment.
 - Back link to presell: `presell-v2.html` — relative link
@@ -408,7 +408,7 @@ When starting each section, say: "Starting Section [N] — [name]." When done: "
 
 - **Gate 1 — Presell purity:** grep for product name → nothing; grep for price → nothing
 - **Gate 2 — Banned vocabulary:** grep "criterion\|criteria\|structural anchor\|engineering target\|specifically engineered" on both files → nothing
-- **Gate 3 — CTA links:** presell CTA href is `offer-v2.html`; offer back link href is `presell-v2.html`; offer buy buttons use `YOUR_PRODUCT_URL` placeholder (not `href="#"`)
+- **Gate 3 — CTA links:** presell CTA href is `offer-v2.html`; offer back link href is `presell-v2.html`; offer buy buttons use `YOUR_COLLECTION_URL` placeholder (not `href="#"`)
 - **Gate 4 — Images:** 5 img tags in presell-v2.html, all src starting with `generated_images/`, all referenced files exist and are >10KB
 - **Gate 5 — Required sections:** offer page has ≥6 `.testimonial-card` elements; has second CTA section (dark background at bottom); has bundle section with 3 cards
 - **Gate 6 — Congruence:** every reason on the presell has a corresponding solution named on the offer page — document the mapping

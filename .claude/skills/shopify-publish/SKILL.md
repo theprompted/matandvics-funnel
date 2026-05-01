@@ -110,18 +110,18 @@ Then continue with deployment.
 
 **Check buy button URLs are configured:**
 ```bash
-grep -c "YOUR_PRODUCT_URL" "[FUNNEL_DIR]/offer-v2.html"
+grep -c "YOUR_COLLECTION_URL" "[FUNNEL_DIR]/offer-v2.html"
 ```
 
-If the file still contains `YOUR_PRODUCT_URL`, stop and tell the user:
-> "Your offer page buy buttons still have a placeholder URL. What's the product page URL on your Shopify store — the page where customers can actually buy? (e.g. `matandvics.com/products/cotton-classics-6-pack`)"
+If the file still contains `YOUR_COLLECTION_URL`, stop and tell the user:
+> "Your offer page buy buttons still have a placeholder URL. What's the collection URL on your Shopify store — the page where customers can browse and choose their socks? (e.g. `yourstore.com/collections/all`)"
 
 Once they give you the URL, replace all occurrences in the offer page:
 ```python
 from pathlib import Path
-product_url = "USER_PROVIDED_URL"
+collection_url = "USER_PROVIDED_URL"
 p = Path("[FUNNEL_DIR]/offer-v2.html")
-p.write_text(p.read_text().replace("YOUR_PRODUCT_URL", product_url))
+p.write_text(p.read_text().replace("YOUR_COLLECTION_URL", collection_url))
 print("Buy button URLs updated.")
 ```
 
