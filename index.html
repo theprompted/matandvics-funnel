@@ -561,12 +561,12 @@
           <span class="num-badge">1</span>
           <span class="step-title">Install the Python libraries</span>
         </div>
-        <p>Copy this and paste it into Claude Code, then press Enter:</p>
-        <div class="code-wrap">
-          <div class="code-block">! pip3 install requests fal-client</div>
-          <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+        <p>Just tell Claude Code to do it:</p>
+        <div class="prompt-box">
+          <div class="prompt-label">Type into Claude Code</div>
+          <div class="prompt-text">Install the Python libraries this funnel needs — requests and fal-client.</div>
         </div>
-        <p>Text will scroll past. When it finishes and you see a prompt again, it's done.</p>
+        <p>Claude will run the install and confirm when it's done.</p>
       </div>
 
       <div class="step-card step-card-yellow">
@@ -578,13 +578,13 @@
         <div class="cost-box">
           <strong>💳 Cost to know about:</strong> fal.ai is <strong>pay-per-use — no subscription, no monthly fee</strong>. You only pay when you generate images. Each image costs <strong>$0.08</strong> (8 cents). You add credits to your account and they draw down as you generate — nothing is charged automatically. Generating all 50 concepts = $4.00. A test batch of 10 = $0.80.
         </div>
-        <p>Once you have your key, copy this, replace <code>YOUR_KEY_HERE</code> with your actual key, then paste it into Claude Code and press Enter:</p>
-        <div class="code-wrap">
-          <div class="code-block">! export FAL_KEY=YOUR_KEY_HERE</div>
-          <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+        <p>Once you have your key, tell Claude Code to set it:</p>
+        <div class="prompt-box">
+          <div class="prompt-label">Type into Claude Code</div>
+          <div class="prompt-text">Set my fal.ai API key for this session. The key is: <em>your-key-here</em></div>
         </div>
         <div class="warning-box">
-          <strong>⚠️ Note:</strong> This command only lasts for your current Claude Code session. Each time you open a new session and want to generate images, run it again before starting.
+          <strong>⚠️ Note:</strong> This only lasts for your current Claude Code session. Any time you open a new session and want to generate images, tell Claude your key again before starting.
         </div>
       </div>
 
@@ -943,10 +943,10 @@ I like c01, c04, and c07. Regenerate c02 and c09 with a tighter crop and more co
         <div class="prompt-text">Replace the first testimonial placeholder on the offer page with: "Endlich Socken, die nach einem langen Tag noch sitzen. — Michael K., Wien". Then republish.</div>
       </div>
 
-      <h3 style="margin-top:1.5rem;margin-bottom:0.5rem;">Generating specific ad images by ID</h3>
-      <div class="code-wrap">
-        <div class="code-block">! python3 funnel/generate_ad_images.py --ids c03,c07</div>
-        <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+      <h3 style="margin-top:1.5rem;margin-bottom:0.5rem;">Regenerating specific ad images</h3>
+      <div class="prompt-box">
+        <div class="prompt-label">Example</div>
+        <div class="prompt-text">Regenerate ad concepts c03 and c07 from funnel/generate_ad_images.py.</div>
       </div>
 
     </div>
@@ -994,12 +994,12 @@ I like c01, c04, and c07. Regenerate c02 and c09 with a tighter crop and more co
           <span class="num-badge question">?</span>
           <span class="step-title">Image generation fails with "FAL_KEY not set"</span>
         </div>
-        <p>The key isn't set in this session. Run:</p>
-        <div class="code-wrap">
-          <div class="code-block">! export FAL_KEY=YOUR_KEY_HERE</div>
-          <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+        <p>The key isn't set in this session. Tell Claude:</p>
+        <div class="prompt-box">
+          <div class="prompt-label">Type into Claude Code</div>
+          <div class="prompt-text">Set my fal.ai API key for this session. The key is: <em>your-key-here</em></div>
         </div>
-        <p>Then try again.</p>
+        <p>Then ask it to try generating again.</p>
       </div>
 
       <div class="step-card step-card-white">
