@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mat & Vic's — Funnel Guide</title>
+  <style>
+    :root {
+      --bg-page: #F8F8F7;
+      --bg-white: #ffffff;
+      --bg-blue: #EBF9FF;
+      --bg-purple: #F7F1FF;
+      --bg-yellow: #FFFDE7;
+      --bg-green: #E8F5E9;
+      --accent-teal: #53DBC9;
+      --accent-yellow: #FFDE00;
+      --accent-purple: #9D4EDD;
+      --text-black: #000000;
+      --text-dark: #1a1a1a;
+      --text-gray: #4a4a4a;
+      --text-muted: #6b6b6b;
+      --shadow-lg: -0.31rem 0.31rem 0 0 #383838;
+      --shadow-sm: -0.19rem 0.19rem 0 0 #383838;
+      --border: 2px solid black;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text-dark);
+      background: var(--bg-page);
+      padding: 2rem 1.5rem;
+    }
+
+    .container { max-width: 860px; margin: 0 auto; }
+
+    h1, h2, h3, h4 {
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-weight: 700;
+      color: var(--text-black);
+    }
+
+    h1 { font-size: 2.25rem; line-height: 1.2; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.125rem; }
+    h4 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-gray);
+    }
+
+    p { margin-bottom: 0.85rem; }
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol { margin: 0.75rem 0; padding-left: 1.5rem; }
+    li { margin-bottom: 0.5rem; }
+
+    strong { font-weight: 600; }
+
+    /* Cards */
+    .card {
+      background: var(--bg-white);
+      border: var(--border);
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 2rem;
+    }
+
+    .card-header {
+      padding: 1rem 1.5rem;
+      border-bottom: var(--border);
+      background: var(--bg-page);
+    }
+
+    .card-content { padding: 1.5rem; }
+
+    .section-blue   { background: var(--bg-blue); }
+    .section-purple { background: var(--bg-purple); }
+    .section-yellow { background: var(--bg-yellow); }
+    .section-green  { background: var(--bg-green); }
+
+    /* Code */
+    code {
+      background: var(--bg-white);
+      border: 1px solid #ccc;
+      padding: 0.125rem 0.5rem;
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.875rem;
+    }
+
+    .code-wrap {
+      position: relative;
+      margin: 1rem 0;
+    }
+
+    .code-block {
+      background: var(--text-dark);
+      color: var(--accent-teal);
+      border: var(--border);
+      padding: 1rem 1.25rem;
+      padding-right: 5rem;
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.875rem;
+      box-shadow: var(--shadow-sm);
+      white-space: pre-wrap;
+      word-break: break-all;
+      overflow-x: auto;
+    }
+
+    .copy-btn {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      background: var(--accent-teal);
+      color: var(--text-black);
+      border: var(--border);
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.25rem 0.6rem;
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.1s;
+    }
+
+    .copy-btn:hover { transform: translate(2px, -2px); box-shadow: -0.4rem 0.4rem 0 0 #383838; }
+    .copy-btn:active { transform: translate(-2px, 2px); box-shadow: -0.1rem 0.1rem 0 0 #383838; }
+    .copy-btn.copied { background: var(--bg-green); }
+
+    /* Tags */
+    .tag {
+      display: inline-block;
+      background: var(--accent-teal);
+      border: var(--border);
+      padding: 0.25rem 0.75rem;
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .tag-purple { background: var(--bg-purple); }
+    .tag-yellow { background: var(--accent-yellow); }
+    .tag-gray { background: #e0e0e0; }
+
+    /* Num badge */
+    .num-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2rem;
+      height: 2rem;
+      background: var(--accent-teal);
+      border: var(--border);
+      border-radius: 50%;
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.875rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .num-badge.question { background: var(--bg-yellow); }
+    .num-badge.track2 { background: var(--bg-purple); }
+
+    /* Step card */
+    .step-card {
+      border: var(--border);
+      padding: 1.25rem 1.5rem;
+      margin: 1rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .step-card-blue   { background: var(--bg-blue); }
+    .step-card-purple { background: var(--bg-purple); }
+    .step-card-yellow { background: var(--bg-yellow); }
+    .step-card-green  { background: var(--bg-green); }
+    .step-card-white  { background: var(--bg-white); }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .step-title {
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    /* Prompt box */
+    .prompt-box {
+      background: var(--text-dark);
+      border: var(--border);
+      padding: 1rem 1.25rem;
+      margin: 0.75rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .prompt-label {
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-teal);
+      margin-bottom: 0.5rem;
+    }
+
+    .prompt-text {
+      color: #e8e8e8;
+      font-size: 0.95rem;
+      line-height: 1.55;
+    }
+
+    .prompt-text em {
+      color: var(--accent-teal);
+      font-style: normal;
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.875rem;
+    }
+
+    /* What Claude does */
+    .claude-box {
+      background: var(--bg-page);
+      border: var(--border);
+      padding: 1rem 1.25rem;
+      margin: 0.75rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .claude-label {
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .claude-box ul { margin: 0; }
+    .claude-box li { font-size: 0.9rem; color: var(--text-gray); margin-bottom: 0.4rem; }
+
+    /* Cost callout */
+    .cost-box {
+      background: var(--bg-yellow);
+      border: var(--border);
+      padding: 1rem 1.25rem;
+      margin: 0.75rem 0;
+      box-shadow: var(--shadow-sm);
+      font-size: 0.9rem;
+    }
+
+    /* Warning */
+    .warning-box {
+      background: var(--bg-yellow);
+      border: var(--border);
+      padding: 1rem 1.25rem;
+      margin: 0.75rem 0;
+      box-shadow: var(--shadow-sm);
+      font-size: 0.9rem;
+    }
+
+    /* Info */
+    .info-box {
+      background: var(--bg-blue);
+      border: var(--border);
+      padding: 1rem 1.25rem;
+      margin: 0.75rem 0;
+      box-shadow: var(--shadow-sm);
+      font-size: 0.9rem;
+    }
+
+    /* Checklist */
+    .checklist { list-style: none; padding: 0; margin: 0.75rem 0; }
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      font-size: 0.9rem;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid #e8e8e4;
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist li::before {
+      content: "☐";
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* TOC */
+    .toc-card {
+      background: var(--bg-white);
+      border: var(--border);
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 2.5rem;
+    }
+
+    .toc-card ol { margin: 0; padding: 0 1.5rem 1.5rem 3rem; }
+    .toc-card li { margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .toc-card a { color: var(--text-black); font-weight: 500; }
+    .toc-card a:hover { color: #0070a8; }
+    .toc-note { color: var(--text-muted); font-weight: 400; font-size: 0.875rem; }
+    .toc-section-label {
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      padding: 1rem 1.5rem 0.4rem;
+    }
+
+    /* Summary table */
+    .summary-row {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1rem 1.5rem;
+      border-bottom: var(--border);
+      font-size: 0.9rem;
+    }
+
+    .summary-row:last-child { border-bottom: none; }
+    .summary-row .skill { flex-shrink: 0; }
+    .summary-row p { margin: 0; color: var(--text-gray); }
+
+    /* Track header */
+    .track-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.25rem 1.5rem;
+      border: var(--border);
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 1.5rem;
+    }
+
+    .track-badge {
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.3rem 0.75rem;
+      border: var(--border);
+      white-space: nowrap;
+    }
+
+    .track-badge-a { background: var(--accent-teal); }
+    .track-badge-b { background: var(--bg-purple); }
+
+    .track-title { font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace; font-weight: 700; font-size: 1.1rem; }
+    .track-desc { font-size: 0.875rem; color: var(--text-muted); margin: 0; }
+
+    /* Divider */
+    .section-divider {
+      border: none;
+      border-top: 2px solid black;
+      margin: 2.5rem 0;
+    }
+
+    .track-divider {
+      border: none;
+      border-top: 2px dashed #aaa;
+      margin: 2rem 0;
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1rem; }
+      h1 { font-size: 1.75rem; }
+      .card-content { padding: 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- Header -->
+  <div class="card" style="margin-bottom: 2rem;">
+    <div class="card-content">
+      <div style="width:3rem;height:3rem;background:var(--accent-teal);border:var(--border);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1rem;">🧦</div>
+      <h1>Mat &amp; Vic's Funnel Guide</h1>
+      <p style="color:var(--text-muted);margin-top:0.5rem;font-size:1.05rem;">How to use Claude Code to publish, generate ad images, and build future funnels.</p>
+    </div>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc-card">
+    <div class="card-header">
+      <h4>Contents</h4>
+    </div>
+    <div class="toc-section-label">Start here</div>
+    <ol style="padding: 0.5rem 1.5rem 1rem 3rem;">
+      <li><a href="#context">What we built for you</a> <span class="toc-note">— the funnel, the ads, the system</span></li>
+    </ol>
+    <div class="toc-section-label" style="border-top: 1px solid #ddd;">Track A — Using the funnel we built for you</div>
+    <ol start="2" style="padding: 0.5rem 1.5rem 1rem 3rem;">
+      <li><a href="#setup">One-time setup</a> <span class="toc-note">— install libraries, fal.ai key, Shopify access, Meta pixel</span></li>
+      <li><a href="#publish">Publish to Shopify</a> <span class="toc-note">— get both pages live on your store</span></li>
+      <li><a href="#ads">Generate ad images</a> <span class="toc-note">— run the 50 concepts we prepared, in German</span></li>
+    </ol>
+    <div class="toc-section-label" style="border-top: 1px solid #ddd;">Track B — Building from scratch (future campaigns)</div>
+    <ol start="5" style="padding: 0.5rem 1.5rem 1rem 3rem;">
+      <li><a href="#scratch">Build a new funnel from scratch</a> <span class="toc-note">— research, copy, HTML in one automated run</span></li>
+    </ol>
+    <div class="toc-section-label" style="border-top: 1px solid #ddd;">Reference</div>
+    <ol start="6" style="padding: 0.5rem 1.5rem 1.25rem 3rem;">
+      <li><a href="#updates">Making updates to live pages</a></li>
+      <li><a href="#troubleshooting">Troubleshooting</a></li>
+    </ol>
+  </div>
+
+  <!-- Context section -->
+  <div id="context" class="card">
+    <div class="card-header" style="background:var(--text-dark);">
+      <h2 style="color:#fff;">What we built for you</h2>
+    </div>
+    <div class="card-content">
+
+      <p>You sent over a few thesis ideas for a new campaign direction. The one that stood out was the angle around cotton being fundamentally the wrong material — not just inferior, but the actual source of every problem your customer has been blaming on their feet, their shoes, or their routine.</p>
+      <p>We built the entire funnel around that thesis: <strong>"5 Reasons 100% Cotton Socks Are Designed to Fail You."</strong> Cotton is the villain. Your product isn't being sold as better cotton — it's being positioned as the exit from a category that was never designed to work.</p>
+
+      <hr class="track-divider" style="margin: 1.5rem 0;">
+
+      <h3 style="margin-bottom:1rem;">What's in this package</h3>
+
+      <div class="step-card step-card-blue" style="margin-bottom:1rem;">
+        <div class="step-header" style="margin-bottom:0.5rem;">
+          <span class="tag">The presell page + images</span>
+        </div>
+        <p style="margin:0;font-size:0.9rem;">A 2,000-word education page (<code>funnel/presell-v2.html</code>) that runs your cold traffic through the cotton villain argument before they ever see the product. Five reason sections, each with its own AI-generated image — those images are already done (<code>funnel/generated_images/r1–r5.png</code>). No product name, no price anywhere on this page — just the argument. The offer comes at the end, after the case has been made.</p>
+      </div>
+
+      <div class="step-card step-card-purple" style="margin-bottom:1rem;">
+        <div class="step-header" style="margin-bottom:0.5rem;">
+          <span class="tag tag-purple">The offer page</span>
+        </div>
+        <p style="margin:0;font-size:0.9rem;">A dedicated offer page (<code>funnel/offer-v2.html</code>) that lives behind the presell. Product hero, the formula, testimonials, bundle options, FAQ — designed to convert the reader the presell page warmed up. Your Meta ads link to the presell; the presell links here.</p>
+      </div>
+
+      <div class="step-card step-card-yellow" style="margin-bottom:1rem;">
+        <div class="step-header" style="margin-bottom:0.5rem;">
+          <span class="tag tag-yellow">50 ad image concepts</span>
+        </div>
+        <p style="margin:0;font-size:0.9rem;">A ready-to-run image generation script (<code>funnel/generate_ad_images.py</code>) with 50 distinct creative concepts — all built around your funnel headline and the cotton villain angle. UGC portraits, comparison formats, macro close-ups, social proof styles. You run the script, images generate via AI in seconds each, and you pick the ones worth testing.</p>
+      </div>
+
+      <div class="step-card step-card-green" style="margin-bottom:0;">
+        <div class="step-header" style="margin-bottom:0.5rem;">
+          <span class="tag">The system, not just the funnel</span>
+        </div>
+        <p style="margin:0;font-size:0.9rem;">The three skills installed in this folder — <code>/dtc-funnel-generate</code>, <code>/shopify-publish</code>, and <code>/dtc-ad-generate</code> — mean you're not just getting this one funnel. You're getting a repeatable process: pick a new angle, run the build skill, review the strategy, approve, and the funnel writes and deploys itself. This guide covers both how to launch what we already built and how to run the full pipeline from scratch for future campaigns.</p>
+      </div>
+
+      <hr class="track-divider" style="margin: 1.5rem 0;">
+
+      <h3 style="margin-bottom:0.75rem;">How Claude Code fits in</h3>
+      <p>Claude Code is your AI assistant for all of this. You open a folder, type a command, and it does the work — researching markets, writing copy, generating images, publishing pages. You answer a few questions at the start and approve the strategy before it builds. Everything else is automated.</p>
+      <p>You don't write code. For most tasks you don't touch a terminal at all. The skills are pre-installed in this folder and load automatically when you have it open in Claude Code.</p>
+
+      <div class="info-box" style="margin-top:1rem;">
+        <strong>Before you start:</strong> Open the <code>matandvics-funnel</code> folder as your project in Claude Code. All three skills load automatically. If you haven't installed Claude Code yet — <strong>claude.ai/code</strong> — do that first.
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- Overview blurb -->
+  <div class="info-box" style="margin-bottom:2rem;display:none;">
+    <strong>How this works:</strong> You use Claude Code as your AI assistant. It does the work — you give it instructions and answer its questions. This package contains pre-installed skills — commands you type into Claude Code that trigger specific workflows. You don't need to write code or touch a terminal for most tasks.<br><br>
+    <strong>Before you start:</strong> Open the <code>matandvics-funnel</code> folder as your project in Claude Code. All skills are pre-installed and load automatically when this folder is open.
+  </div>
+
+  <!-- ==============================
+       TRACK A HEADER
+  ================================= -->
+  <div class="track-header" style="background:var(--bg-blue);">
+    <span class="track-badge track-badge-a">TRACK A</span>
+    <div>
+      <div class="track-title">Using the funnel we built for you</div>
+      <p class="track-desc">Your funnel copy and HTML pages are already done. Start here to get them live and generate ad images.</p>
+    </div>
+  </div>
+
+  <!-- Setup -->
+  <div id="setup" class="card">
+    <div class="card-header section-purple">
+      <h2>Step 1 — One-time setup</h2>
+    </div>
+    <div class="card-content">
+      <p style="color:var(--text-muted);">Do these steps once. You'll never need to repeat them.</p>
+
+      <div class="step-card step-card-blue">
+        <div class="step-header">
+          <span class="num-badge">1</span>
+          <span class="step-title">Install the Python libraries</span>
+        </div>
+        <p>Copy this and paste it into Claude Code, then press Enter:</p>
+        <div class="code-wrap">
+          <div class="code-block">! pip3 install requests fal-client</div>
+          <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+        </div>
+        <p>Text will scroll past. When it finishes and you see a prompt again, it's done.</p>
+      </div>
+
+      <div class="step-card step-card-yellow">
+        <div class="step-header">
+          <span class="num-badge">2</span>
+          <span class="step-title">Get a fal.ai API key</span>
+        </div>
+        <p>Go to <strong>fal.ai/dashboard</strong>, create a free account, then go to <strong>API Keys</strong> and create a new key. Copy it.</p>
+        <div class="cost-box">
+          <strong>💳 Cost to know about:</strong> Creating an account is free. Image generation costs <strong>$0.08 per image</strong> using the Nano Banana 2 model this skill is configured to use. Generating a batch of 20 images costs $1.60. You'll be billed by fal.ai directly based on usage.
+        </div>
+        <p>Once you have your key, copy this, replace <code>YOUR_KEY_HERE</code> with your actual key, then paste it into Claude Code and press Enter:</p>
+        <div class="code-wrap">
+          <div class="code-block">! export FAL_KEY=YOUR_KEY_HERE</div>
+          <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+        </div>
+        <div class="warning-box">
+          <strong>⚠️ Note:</strong> This command only lasts for your current Claude Code session. Each time you open a new session and want to generate images, run it again before starting.
+        </div>
+      </div>
+
+      <div class="step-card step-card-blue">
+        <div class="step-header">
+          <span class="num-badge">3</span>
+          <span class="step-title">Create a Shopify custom app</span>
+        </div>
+        <p>This is what gives Claude Code permission to publish pages and upload images to your store on your behalf — without you ever having to log into Shopify Admin and do it manually. Every time you run <code>/shopify-publish</code>, Claude uses this access to deploy your funnel in one shot. You set it up once and never touch it again.</p>
+        <ol>
+          <li>Go to <strong>Shopify Admin → Settings → Apps and sales channels</strong></li>
+          <li>Click <strong>Develop apps</strong> (top right corner)</li>
+          <li>If prompted, click <strong>Allow custom app development</strong></li>
+          <li>Click <strong>Create an app</strong> — name it anything, e.g. <em>Funnel Deploy</em></li>
+          <li>Under <strong>Configuration</strong>, click <strong>Admin API integration</strong></li>
+          <li>Enable these three checkboxes: <code>write_content</code>, <code>write_themes</code>, <code>write_files</code></li>
+          <li>Click <strong>Save</strong></li>
+          <li>Go to the <strong>API credentials</strong> tab → click <strong>Install app</strong></li>
+          <li>Copy the <strong>Admin API access token</strong> — it starts with <code>shpat_</code></li>
+        </ol>
+        <div class="warning-box" style="margin-top:0.75rem;">
+          <strong>⚠️ You only see this token once.</strong> Don't close the page before completing the next step.
+        </div>
+      </div>
+
+      <div class="step-card step-card-green">
+        <div class="step-header">
+          <span class="num-badge">4</span>
+          <span class="step-title">Save your token to Claude Code</span>
+        </div>
+        <p>Give Claude Code your store domain and token — it will save them to a <code>.env</code> file in this folder so it always has secure access without you having to type them again.</p>
+        <div class="prompt-box">
+          <div class="prompt-label">Type into Claude Code</div>
+          <div class="prompt-text">Save my Shopify credentials to the .env file. My store is <em>yourstore.myshopify.com</em> and my token is <em>shpat_xxxxxxxxxxxx</em>.</div>
+        </div>
+        <p>Claude saves both values to <code>.env</code> and confirms. Your token is stored locally in this folder — never shared, never uploaded.</p>
+        <div class="info-box" style="margin-top:0.75rem;">
+          <strong>Why this matters:</strong> Every skill that touches Shopify — <code>/shopify-publish</code> and the no-header template install — reads credentials from this file automatically. You won't need to paste your token into chat again.
+        </div>
+      </div>
+
+      <div class="step-card step-card-blue">
+        <div class="step-header">
+          <span class="num-badge">5</span>
+          <span class="step-title">Add your Meta Pixel ID to the funnel pages</span>
+        </div>
+        <p>Both funnel pages already contain the Meta Pixel tracking code with a placeholder ID (<code>YOUR_PIXEL_ID</code>). Before going live, replace it with your real pixel so Meta can attribute visits and conversions from your ads.</p>
+        <p style="margin-top:0.5rem;"><strong>Find your pixel ID:</strong> Go to <strong>Meta Business Suite → Events Manager</strong> and copy the 15–16 digit number under your pixel name.</p>
+        <div class="prompt-box" style="margin-top:0.75rem;">
+          <div class="prompt-label">Type into Claude Code</div>
+          <div class="prompt-text">Replace the Meta Pixel placeholder in the funnel pages with my pixel ID: <em>1234567890123456</em></div>
+        </div>
+        <p>Claude will swap <code>YOUR_PIXEL_ID</code> for your real ID in both <code>presell-v2.html</code> and <code>offer-v2.html</code>.</p>
+        <div class="info-box" style="margin-top:0.75rem;">
+          <strong>Why this matters:</strong> Without the pixel, Meta can't see who lands on your pages, can't optimize for Add to Cart or Purchase events, and can't build retargeting audiences. The ads will run but you'll be flying blind on attribution.
+        </div>
+      </div>
+
+      <div class="step-card step-card-blue">
+        <div class="step-header">
+          <span class="num-badge">6</span>
+          <span class="step-title">Install the no-header template on your store</span>
+        </div>
+        <p>This installs a small template file on your Shopify theme that makes funnel pages display without your store's navigation header and footer. Do this once — it stays permanently.</p>
+        <div class="prompt-box">
+          <div class="prompt-label">Type into Claude Code</div>
+          <div class="prompt-text">Install the no-header template on my Shopify store.</div>
+        </div>
+        <p>Claude reads your credentials from <code>.env</code>, runs one API call, installs the template, and confirms it worked.</p>
+        <div style="margin-top:0.75rem;"><span class="tag">✓ Setup complete</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- Publish -->
+  <div id="publish" class="card">
+    <div class="card-header section-green">
+      <h2>Step 2 — Publish to Shopify</h2>
+    </div>
+    <div class="card-content">
+      <p style="color:var(--text-muted);">Claude uploads your images to Shopify's CDN, rewrites the paths in the HTML, and publishes both pages live. Nothing to upload manually.</p>
+
+      <div class="step-card step-card-white">
+        <div class="step-header">
+          <span class="num-badge">1</span>
+          <span class="step-title">Have your product photo ready</span>
+        </div>
+        <p>The offer page hero has a product image slot. Have your product photo saved on your computer. If you're unsure of the file path, drag the image into Claude Code's chat — it will tell you the path.</p>
+      </div>
+
+      <div class="step-card step-card-white">
+        <div class="step-header">
+          <span class="num-badge">2</span>
+          <span class="step-title">Decide on your page URL slugs</span>
+        </div>
+        <p>Your pages will live at:</p>
+        <ul>
+          <li><code>yourstore.com/pages/<strong>cotton-socks-guide</strong></code> — presell page</li>
+          <li><code>yourstore.com/pages/<strong>mat-vics-socks</strong></code> — offer page</li>
+        </ul>
+        <p>Pick short slugs with hyphens and no spaces. These become permanent URLs so choose carefully.</p>
+      </div>
+
+      <div class="step-card step-card-blue">
+        <div class="step-header">
+          <span class="num-badge">3</span>
+          <span class="step-title">Run the publish command</span>
+        </div>
+        <div class="prompt-box">
+          <div class="prompt-label">Type into Claude Code</div>
+          <div class="prompt-text">/shopify-publish</div>
+        </div>
+        <p>Claude reads your store credentials from <code>.env</code> automatically. It will ask for your product photo path and the two URL slugs — that's it.</p>
+        <div class="claude-box" style="margin-top:0.75rem;">
+          <div class="claude-label">Claude will then</div>
+          <ul>
+            <li>Upload all 5 presell images to your Shopify CDN</li>
+            <li>Upload your product photo to Shopify CDN</li>
+            <li>Rewrite all image paths in the HTML to permanent CDN URLs</li>
+            <li>Publish the presell page at your chosen slug</li>
+            <li>Publish the offer page at your chosen slug</li>
+            <li>Confirm both pages are live and give you the URLs</li>
+          </ul>
+        </div>
+        <div class="info-box" style="margin-top:0.75rem;">
+          <strong>Re-running is safe.</strong> If you need to update something and republish later, just run <code>/shopify-publish</code> again. Claude updates the existing pages in place — no duplicates created.
+        </div>
+      </div>
+
+      <div class="step-card step-card-yellow">
+        <div class="step-header">
+          <span class="num-badge">4</span>
+          <span class="step-title">Test the full flow in an incognito window</span>
+        </div>
+        <ul class="checklist">
+          <li>No product name or price anywhere on the presell page</li>
+          <li>Layout looks correct — no broken styling</li>
+          <li>All 5 reason images load</li>
+          <li>CTA button at the bottom → loads the offer page</li>
+          <li>Buy buttons on the offer page → go to checkout</li>
+          <li>"Back to the guide" link → returns to the presell</li>
+        </ul>
+        <p style="margin-top:0.75rem;">If anything looks wrong, describe it to Claude and it will fix and republish.</p>
+      </div>
+
+      <div class="step-card step-card-green">
+        <div class="step-header">
+          <span class="num-badge">5</span>
+          <span class="step-title">Point your Meta ads at the presell URL</span>
+        </div>
+        <p>The presell page is your cold traffic landing page. Your Meta ad campaigns link here — not the offer page, not your homepage.</p>
+        <div style="margin-top:0.75rem;"><span class="tag">✓ Funnel is live</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- Ad images -->
+  <div id="ads" class="card">
+    <div class="card-header section-purple">
+      <h2>Step 3 — Generate ad images</h2>
+    </div>
+    <div class="card-content">
+      <p style="color:var(--text-muted);">50 ad image concepts have already been written for you — based on your funnel headline, avatar, and the 5 villain reasons. You generate them, review them, and keep the best ones.</p>
+
+      <div class="info-box">
+        <strong>Before generating:</strong> The concepts are written in English. Since you're running ads in Germany and Austria, you need to switch the language to German first. This is a one-line instruction to Claude — see Step 1 below.
+      </div>
+
+      <div class="step-card step-card-yellow">
+        <div class="step-header">
+          <span class="num-badge">1</span>
+          <span class="step-title">Make sure your FAL_KEY is set</span>
+        </div>
+        <p>If you've opened a new Claude Code session, run this first:</p>
+        <div class="code-wrap">
+          <div class="code-block">! export FAL_KEY=YOUR_KEY_HERE</div>
+          <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+        </div>
+        <div class="cost-box">
+          <strong>💳 Cost reminder:</strong> Each image costs <strong>$0.08</strong>. Generating all 50 = <strong>$4.00</strong>. Generating 20 at a time = <strong>$1.60</strong>. You can generate in batches — see Step 3. Charged to your fal.ai account.
+        </div>
+      </div>
+
+      <div class="step-card step-card-blue">
+        <div class="step-header">
+          <span class="num-badge">2</span>
+          <span class="step-title">Switch the prompts to German</span>
+        </div>
+        <p>The concepts are in <code>funnel/generate_ad_images.py</code>. Tell Claude to update all the prompts so the headline text and any in-image copy is in German:</p>
+        <div class="prompt-box">
+          <div class="prompt-label">Type into Claude Code</div>
+          <div class="prompt-text">Update funnel/generate_ad_images.py so that all image prompts use German language — translate the HEADLINE variable and any in-image text descriptions to German. Keep everything else the same.</div>
+        </div>
+        <p>Claude translates the headline and any text-in-image references. The visual descriptions, format types, and settings stay as-is.</p>
+      </div>
+
+      <div class="step-card step-card-white">
+        <div class="step-header">
+          <span class="num-badge">3</span>
+          <span class="step-title">See all 50 concepts before generating</span>
+        </div>
+        <p>Before spending anything, list the concepts to see what you're working with:</p>
+        <div class="code-wrap">
+          <div class="code-block">! python3 funnel/generate_ad_images.py --list</div>
+          <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+        </div>
+        <p>This shows all 50 concept IDs (c01–c50) with their descriptions. No images generated, no cost. If any concepts look wrong, tell Claude to swap them out before proceeding.</p>
+      </div>
+
+      <div class="step-card step-card-blue">
+        <div class="step-header">
+          <span class="num-badge">4</span>
+          <span class="step-title">Generate in batches</span>
+        </div>
+        <p>You don't have to generate all 50 at once. Start with a batch to check quality:</p>
+        <div class="code-wrap">
+          <div class="code-block">! python3 funnel/generate_ad_images.py --ids c01,c02,c03,c04,c05,c06,c07,c08,c09,c10</div>
+          <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+        </div>
+        <p>Images save to <code>funnel/generated_images/ad-concepts/</code>. When done, tell Claude to open the folder so you can review them.</p>
+        <p style="margin-top:0.75rem;">To generate all 50 at once:</p>
+        <div class="code-wrap">
+          <div class="code-block">! python3 funnel/generate_ad_images.py --ids all</div>
+          <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+        </div>
+      </div>
+
+      <div class="step-card step-card-white">
+        <div class="step-header">
+          <span class="num-badge">5</span>
+          <span class="step-title">Regenerate specific images</span>
+        </div>
+        <p>If certain images don't look right, regenerate only those by ID:</p>
+        <div class="code-wrap">
+          <div class="code-block">! python3 funnel/generate_ad_images.py --ids c03,c07,c15</div>
+          <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+        </div>
+        <p>Or ask Claude to adjust the concept first before regenerating: <em>"c03 shows the sock slipping — make it more dramatic, tighter crop on the heel. Then regenerate c03."</em></p>
+        <div style="margin-top:0.75rem;"><span class="tag">✓ Ad images ready for Meta</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- ==============================
+       TRACK B HEADER
+  ================================= -->
+  <div class="track-header" style="background:var(--bg-purple);">
+    <span class="track-badge track-badge-b">TRACK B</span>
+    <div>
+      <div class="track-title">Building from scratch</div>
+      <p class="track-desc">For future campaigns — start here when you want to build a new funnel from zero.</p>
+    </div>
+  </div>
+
+  <!-- Build from scratch -->
+  <div id="scratch" class="card">
+    <div class="card-header section-blue">
+      <h2>Step 4 — Build a new funnel from scratch</h2>
+    </div>
+    <div class="card-content">
+      <p style="color:var(--text-muted);">The <code>/dtc-funnel-generate</code> skill researches your market, writes all the copy, reviews it, and builds the HTML pages — mostly automated. Use this for new products or completely new campaigns.</p>
+
+      <div class="step-card step-card-white">
+        <div class="step-header">
+          <span class="num-badge track2">1</span>
+          <span class="step-title">Type the build command</span>
+        </div>
+        <div class="prompt-box">
+          <div class="prompt-label">Type into Claude Code</div>
+          <div class="prompt-text">/dtc-funnel-generate</div>
+        </div>
+      </div>
+
+      <div class="step-card step-card-blue">
+        <div class="step-header">
+          <span class="num-badge track2">2</span>
+          <span class="step-title">Answer three opening questions</span>
+        </div>
+        <p>Claude will ask for:</p>
+        <ol>
+          <li><strong>Your product name</strong> — e.g. <em>Mat &amp; Vic's Premium Socks</em></li>
+          <li><strong>The direct buy/checkout URL</strong> — the link someone clicks to purchase. Must go to a product or checkout page, not your homepage.</li>
+          <li><strong>A name for the funnel folder</strong> — short, no spaces, e.g. <code>cotton-socks-v2</code>. All files get saved here.</li>
+        </ol>
+      </div>
+
+      <div class="step-card step-card-white">
+        <div class="step-header">
+          <span class="num-badge track2">3</span>
+          <span class="step-title">Wait while Claude researches — no input needed</span>
+        </div>
+        <div class="claude-box">
+          <div class="claude-label">Claude will autonomously</div>
+          <ul>
+            <li>Search the Meta Ad Library for competitor ads in your category</li>
+            <li>Mine Amazon reviews for your customers' exact language</li>
+            <li>Identify the strongest villain angle and avatar</li>
+            <li>Save findings to the funnel folder</li>
+          </ul>
+        </div>
+        <p>This takes a few minutes. Don't type anything — let it finish.</p>
+      </div>
+
+      <div class="step-card step-card-yellow">
+        <div class="step-header">
+          <span class="num-badge track2">4</span>
+          <span class="step-title">Confirm the strategy — your one decision gate</span>
+        </div>
+        <p>Claude presents the proposed strategy: villain angle, avatar problem, 5 reasons, coined term, and page 1 headline.</p>
+        <p>Read it. If it looks right, reply <strong>"looks good, go ahead."</strong> If something feels off, say what to change.</p>
+        <div class="info-box">
+          <strong>This is the most important moment.</strong> Everything built after this flows from what you confirm here. If the villain angle or headline doesn't feel right for your customers, say so now.
+        </div>
+      </div>
+
+      <div class="step-card step-card-white">
+        <div class="step-header">
+          <span class="num-badge track2">5</span>
+          <span class="step-title">Let Claude build — runs automatically from here</span>
+        </div>
+        <div class="claude-box">
+          <div class="claude-label">Claude builds in order</div>
+          <ul>
+            <li>5 reason headlines</li>
+            <li>Presell intro — header, thesis, opening block</li>
+            <li>5 reason body sections with image placeholders</li>
+            <li>Coined term bridge + things to check + CTA</li>
+            <li>Offer page — hero, formula, testimonials, bundles, FAQ</li>
+            <li><code>presell-v2.html</code> and <code>offer-v2.html</code></li>
+            <li>Image briefs for the 5 reason images</li>
+            <li>Final QA — links, images, copy checks</li>
+          </ul>
+        </div>
+        <p>Each copy section gets reviewed and fixed before Claude moves on. The full build takes 20–40 minutes. When done, Claude tells you the file paths and confirms all QA checks passed.</p>
+      </div>
+
+      <div class="step-card step-card-green">
+        <div class="step-header">
+          <span class="num-badge track2">5</span>
+          <span class="step-title">Then follow Track A from Step 2</span>
+        </div>
+        <p>Once the build completes, you're back on Track A:</p>
+        <ul>
+          <li>Publish to Shopify (Step 2)</li>
+          <li>Generate ad images (Step 3) — update the ad prompts for any new product/angle</li>
+        </ul>
+        <div style="margin-top:0.75rem;"><span class="tag">✓ New funnel complete</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- Updates -->
+  <div id="updates" class="card">
+    <div class="card-header section-blue">
+      <h2>Making updates to live pages</h2>
+    </div>
+    <div class="card-content">
+      <p style="color:var(--text-muted);margin-bottom:1.25rem;">Editing a live page is just telling Claude what to change and republishing. No manual file handling.</p>
+
+      <h3 style="margin-bottom:0.5rem;">Updating copy on a live page</h3>
+      <div class="prompt-box">
+        <div class="prompt-label">Example</div>
+        <div class="prompt-text">Update the CTA button on my presell page from "See the sock that gets it right" to "See what makes the difference". Then republish.</div>
+      </div>
+      <p>Claude edits the HTML and publishes the update in place — same URL, no duplicates.</p>
+
+      <h3 style="margin-top:1.5rem;margin-bottom:0.5rem;">Adding real testimonials after going live</h3>
+      <div class="prompt-box">
+        <div class="prompt-label">Example</div>
+        <div class="prompt-text">Replace the first testimonial placeholder on the offer page with: "Endlich Socken, die nach einem langen Tag noch sitzen. — Michael K., Wien". Then republish.</div>
+      </div>
+
+      <h3 style="margin-top:1.5rem;margin-bottom:0.5rem;">Generating specific ad images by ID</h3>
+      <div class="code-wrap">
+        <div class="code-block">! python3 funnel/generate_ad_images.py --ids c03,c07</div>
+        <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- Troubleshooting -->
+  <div id="troubleshooting" class="card">
+    <div class="card-header section-yellow">
+      <h2>Troubleshooting</h2>
+    </div>
+    <div class="card-content">
+
+      <div class="step-card step-card-white">
+        <div class="step-header">
+          <span class="num-badge question">?</span>
+          <span class="step-title">Page shows the store header and footer</span>
+        </div>
+        <p>The no-header template wasn't applied. Tell Claude:</p>
+        <div class="prompt-box">
+          <div class="prompt-label">Type into Claude Code</div>
+          <div class="prompt-text">My page at yourstore.com/pages/cotton-socks-guide is showing the store header and footer. Fix it — apply the no-header template.</div>
+        </div>
+      </div>
+
+      <div class="step-card step-card-white">
+        <div class="step-header">
+          <span class="num-badge question">?</span>
+          <span class="step-title">Page returns a 404 error</span>
+        </div>
+        <p>The page was created but not published, or the slug is wrong. Tell Claude the page handle and ask it to verify and republish.</p>
+      </div>
+
+      <div class="step-card step-card-white">
+        <div class="step-header">
+          <span class="num-badge question">?</span>
+          <span class="step-title">Shopify returns a permission error</span>
+        </div>
+        <p>The custom app is missing a scope. Go to Shopify Admin → Settings → Apps → your app → Configuration → Admin API integration. Confirm all three are checked: <code>write_content</code>, <code>write_themes</code>, <code>write_files</code>. Click Save, then <strong>uninstall and reinstall</strong> the app. Scope changes only take effect after reinstall.</p>
+      </div>
+
+      <div class="step-card step-card-white">
+        <div class="step-header">
+          <span class="num-badge question">?</span>
+          <span class="step-title">Image generation fails with "FAL_KEY not set"</span>
+        </div>
+        <p>The key isn't set in this session. Run:</p>
+        <div class="code-wrap">
+          <div class="code-block">! export FAL_KEY=YOUR_KEY_HERE</div>
+          <button class="copy-btn" onclick="copyCode(this)">COPY</button>
+        </div>
+        <p>Then try again.</p>
+      </div>
+
+      <div class="step-card step-card-white">
+        <div class="step-header">
+          <span class="num-badge question">?</span>
+          <span class="step-title">Images look broken on the live page</span>
+        </div>
+        <div class="prompt-box">
+          <div class="prompt-label">Type into Claude Code</div>
+          <div class="prompt-text">The images on my presell page aren't loading. Re-upload the images to CDN and republish.</div>
+        </div>
+      </div>
+
+      <div class="step-card step-card-white">
+        <div class="step-header">
+          <span class="num-badge question">?</span>
+          <span class="step-title">Something else went wrong</span>
+        </div>
+        <p>Describe what you see to Claude in plain language — e.g. <em>"The CTA button doesn't do anything when I click it"</em> or <em>"The offer page looks unstyled — no fonts or colours."</em> Claude will diagnose and fix it.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- Summary -->
+  <div class="card">
+    <div class="card-header">
+      <h4>Quick Reference</h4>
+    </div>
+    <div class="summary-row" style="background:var(--bg-blue);">
+      <span style="font-family:monospace;font-weight:700;font-size:0.8rem;color:var(--text-muted);white-space:nowrap;">TRACK A</span>
+      <p style="color:var(--text-muted);">Using the funnel we built for you</p>
+    </div>
+    <div class="summary-row">
+      <span class="skill tag tag-gray">Step 2</span>
+      <p>Replace 6 testimonial placeholders in <code>offer-v2.html</code> with real customer quotes.</p>
+    </div>
+    <div class="summary-row" style="background:var(--bg-page);">
+      <span class="skill tag">/shopify-publish</span>
+      <p>Upload images to CDN + publish both pages live. Reads Shopify credentials from <code>.env</code> automatically — just provide your product photo and URL slugs.</p>
+    </div>
+    <div class="summary-row">
+      <span class="skill tag tag-gray">Step 4</span>
+      <p>Switch ad prompts to German, then generate from <code>funnel/generate_ad_images.py</code>. <strong>$0.08/image</strong>. Need FAL_KEY.</p>
+    </div>
+    <div class="summary-row" style="background:var(--bg-purple);">
+      <span style="font-family:monospace;font-weight:700;font-size:0.8rem;color:var(--text-muted);white-space:nowrap;">TRACK B</span>
+      <p style="color:var(--text-muted);">Future campaigns — build from scratch</p>
+    </div>
+    <div class="summary-row">
+      <span class="skill tag tag-purple">/dtc-funnel-generate</span>
+      <p>Research, copy, HTML, QA — all automated. ~30 min. Then follow Track A from Step 2.</p>
+    </div>
+    <div class="summary-row" style="background:var(--bg-page);">
+      <span style="color:var(--text-muted);font-size:0.875rem;padding-left:0.5rem;">↳ Always point Meta ads at the presell URL — that's the cold traffic landing page.</span>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function copyCode(btn) {
+    const block = btn.closest('.code-wrap').querySelector('.code-block');
+    navigator.clipboard.writeText(block.textContent.trim()).then(() => {
+      btn.textContent = 'COPIED!';
+      btn.classList.add('copied');
+      setTimeout(() => { btn.textContent = 'COPY'; btn.classList.remove('copied'); }, 2000);
+    });
+  }
+</script>
+
+</body>
+</html>

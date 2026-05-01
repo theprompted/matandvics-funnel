@@ -1,0 +1,77 @@
+[
+  {
+    "id": "r1",
+    "style": "close-up macro photography, natural light, muted tones",
+    "lighting": "soft diffused natural light from side window, no harsh shadows",
+    "scene": "A cotton sock bunched and folded at the arch of a foot inside a dark leather Oxford shoe. The heel of the sock has visibly slid forward off the heel cup. The shoe is partially on but the sock failure is visible through the opening.",
+    "primary_object": {
+      "description": "bunched cotton sock fabric folded under the arch of a foot",
+      "material_detail": "loose-weave natural cotton, slightly stretched and deformed, visible bunching folds",
+      "position": "lower third of frame, sock visible inside shoe opening"
+    },
+    "energy": "still, slightly uncomfortable, mid-day fatigue",
+    "constraints": "no faces above ankle, no product branding, no logos, no bright colors",
+    "negative_prompt": "no product shots, no lifestyle smiling people, no clean socks, no outdoor running, no athletic context",
+    "aspect_ratio": "3:2"
+  },
+  {
+    "id": "r2",
+    "style": "close-up macro, slightly clinical but not sterile, warm background",
+    "lighting": "warm side lighting, slight shadow to emphasize texture and dampness",
+    "scene": "A cotton sock removed from a foot after a full workday — lying flat on a wooden surface or tile floor. The fabric is visibly darkened with moisture at the toe and ball-of-foot areas. The texture looks heavy and compressed.",
+    "primary_object": {
+      "description": "worn cotton sock lying flat, moisture visible in toe and ball-of-foot zones",
+      "material_detail": "slightly discolored dark patches where moisture has absorbed, weave compressed and limp",
+      "position": "centered, filling most of frame, shot from slight overhead angle"
+    },
+    "energy": "end-of-day heaviness, the aftermath of absorption",
+    "constraints": "no faces, no legs above ankle, no branding",
+    "negative_prompt": "no clean bright socks, no outdoor setting, no active movement, no styling",
+    "aspect_ratio": "3:2"
+  },
+  {
+    "id": "r3",
+    "style": "split or annotated macro photography, clean light",
+    "lighting": "even overhead lighting, clinical but accessible",
+    "scene": "A worn cotton sock laid flat on a white or light grey surface. The heel area shows a thinning patch or small hole beginning to form. The ankle cuff and leg area look intact. The contrast between the damaged heel zone and the intact rest of the sock is the focus.",
+    "primary_object": {
+      "description": "cotton sock with visible wear-through thinning at the heel, intact elsewhere",
+      "material_detail": "cotton weave visibly thinned at heel, slight hole or near-transparent patch, normal weave density at ankle",
+      "position": "heel zone occupying left third of frame in focus, rest of sock trailing to right"
+    },
+    "energy": "quiet inevitability — the failure is predictable, not dramatic",
+    "constraints": "no branding, no faces, no product comparison shots",
+    "negative_prompt": "no dramatic tearing, no active wear, no human hands holding, no branding",
+    "aspect_ratio": "3:2"
+  },
+  {
+    "id": "r4",
+    "style": "documentary close-up, natural light, realistic texture",
+    "lighting": "warm ambient light as if from a laundry room or kitchen",
+    "scene": "A cotton sock next to a washing machine drum or laundry pile. The sock has visibly shrunk and deformed — the heel cup appears compressed and the overall shape is shorter and stiffer than a new sock. A care label reading '30°C' is slightly visible.",
+    "primary_object": {
+      "description": "shrunken, deformed cotton sock near washing machine, care label partially visible",
+      "material_detail": "compressed weave, heel cup no longer properly shaped, fabric stiffer and denser than original",
+      "position": "sock in foreground, washing machine drum blurred behind"
+    },
+    "energy": "domestic, matter-of-fact, the familiar inevitability of a sock after too many washes",
+    "constraints": "no branding on sock, no logos except generic '30°C' care label, no faces",
+    "negative_prompt": "no bright colorful socks, no outdoor scenes, no advertising aesthetic",
+    "aspect_ratio": "3:2"
+  },
+  {
+    "id": "r5",
+    "style": "comparison macro, neutral light, slightly clinical",
+    "lighting": "flat overhead light, neutral white or grey background",
+    "scene": "Two cotton socks side by side on a flat surface. Left sock: new, smooth surface, tight weave. Right sock: after 20+ washes, visible pilling on surface, roughened texture, slight fading. The surface texture difference is the story.",
+    "primary_object": {
+      "description": "two cotton socks side by side showing surface degradation over wash cycles",
+      "material_detail": "left sock: smooth tight weave. Right sock: visible surface pilling, loose short fibers, roughened texture, slight color fading",
+      "position": "both socks filling frame equally, left-right comparison"
+    },
+    "energy": "objective, before-and-after without drama — just reality",
+    "constraints": "no branding, no labels, no faces, no product photography aesthetic",
+    "negative_prompt": "no bright colors, no lifestyle, no people, no stylized photography",
+    "aspect_ratio": "3:2"
+  }
+]

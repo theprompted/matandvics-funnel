@@ -1,0 +1,3526 @@
+[
+  {
+    "id": "005",
+    "filename": "SCR-20260313-biiu.png",
+    "format_type": "founder-letter-social-post",
+    "platform_context": {
+      "type": "Instagram/Facebook sponsored post format",
+      "header": {
+        "profile_icon": "circular logo with text RIPLEY RADER",
+        "handle": "shopripleyrader",
+        "label": "Sponsored",
+        "menu_dots": "three dots menu visible"
+      }
+    },
+    "format": {
+      "type": "pure text post - no image, no product",
+      "structure": "letter format with salutation, body, sign-off",
+      "aspect_ratio": "approximately 4:5 vertical"
+    },
+    "typography": {
+      "salutation": {
+        "content": "Dear RIPLEY RADER Women,",
+        "style": "bold, larger than body text",
+        "spacing": "generous space below"
+      },
+      "body": {
+        "font": "clean sans-serif, regular weight",
+        "size": "standard social post text size",
+        "emphasis": "BIGGEST and 50% OFF SITEWIDE in bold",
+        "paragraphs": "6 short paragraphs with single line breaks"
+      },
+      "sign_off": {
+        "content": "Happy shopping y'all,\nRipley Rader",
+        "style": "casual, personal"
+      },
+      "brand_logo": {
+        "content": "RIPLEY RADER\nlos angeles",
+        "position": "bottom center",
+        "style": "elegant serif, centered"
+      }
+    },
+    "letter_content": {
+      "opening_hook": {
+        "text": "I apologize for the shock... this is massive,",
+        "function": "apology framing reframes discount as gift, not desperation"
+      },
+      "offer_details": {
+        "sale_type": "Black Friday",
+        "discount": "up to 50% OFF SITEWIDE",
+        "scope": "wardrobe essentials to statement pieces"
+      },
+      "urgency_elements": {
+        "scarcity": "these savings are too good to last",
+        "action": "Everything is going to fly off the shelves"
+      },
+      "emotional_payoff": {
+        "text": "seeing women stepping into their power and confidence in their new Ripley Rader pieces makes it totally worth it",
+        "function": "connects product to identity transformation"
+      },
+      "personal_touches": [
+        "my beautiful muses - transforms customers into collaborators",
+        "y'all - casual Southern warmth",
+        "founder signing with full name"
+      ]
+    },
+    "background": {
+      "color": "pure white",
+      "texture": "none - clean, editorial anti-design",
+      "purpose": "maximum contrast, no visual distraction"
+    },
+    "color_story": {
+      "primary": "black text on pure white",
+      "accent": "none - monochromatic by design",
+      "contrast": "maximum for readability",
+      "overall": "clean, editorial, sophisticated, anti-design"
+    },
+    "the_vibe": {
+      "energy": "warm urgency, affectionate FOMO",
+      "mood": "your cool friend who owns a boutique texting you about a sale",
+      "aesthetic": "anti-ad - looks like a personal note, not marketing",
+      "scroll_stop_factor": "no image in image-heavy feed is a pattern interrupt",
+      "story": "founder personally reaching out to her community"
+    },
+    "psychological_mechanics": {
+      "apology_reframe": "apologizing for how good the sale is = gift not desperation",
+      "identity_language": "'RIPLEY RADER Women' creates in-group belonging",
+      "transformation_promise": "'stepping into their power and confidence'",
+      "casual_authority": "'y'all' and personal sign-off breaks corporate wall"
+    },
+    "constraints": {
+      "must_keep": [
+        "sponsored post header format",
+        "pure text - no product images",
+        "Dear [Brand] Women salutation",
+        "apology opening hook",
+        "bold emphasis on key offer terms",
+        "casual personal sign-off",
+        "brand logo at bottom",
+        "pure white background"
+      ],
+      "avoid": [
+        "product photography",
+        "lifestyle imagery",
+        "complex layouts",
+        "color blocks or backgrounds",
+        "corporate language",
+        "formal tone"
+      ]
+    },
+    "negative_prompt": [
+      "product images",
+      "lifestyle photos",
+      "colored backgrounds",
+      "graphics",
+      "icons",
+      "corporate tone",
+      "formal language",
+      "busy design",
+      "multiple fonts",
+      "marketing jargon"
+    ]
+  },
+  {
+    "id": "007",
+    "filename": "SCR-20260313-bilv.jpeg",
+    "format_type": "fake-tweet-testimonial",
+    "twitter_interface": {
+      "frame_position": "full-width tweet card on white background",
+      "interface_fidelity": "pixel-perfect Twitter/X mobile UI replication",
+      "chrome_elements": {
+        "three_dot_menu": "top-right corner, standard Twitter overflow icon",
+        "timestamp": "Apr 23, positioned after username"
+      }
+    },
+    "profile_section": {
+      "avatar": {
+        "shape": "circular crop, ~48px diameter at mobile scale",
+        "position": "top-left of tweet card",
+        "image_content": {
+          "subject": "Caucasian woman, mid-20s to early 30s",
+          "pose": "casual glamour shot, hand lifted touching/in hair",
+          "expression": "relaxed, confident, slightly playful",
+          "hair": "long blonde, beachy waves, sun-kissed highlights",
+          "skin": "warm tan, natural glow, minimal visible makeup",
+          "clothing": "white or cream top, off-shoulder suggested",
+          "background": "soft neutral, lifestyle photography aesthetic",
+          "lighting": "natural golden hour warmth"
+        }
+      },
+      "display_name": {
+        "text": "Emily Miller",
+        "typography": "bold black sans-serif, Twitter standard weight",
+        "position": "right of avatar, top line"
+      },
+      "verification": {
+        "badge": "blue checkmark",
+        "position": "immediately after display name, inline"
+      },
+      "username": {
+        "text": "@emilyinLA_",
+        "typography": "gray regular weight, Twitter standard",
+        "position": "after verification badge, same line"
+      }
+    },
+    "tweet_body": {
+      "text_content": {
+        "paragraph_1": "I didn't need to lose 50lbs, just 10... but nobody wanted to help. Enter @startwillow",
+        "paragraph_2": "Their GLP-1 program works fast, is super easy, and doesn't make you feel guilty. 10lbs later, I feel like a new person",
+        "line_break": "visible paragraph break between sections"
+      },
+      "typography": {
+        "font": "Twitter system font (SF Pro on iOS)",
+        "size": "15-16px equivalent, standard tweet body",
+        "color": "black #0F1419",
+        "line_height": "relaxed, ~1.4"
+      },
+      "mentions": {
+        "brand_handle": "@startwillow",
+        "color": "Twitter blue #1D9BF0",
+        "position": "end of first paragraph"
+      },
+      "emojis": {
+        "hug_emoji": {
+          "character": "hugging face emoji",
+          "position": "after @startwillow mention"
+        },
+        "shrug_emoji": {
+          "character": "woman shrugging emoji",
+          "position": "implied in original, may be in second paragraph"
+        },
+        "sparkles_emoji": {
+          "character": "sparkles",
+          "position": "end of tweet, after 'new person'"
+        }
+      }
+    },
+    "embedded_image": {
+      "position": "below tweet text, full-width within card, rounded corners",
+      "aspect_ratio": "approximately 16:9 landscape",
+      "corner_radius": "12-16px, Twitter standard media radius",
+      "scene": {
+        "location": "luxury tropical resort infinity pool",
+        "water": {
+          "color": "teal-turquoise gradient, crystal clear",
+          "surface": "calm with subtle ripples, light refraction visible",
+          "depth_visibility": "can see through to pool floor/edge"
+        },
+        "pool_edge": {
+          "material": "natural stone or concrete, infinity edge visible",
+          "position": "bottom third of embedded image"
+        }
+      },
+      "subject": {
+        "pose": {
+          "position": "floating on back, arms extended outward in surrender/relaxation pose",
+          "body_orientation": "horizontal across frame, head toward left",
+          "arms": "spread wide, palms up, floating on water surface",
+          "legs": "extended, relaxed, partially submerged"
+        },
+        "expression": {
+          "overall": "complete relaxation, bliss, achieved contentment",
+          "eyes": "likely closed or looking up at sky",
+          "mouth": "relaxed, possibly slight smile"
+        },
+        "body": {
+          "physique": "slim, toned, healthy-looking",
+          "skin_tone": "warm tan, glistening wet",
+          "skin_texture": "water droplets visible, natural shine from wetness"
+        },
+        "swimwear": {
+          "type": "bikini",
+          "color": "dark forest green/hunter green",
+          "style": "tie-front or halter top, classic cut",
+          "fit": "properly fitted, flattering"
+        },
+        "hair": {
+          "state": "wet, slicked back",
+          "color": "dark (contrast to profile pic blonde - could be different person or hair wet)",
+          "position": "flowing in water behind head"
+        },
+        "makeup": {
+          "lipstick": "visible red/coral lip color",
+          "waterproof": "makeup intact despite being in water"
+        },
+        "visible_tattoo": {
+          "location": "inner forearm/wrist area",
+          "style": "small, dark, possibly script or minimal design",
+          "visibility": "subtle but noticeable"
+        }
+      },
+      "background": {
+        "lawn": {
+          "color": "vibrant green, well-manicured",
+          "position": "beyond pool edge, middle ground"
+        },
+        "landscaping": {
+          "elements": [
+            "tropical plants",
+            "palm trees suggested",
+            "possibly terracotta pots"
+          ],
+          "style": "resort tropical garden"
+        },
+        "sky": {
+          "visible": "minimal, cropped tight on scene"
+        }
+      },
+      "lighting": {
+        "source": "natural daylight, likely midday tropical sun",
+        "quality": "bright, warm, vacation lighting",
+        "water_interaction": "caustics and light patterns on pool floor",
+        "skin_interaction": "wet skin highlights, specular reflections"
+      },
+      "atmosphere": {
+        "vibe": "aspirational vacation freedom",
+        "implied_narrative": "this is what losing 10lbs feels like - floating through life",
+        "emotional_payload": "you could be here, this relaxed, in this body"
+      }
+    },
+    "engagement_bar": {
+      "position": "bottom of tweet card, full width",
+      "layout": "horizontal row, evenly spaced",
+      "metrics": {
+        "replies": {
+          "icon": "speech bubble outline",
+          "count": "11.3k",
+          "position": "leftmost"
+        },
+        "retweets": {
+          "icon": "retweet arrows",
+          "count": "16.8k",
+          "position": "second from left"
+        },
+        "likes": {
+          "icon": "heart, filled pink/red",
+          "count": "52.1k",
+          "position": "third from left"
+        },
+        "views": {
+          "icon": "bar chart",
+          "count": "93.1k",
+          "position": "fourth from left"
+        },
+        "share": {
+          "icon": "share/upload arrow",
+          "position": "rightmost"
+        }
+      },
+      "typography": {
+        "color": "gray #536471",
+        "size": "13px equivalent"
+      }
+    },
+    "color_palette": {
+      "interface": {
+        "background": "#FFFFFF white",
+        "text_primary": "#0F1419 near-black",
+        "text_secondary": "#536471 gray",
+        "accent": "#1D9BF0 Twitter blue"
+      },
+      "embedded_image": {
+        "dominant": "teal-turquoise pool water",
+        "secondary": "vibrant green lawn and foliage",
+        "accent": "dark green bikini, red lipstick",
+        "skin_tones": "warm tan"
+      }
+    },
+    "psychological_mechanics": {
+      "social_proof_stack": {
+        "verification_badge": "implies credibility, influencer status",
+        "high_engagement": "52.1K likes signals mass resonance",
+        "relatable_handle": "@emilyinLA_ suggests real person, not brand"
+      },
+      "positioning_strategy": {
+        "underserved_market": "'Just 10' targets people ignored by dramatic transformation marketing",
+        "pain_acknowledgment": "'Nobody wanted to help' validates frustration",
+        "guilt_removal": "'Doesn't make you feel guilty' addresses emotional barrier"
+      },
+      "visual_reward": {
+        "pool_float_pose": "visual metaphor for freedom, weightlessness, achieved goals",
+        "aspirational_body": "subtle - not dramatic, matches '10lbs' claim"
+      }
+    },
+    "constraints": {
+      "must_keep": [
+        "Twitter UI pixel-perfect accuracy",
+        "Blue verification checkmark",
+        "Specific engagement numbers (52.1K, etc.)",
+        "Pool floating pose with arms spread",
+        "Dark green bikini color",
+        "Red lipstick visible",
+        "Teal/turquoise water color",
+        "Tropical resort setting",
+        "Relaxed surrender body language"
+      ],
+      "avoid": [
+        "Generic stock photo pool images",
+        "Overly posed or unnatural floating position",
+        "Wrong Twitter UI elements or outdated design",
+        "Mismatch between casual tweet tone and overly produced image",
+        "Cluttered or busy background",
+        "Unrealistic body proportions"
+      ]
+    },
+    "negative_prompt": [
+      "wrong twitter interface",
+      "old twitter design",
+      "incorrect engagement icons",
+      "stiff posed model",
+      "indoor pool",
+      "chlorine-blue water",
+      "athletic swimsuit",
+      "bright neon bikini",
+      "crowded pool scene",
+      "other people visible",
+      "waterpark",
+      "artificial lighting",
+      "studio backdrop"
+    ]
+  },
+  {
+    "id": "010",
+    "filename": "SCR-20260313-bjfz.png",
+    "format_type": "anti-design-text-only",
+    "composition": {
+      "layout": "pure typography on solid background, no images",
+      "aspect_ratio": "1:1 square",
+      "visual_hierarchy": "text content is the entire visual, strikethrough creates secondary reading",
+      "intentional_aesthetic": "raw, undesigned, note-to-self feeling"
+    },
+    "background": {
+      "type": "solid flat color, no gradient",
+      "color": {
+        "description": "electric royal blue",
+        "hex_estimate": "#2B44FF or similar vibrant blue",
+        "saturation": "high, vivid",
+        "brightness": "medium-bright, not pastel, not navy"
+      },
+      "texture": "completely flat, no grain, no effects",
+      "fill": "edge-to-edge, no margins visible"
+    },
+    "typography_system": {
+      "font_family": "bold sans-serif, likely Helvetica Bold or similar geometric sans",
+      "font_weight": "bold to extra bold",
+      "color": "white #FFFFFF",
+      "case": "sentence case, natural capitalization",
+      "size": "large, fills most of frame width per line",
+      "line_height": "tight, text blocks stack closely",
+      "alignment": "left-aligned"
+    },
+    "text_content": {
+      "full_text": "I wanted to understand my triggers but I don't like talking about my feelings and Bloom allows me to do therapy on my terms.",
+      "visual_structure": {
+        "layout": "broken into word groups that stack vertically",
+        "line_breaks": "natural reading rhythm, not grammatically broken"
+      },
+      "strikethrough_element": {
+        "affected_text": "but I don't like talking about my feelings",
+        "style": {
+          "line_type": "single horizontal strikethrough",
+          "line_color": "white (same as text)",
+          "line_weight": "medium, proportional to text weight",
+          "line_position": "through middle of text, standard strikethrough"
+        },
+        "visual_effect": "text still readable but visually 'crossed out'",
+        "psychological_purpose": "shows the barrier being eliminated, internal conflict revealed"
+      },
+      "text_segments": [
+        {
+          "text": "I wanted to understand",
+          "treatment": "normal",
+          "position": "top"
+        },
+        {
+          "text": "my triggers",
+          "treatment": "normal",
+          "position": "second line"
+        },
+        {
+          "text": "but I don't",
+          "treatment": "strikethrough begins",
+          "position": "third line"
+        },
+        {
+          "text": "like talking about my",
+          "treatment": "strikethrough continues",
+          "position": "fourth line"
+        },
+        {
+          "text": "feelings",
+          "treatment": "strikethrough ends",
+          "position": "fifth line"
+        },
+        {
+          "text": "and Bloom",
+          "treatment": "normal",
+          "position": "sixth line"
+        },
+        {
+          "text": "allows me to do",
+          "treatment": "normal",
+          "position": "seventh line"
+        },
+        {
+          "text": "therapy on my terms.",
+          "treatment": "normal, includes period",
+          "position": "eighth line"
+        }
+      ]
+    },
+    "brand_logo": {
+      "position": {
+        "location": "bottom center",
+        "margin_from_bottom": "approximately 10-15% of frame height"
+      },
+      "text": "bloom",
+      "typography": {
+        "font": "lowercase sans-serif, rounded friendly",
+        "weight": "medium to bold",
+        "color": "white",
+        "size": "smaller than body text, logo scale"
+      },
+      "special_character": {
+        "element": "smiley face integrated into double-o",
+        "description": "the two 'o's in bloom form eyes of a simple smiley face, or one 'o' has smile curve",
+        "style": "minimal, clever wordmark integration"
+      }
+    },
+    "color_palette": {
+      "primary": {
+        "blue": "electric/royal blue",
+        "psychological_effect": "unexpected for therapy, modern, approachable, not clinical"
+      },
+      "secondary": {
+        "white": "pure white for all text",
+        "contrast": "high contrast for readability"
+      },
+      "absent_colors": "no other colors, pure two-tone"
+    },
+    "design_philosophy": {
+      "anti-design_elements": [
+        "No images whatsoever",
+        "No gradients or effects",
+        "No icons or illustrations",
+        "No decorative elements",
+        "Single solid background color",
+        "Pure typography focus"
+      ],
+      "intentional_rawness": {
+        "feeling": "feels like a note someone wrote to themselves",
+        "authenticity": "unpolished = honest = trustworthy",
+        "contrast_to_category": "most therapy ads are soft, calming, nature-filled - this is bold and direct"
+      }
+    },
+    "psychological_mechanics": {
+      "strikethrough_brilliance": {
+        "mechanic": "shows the thought we have but try to suppress",
+        "dual_reading": "first you read it, then you see it's crossed out - both truths exist",
+        "resolution": "Bloom makes that barrier irrelevant"
+      },
+      "internal_monologue_capture": {
+        "mechanic": "written exactly how the target audience thinks",
+        "language": "'understand my triggers' = therapy speak, qualifies audience"
+      },
+      "autonomy_promise": {
+        "mechanic": "'on my terms' addresses control/autonomy concerns",
+        "target": "people who resist therapy because it feels forced or vulnerable"
+      },
+      "pattern_interrupt": {
+        "mechanic": "solid bright blue is jarring in any feed",
+        "effect": "scroll-stop through pure color contrast"
+      }
+    },
+    "constraints": {
+      "must_keep": [
+        "Electric/royal blue background - exact shade matters",
+        "Pure white text only",
+        "Strikethrough on specific phrase about not liking feelings",
+        "No images - text only",
+        "Bloom logo with smiley integration at bottom",
+        "Left-aligned text",
+        "Bold sans-serif typography",
+        "Sentence case (not all caps)",
+        "Period at end of statement"
+      ],
+      "avoid": [
+        "Any images or illustrations",
+        "Gradients or color variations",
+        "Additional colors beyond blue and white",
+        "Centered text alignment",
+        "Decorative fonts or serifs",
+        "Soft or muted blue tones",
+        "Multiple strikethrough elements",
+        "Subheadlines or additional text"
+      ]
+    },
+    "negative_prompt": [
+      "images",
+      "photos",
+      "illustrations",
+      "icons",
+      "gradients",
+      "multiple colors",
+      "centered text",
+      "decorative elements",
+      "soft pastel blue",
+      "navy blue",
+      "nature imagery",
+      "calming aesthetic",
+      "meditation imagery",
+      "person meditating",
+      "therapy couch",
+      "brain illustration"
+    ]
+  },
+  {
+    "id": "011",
+    "filename": "SCR-20260313-bjqv.jpeg",
+    "format_type": "split-comparison-us-vs-them-011",
+    "composition": {
+      "layout": "vertical split, 50/50 left-right",
+      "aspect_ratio": "approximately 1:1 square or 4:5",
+      "divider": "implied by color change, no visible line",
+      "reading_direction": "designed to compare simultaneously, eye ping-pongs between sides"
+    },
+    "left_side_us": {
+      "brand": "MUD\\WTR",
+      "background": {
+        "color": "warm beige/tan, natural earth tone",
+        "hex_estimate": "#E8DFD0 or similar",
+        "feeling": "wellness retreat, calm, grounded"
+      },
+      "brand_label": {
+        "text": "MUD\\WTR",
+        "position": "top of left panel, centered",
+        "typography": {
+          "font": "minimal sans-serif, all caps with backslash",
+          "weight": "regular to medium",
+          "color": "dark brown/black",
+          "size": "brand logo size",
+          "special_character": "backslash between MUD and WTR"
+        }
+      },
+      "icon_metaphor": {
+        "position": "below brand name, centered",
+        "description": "simple circle with single centered dot",
+        "symbolism": "focus, calm center, zen, clarity",
+        "style": "minimal line drawing, single stroke weight",
+        "color": "dark/black outline",
+        "size": "approximately 60-80px diameter"
+      },
+      "stats_block": {
+        "position": "below icon, centered",
+        "primary_stat": {
+          "text": "55mg Caffeine +",
+          "typography": "medium weight, black text"
+        },
+        "secondary_stat": {
+          "text": ">2000mg Adaptogens",
+          "typography": "medium weight, black text"
+        },
+        "equals_sign": {
+          "text": "=",
+          "position": "between stats and outcome, centered"
+        },
+        "outcome": {
+          "text": "Energy, focus, & immune support without the jitters and crash",
+          "typography": "regular weight, black text, smaller than stats",
+          "line_breaks": "wraps to multiple lines"
+        }
+      },
+      "product_photography": {
+        "position": "lower half of left panel",
+        "container": {
+          "type": "cylindrical metal tin",
+          "color": "olive/army green matte finish",
+          "material": "metal, matte coating",
+          "label": {
+            "brand": "MUD\\WTR :matcha",
+            "product_name": "Matcha Chai",
+            "ingredients_list": "Lion's Mane, Cordyceps, Chaga visible",
+            "typography": "minimal, light colored text on green"
+          }
+        },
+        "lid": {
+          "position": "being lifted by hand, revealing contents",
+          "color": "same olive green as container",
+          "material": "matching metal"
+        },
+        "contents_visible": {
+          "description": "golden-yellow matcha powder visible inside open tin",
+          "color": "vibrant golden/turmeric yellow-green",
+          "texture": "fine powder, slight mounding"
+        },
+        "hand": {
+          "position": "holding/lifting lid from above",
+          "skin_tone": "fair/light",
+          "nails": "natural, clean, unpolished",
+          "grip": "fingertips lifting lid edge"
+        }
+      }
+    },
+    "right_side_them": {
+      "label": "coffee",
+      "background": {
+        "color": "cool light gray, slightly desaturated",
+        "hex_estimate": "#E5E5E5 or similar",
+        "feeling": "sterile, corporate, uninviting"
+      },
+      "category_label": {
+        "text": "coffee",
+        "position": "top of right panel, centered",
+        "typography": {
+          "font": "serif, lowercase, italic",
+          "weight": "regular",
+          "color": "dark gray/black",
+          "size": "matching left side brand name"
+        }
+      },
+      "icon_metaphor": {
+        "position": "below category label, centered",
+        "description": "chaotic scribbled ball of tangled lines",
+        "symbolism": "anxiety, scattered thoughts, chaos, jitters",
+        "style": "hand-drawn scribble appearance, continuous tangled line",
+        "color": "dark/black",
+        "size": "roughly matching left side icon diameter"
+      },
+      "stats_block": {
+        "position": "below icon, centered",
+        "primary_stat": {
+          "text": ">100mg Caffeine +",
+          "typography": "medium weight, black text"
+        },
+        "secondary_stat": {
+          "text": "Nothing Else",
+          "typography": "medium weight, black text"
+        },
+        "equals_sign": {
+          "text": "=",
+          "position": "between stats and outcome, centered"
+        },
+        "outcome": {
+          "text": "Anxiety, jitters, poor sleep, gut issues, dehydration, and dependency",
+          "typography": "regular weight, black text, smaller than stats",
+          "tone": "list of negatives, problem stacking"
+        }
+      },
+      "product_photography": {
+        "position": "lower half of right panel",
+        "container": {
+          "type": "travel tumbler/to-go mug",
+          "color": "matte black",
+          "material": "likely plastic or coated metal",
+          "text_graphic": {
+            "text": "PEACE\nLOVE\nCOFFEE",
+            "typography": "white bold sans-serif, stacked",
+            "position": "front of tumbler, centered"
+          },
+          "lid": {
+            "type": "sippy lid",
+            "color": "black matching body"
+          }
+        },
+        "irony_element": {
+          "description": "'PEACE LOVE COFFEE' text on tumbler containing anxiety-causing beverage",
+          "psychological_purpose": "highlights cognitive dissonance - your coffee mug lies to you"
+        },
+        "hand": {
+          "position": "holding tumbler from side/bottom",
+          "skin_tone": "similar to left side",
+          "grip": "natural hold, fingers wrapped around"
+        }
+      }
+    },
+    "visual_contrasts": {
+      "color_temperature": {
+        "left": "warm beige",
+        "right": "cool gray"
+      },
+      "icon_energy": {
+        "left": "centered dot = calm focus",
+        "right": "scribble = chaotic anxiety"
+      },
+      "product_packaging": {
+        "left": "natural tin with visible whole ingredients",
+        "right": "black plastic with ironic messaging"
+      },
+      "openness": {
+        "left": "lid being opened, revealing contents, transparency",
+        "right": "closed container, contents hidden"
+      }
+    },
+    "color_palette": {
+      "left_side": {
+        "background": "warm beige/tan",
+        "product": "olive green tin, golden powder",
+        "text": "dark brown/black",
+        "mood": "natural, grounded, wellness"
+      },
+      "right_side": {
+        "background": "cool gray",
+        "product": "black tumbler, white text",
+        "text": "dark gray/black",
+        "mood": "corporate, harsh, sterile"
+      },
+      "overall_contrast": "warm vs cool reinforces good vs bad positioning"
+    },
+    "psychological_mechanics": {
+      "icon_metaphor_power": {
+        "mechanic": "the centered dot vs chaotic scribble does more work than any copy",
+        "instant_understanding": "you feel the difference before reading"
+      },
+      "specificity_of_claims": {
+        "mechanic": "exact mg dosages feel scientific, not marketing",
+        "contrast": "'Nothing Else' makes coffee sound empty"
+      },
+      "irony_exploitation": {
+        "mechanic": "'PEACE LOVE COFFEE' on the anxiety side creates cognitive dissonance",
+        "effect": "makes you question your own coffee mug's promises"
+      },
+      "visual_revelation": {
+        "mechanic": "opened tin showing actual ingredients vs closed black container",
+        "effect": "transparency vs mystery, nothing to hide vs hiding emptiness"
+      }
+    },
+    "constraints": {
+      "must_keep": [
+        "Exact 50/50 split layout",
+        "Warm beige vs cool gray backgrounds",
+        "Centered dot icon vs scribbled chaos icon",
+        "Specific mg measurements (55mg, >100mg, >2000mg)",
+        "Olive green tin with lid being lifted",
+        "Golden matcha powder visible",
+        "Black 'PEACE LOVE COFFEE' tumbler",
+        "Hands holding both products",
+        "MUD\\WTR branding with backslash"
+      ],
+      "avoid": [
+        "Equal visual treatment of both sides (they should feel different)",
+        "Different icon styles (must be comparable complexity)",
+        "Changing the specific statistics",
+        "Showing coffee beans or coffee liquid",
+        "Adding additional products or variants",
+        "Cluttered backgrounds",
+        "Different hand positions that don't match"
+      ]
+    },
+    "negative_prompt": [
+      "coffee beans",
+      "coffee liquid",
+      "latte art",
+      "cafe setting",
+      "equal warm tones both sides",
+      "busy backgrounds",
+      "additional products",
+      "faces visible",
+      "full body shots",
+      "outdoor setting",
+      "kitchen setting",
+      "coffee shop",
+      "different icon styles",
+      "asymmetric layout",
+      "gradient backgrounds"
+    ]
+  },
+  {
+    "id": "022",
+    "filename": "SCR-20260313-bksr.jpeg",
+    "format_type": "handwritten-whiteboard-price-comparison",
+    "brand": "NOOD",
+    "product_category": "IPL hair removal device",
+    "composition": {
+      "layout": "lifestyle flat lay with whiteboard as hero",
+      "aspect_ratio": "1:1 square",
+      "visual_flow": "whiteboard list (top to bottom, building pain) -> orange NOOD payoff -> product confirmation",
+      "focal_point": "whiteboard occupies approximately 70% of frame"
+    },
+    "environment": {
+      "setting": "modern bathroom/spa space",
+      "surface": {
+        "type": "white marble or quartz countertop",
+        "texture": "subtle gray veining, polished surface",
+        "lighting_interaction": "soft reflection of items above"
+      },
+      "wall": {
+        "type": "gray subway tile",
+        "color": "medium gray (#8C9298)",
+        "grout": "visible white/light gray grout lines",
+        "coverage": "visible in upper-left corner"
+      },
+      "plant": {
+        "type": "fiddle leaf fig or similar large-leaf tropical",
+        "position": "right side of frame, partially cropped",
+        "leaves": "deep green, glossy, large oval leaves",
+        "pot": "not visible, plant emerging from frame edge"
+      },
+      "mirror_reflection": {
+        "visible": "partial mirror reflection in upper-left",
+        "content": "reflects more subway tile"
+      }
+    },
+    "whiteboard": {
+      "physical_properties": {
+        "frame": "thin silver/aluminum frame",
+        "surface": "standard glossy whiteboard",
+        "size": "medium desktop whiteboard, approximately 60% frame height",
+        "position": "center-left, propped up at slight angle"
+      },
+      "handwriting": {
+        "style": "casual marker handwriting, slightly imperfect",
+        "authenticity": "looks genuinely hand-drawn, not font",
+        "marker_strokes": "visible marker texture and slight bleed"
+      },
+      "content_layout": {
+        "structure": "price comparison list, method names left, prices right",
+        "vertical_spacing": "even spacing between lines"
+      },
+      "competitor_prices": [
+        {
+          "method": "Shaving",
+          "price": "$480",
+          "ink_color": "black",
+          "position": "first line, approximately 20% from top of whiteboard"
+        },
+        {
+          "method": "Waxing",
+          "price": "$3,120",
+          "ink_color": "black",
+          "position": "second line, approximately 35% from top"
+        },
+        {
+          "method": "Lasering",
+          "price": "$2,500",
+          "ink_color": "black",
+          "position": "third line, approximately 50% from top"
+        }
+      ],
+      "brand_price": {
+        "method": "NOOD",
+        "price": "$209",
+        "ink_color": "bright orange (#FF6B35)",
+        "position": "fourth line, approximately 70% from top",
+        "emphasis": "both brand name and price in orange for maximum pop"
+      }
+    },
+    "product": {
+      "device": {
+        "type": "IPL hair removal device",
+        "shape": "ergonomic egg/pear shape",
+        "color": "white body with rose gold accent ring",
+        "flash_window": "circular black/dark lens area",
+        "button": "small circular button with rose gold ring",
+        "branding": "nood logo in lowercase on front"
+      },
+      "packaging": {
+        "type": "matte black retail box",
+        "position": "beneath/behind device",
+        "size": "approximately 80% of device height"
+      },
+      "placement": {
+        "position": "bottom-right of frame",
+        "relationship_to_whiteboard": "in front of whiteboard, overlapping slightly",
+        "size": "device approximately 15% of frame width"
+      }
+    },
+    "lighting": {
+      "type": "natural daylight from window",
+      "direction": "from left/above",
+      "shadows": {
+        "whiteboard": "casts soft shadow on counter to right",
+        "product": "subtle shadow beneath device and box"
+      },
+      "quality": "bright, clean, spa-like ambiance"
+    },
+    "color_palette": {
+      "dominant": "white and gray neutrals",
+      "accent_primary": "bright orange handwriting (#FF6B35)",
+      "accent_secondary": "rose gold device details, green plant",
+      "marble_undertones": "subtle gray veining",
+      "overall_feel": "clean, bright, bathroom-authentic"
+    },
+    "psychology": {
+      "format_effect": "whiteboard feels like 'I did the math' TikTok moment",
+      "price_specificity": "$480 for shaving feels researched, not made up",
+      "list_flow": "builds pain with high prices, releases with low NOOD price",
+      "orange_pop": "brand color demands attention in neutral setting"
+    },
+    "constraints": {
+      "must_keep": [
+        "handwritten marker style (not font)",
+        "orange ink for NOOD only",
+        "specific price points ($480, $3,120, $2,500, $209)",
+        "bathroom/spa setting with subway tile",
+        "product visible with packaging",
+        "whiteboard propped naturally",
+        "green plant for life/freshness"
+      ],
+      "avoid": [
+        "perfectly straight handwriting",
+        "digital/printed text on whiteboard",
+        "multiple products",
+        "hands in frame",
+        "complex props",
+        "outdoor setting"
+      ]
+    },
+    "negative_prompt": [
+      "digital text",
+      "perfect handwriting",
+      "font on whiteboard",
+      "hands",
+      "multiple products",
+      "outdoor setting",
+      "dark environment",
+      "complex props",
+      "brand logos other than NOOD"
+    ]
+  },
+  {
+    "id": "025",
+    "filename": "SCR-20260313-blgb.jpeg",
+    "format_type": "us-vs-them-comparison-025",
+    "brand": "REJUVIA",
+    "product_category": "sleep supplement / oral spray",
+    "layout": {
+      "structure": "vertical split-screen with dramatic gradient transition",
+      "aspect_ratio": "1:1 square",
+      "divider": {
+        "type": "soft vertical gradient blend",
+        "position": "center of frame, roughly 50% mark",
+        "transition_width": "approximately 5% of frame width, blurred edge"
+      }
+    },
+    "left_panel": {
+      "label": {
+        "text": "Sleep Gummies",
+        "typography": {
+          "font_weight": "bold",
+          "color": "white",
+          "size": "large headline",
+          "position": "top center of left half, approximately 8% from top"
+        }
+      },
+      "background": {
+        "gradient": "deep maroon-red to darker burgundy, vertical gradient",
+        "emotional_coding": "tired, sluggish, warning/negative",
+        "hex_range": "#8B0000 to #4A0000"
+      },
+      "product_visual": {
+        "type": "generic purple gummy bear",
+        "position": "center of left panel, approximately 20% from top",
+        "size": "approximately 15% of frame width",
+        "rendering": "3D rendered, cheap-looking, semi-translucent purple",
+        "texture": "smooth gelatin surface with visible gummy texture",
+        "orientation": "slightly angled, showing both front and side",
+        "lighting": "flat, unflattering overhead light"
+      },
+      "rating_badge": {
+        "stars": "3.5 out of 5, gold stars with gray unfilled portion",
+        "review_count": "(127)",
+        "position": "directly below gummy bear, approximately 35% from top",
+        "typography_color": "gray text on dark background"
+      },
+      "comparison_bullets": {
+        "position": "left-aligned, stacked vertically from 45% to 95% of frame height",
+        "icon_style": "shrugging emoji face with purple shirt, repeated for each point",
+        "icon_size": "approximately 5% of frame width each",
+        "text_color": "white",
+        "font_weight": "bold sans-serif",
+        "points": [
+          {
+            "text": "Takes 45 minutes",
+            "icon_position": "left of text"
+          },
+          {
+            "text": "1 or 2 ingredients",
+            "icon_position": "left of text"
+          },
+          {
+            "text": "Melatonin hangovers",
+            "icon_position": "left of text"
+          },
+          {
+            "text": "Bulky bottles",
+            "icon_position": "left of text"
+          },
+          {
+            "text": "Low absorbtion (stomach)",
+            "subtext_styling": "(stomach) in smaller font, same line",
+            "icon_position": "left of text"
+          }
+        ]
+      }
+    },
+    "right_panel": {
+      "label": {
+        "text": "REJUVIA",
+        "subtext": "Oral Sleep Spray",
+        "typography": {
+          "brand_font_weight": "bold, slightly stylized serif",
+          "brand_color": "white",
+          "brand_size": "large headline matching left panel",
+          "subtext_weight": "regular",
+          "subtext_size": "medium, approximately 60% of headline size",
+          "position": "top center of right half, approximately 5% from top"
+        }
+      },
+      "background": {
+        "gradient": "deep purple transitioning to vibrant teal/cyan at bottom",
+        "emotional_coding": "energized, premium, alive, hopeful",
+        "hex_range": "#6B2C91 at top to #00CED1 at bottom"
+      },
+      "product_visual": {
+        "type": "premium oral spray bottle",
+        "position": "center-right of right panel, approximately 15% from top",
+        "size": "approximately 18% of frame width, taller than left product",
+        "bottle": {
+          "material": "dark amber/purple glass",
+          "shape": "cylindrical spray bottle with pump mechanism",
+          "cap": "metallic gold spray cap",
+          "label": {
+            "text_elements": [
+              "CBD ORAL",
+              "SLEEP SPRAY",
+              "120mg"
+            ],
+            "label_color": "purple with gold and white text",
+            "logo": "golden butterfly icon in upper right of label"
+          }
+        },
+        "lighting": "soft gradient lighting, premium product photography style",
+        "shadow": "soft diffused shadow suggesting quality"
+      },
+      "rating_badge": {
+        "background": "white rounded rectangle pill shape",
+        "stars": "5 out of 5, solid gold stars",
+        "review_count": "1,011 Reviews",
+        "position": "below product, approximately 38% from top",
+        "typography_color": "black text on white badge"
+      },
+      "comparison_bullets": {
+        "position": "left-aligned within right panel, stacked vertically from 45% to 95% of frame height",
+        "icon_style": "green checkmark in white square with rounded corners",
+        "icon_size": "approximately 5% of frame width each",
+        "text_color": "white",
+        "font_weight": "bold sans-serif",
+        "points": [
+          {
+            "text": "Works in 10 minutes",
+            "icon_position": "left of text"
+          },
+          {
+            "text": "12 ingredient blend",
+            "icon_position": "left of text"
+          },
+          {
+            "text": "Easy-adjust dosage",
+            "icon_position": "left of text"
+          },
+          {
+            "text": "240 doses per stick!",
+            "icon_position": "left of text"
+          },
+          {
+            "text": "Max absorbtion (oral spray)",
+            "subtext_styling": "(oral spray) in smaller font, same line",
+            "icon_position": "left of text"
+          }
+        ]
+      }
+    },
+    "typography_system": {
+      "headline_font": "bold sans-serif, likely Helvetica or similar",
+      "bullet_font": "bold sans-serif, consistent weight throughout",
+      "hierarchy": "brand names largest, product descriptors medium, bullets readable but smaller"
+    },
+    "visual_psychology": {
+      "color_emotional_contrast": "death vs life, exhausted vs energized",
+      "product_quality_gap": "cheap candy vs premium pharmaceutical",
+      "social_proof_gap": "127 mediocre reviews vs 1,011 perfect reviews",
+      "specificity_asymmetry": "vague negatives vs precise positives (45 vs 10 minutes, 1-2 vs 12 ingredients)"
+    },
+    "constraints": {
+      "must_keep": [
+        "dramatic gradient split down the center",
+        "maroon-red vs purple-teal color contrast",
+        "shrugging emoji icons on left side",
+        "green checkmark icons on right side",
+        "cheap gummy bear rendering on left",
+        "premium glass bottle with gold cap on right",
+        "star rating disparity (3.5 vs 5 stars)",
+        "review count disparity (127 vs 1,011)",
+        "butterfly logo on bottle",
+        "vertical bullet point layout on both sides"
+      ],
+      "avoid": [
+        "equal visual treatment of both products",
+        "neutral or balanced color scheme",
+        "similar product quality rendering",
+        "matching review counts",
+        "horizontal layout",
+        "cluttered or busy design",
+        "hard dividing line instead of gradient blend"
+      ]
+    },
+    "negative_prompt": [
+      "horizontal split",
+      "equal product sizing",
+      "neutral gray background",
+      "matching star ratings",
+      "similar product photography quality",
+      "happy emoji on left side",
+      "red X icons instead of shrugging emoji",
+      "plain text without icons",
+      "product-only comparison without ratings",
+      "single gradient color throughout"
+    ]
+  },
+  {
+    "id": "045",
+    "filename": "SCR-20260313-bnre.jpeg",
+    "format_type": "problem-agitate-lifestyle",
+    "brand": "Moon Juice",
+    "product_category": "magnesium supplement / digestive aid",
+    "composition": {
+      "aspect_ratio": "9:16 vertical (story format)",
+      "visual_hierarchy": "shock headline top, subhead below, lifestyle hero image center, product bottom right",
+      "negative_space": "warm beige/taupe fills upper portion, product photography occupies lower 60%"
+    },
+    "background": {
+      "color": "warm beige/taupe gradient, lighter at top (#D4C8BA to #C9BDAF approximate)",
+      "texture": "soft, slightly warm, editorial photography backdrop feel",
+      "lighting": "natural daylight, soft and diffused"
+    },
+    "headline": {
+      "text": "CAN'T POOP?",
+      "positioning": {
+        "location": "top center, starting approximately 8% from top edge",
+        "alignment": "center-aligned"
+      },
+      "typography": {
+        "font": "bold sans-serif, condensed, all caps",
+        "color": "pure black (#000000)",
+        "size": "massive, approximately 12% of frame height",
+        "weight": "extra bold/black weight",
+        "letter_spacing": "tight"
+      },
+      "emotional_function": "shock value, taboo-breaking directness, scroll-stop"
+    },
+    "subheadline": {
+      "text": "Magnesi-Om supports regular bowel movements and soothes bloating.",
+      "positioning": {
+        "location": "directly below headline, approximately 22% from top",
+        "alignment": "center-aligned"
+      },
+      "typography": {
+        "font": "regular weight sans-serif, sentence case",
+        "color": "black",
+        "size": "medium, approximately 3% of frame height",
+        "product_name_styling": "Magnesi-Om in bold or medium weight, product name differentiated"
+      },
+      "function": "educates after shock, provides solution"
+    },
+    "lifestyle_hero": {
+      "item": "elegant cocktail glass with pink beverage",
+      "positioning": {
+        "location": "left-center of frame, occupying approximately 40% of frame",
+        "vertical_position": "starting at approximately 35% from top, extending to 85%"
+      },
+      "glass": {
+        "shape": "hourglass/curvy wine glass or balloon glass",
+        "material": "clear glass, visible thickness at base",
+        "stem": "short, elegant",
+        "base": "wide and stable"
+      },
+      "beverage": {
+        "color": "vibrant magenta/hot pink (#E91E8C approximate)",
+        "appearance": "translucent, backlit glow effect",
+        "ice": "large ice spheres or cubes visible, creating visual interest",
+        "fill_level": "generous, near top of glass bowl"
+      },
+      "garnish": {
+        "item": "fresh raspberry",
+        "position": "perched on rim of glass",
+        "skewer": "thin metallic cocktail pick, silver/steel color",
+        "lighting": "backlit, creating translucent berry effect"
+      },
+      "surface": {
+        "type": "light stone or marble countertop",
+        "color": "light beige/cream",
+        "texture": "subtle natural stone variation"
+      },
+      "lighting": {
+        "source": "natural light from behind/side",
+        "effect": "beverage glows, creates appetizing translucency",
+        "shadows": "soft, natural shadow beneath glass"
+      },
+      "emotional_function": "transforms supplement into aspirational ritual, cocktail aesthetic"
+    },
+    "product_jar": {
+      "positioning": {
+        "location": "bottom right, approximately 55% from left, 70% from top",
+        "relationship": "adjacent to glass, slightly overlapping composition"
+      },
+      "jar_details": {
+        "material": "amber glass",
+        "shape": "wide-mouth jar with rounded shoulders",
+        "finish": "glossy amber, semi-transparent"
+      },
+      "lid": {
+        "color": "dark brown/amber matching jar",
+        "style": "clean, minimalist"
+      },
+      "label": {
+        "brand_logo": {
+          "text": "Moon Juice",
+          "position": "upper portion of label",
+          "style": "circular badge with script font, pink/salmon color"
+        },
+        "product_name": {
+          "text": "Magnesi-Om",
+          "style": "serif font, pink/coral color"
+        },
+        "variant": {
+          "text": "BERRY CALM + L-THEANINE",
+          "style": "all caps, smaller, pink"
+        },
+        "benefits": {
+          "text": "Relaxation, Sleep",
+          "style": "smaller, pink"
+        },
+        "size": "4.2 oz (120g) visible at bottom"
+      },
+      "lighting": "natural light, subtle reflections on glass"
+    },
+    "color_story": {
+      "primary": "warm beige/taupe background",
+      "accent": "vibrant magenta/hot pink beverage",
+      "product": "amber glass with pink label elements",
+      "text": "black for maximum contrast",
+      "overall": "premium wellness editorial, lifestyle magazine aesthetic"
+    },
+    "the_vibe": {
+      "energy": "irreverent luxury wellness",
+      "tone": "we talk about taboo things but make them beautiful",
+      "aesthetic": "high-end lifestyle magazine meets wellness brand",
+      "scroll_stop_element": "CAN'T POOP? in massive text - impossible to scroll past"
+    },
+    "photography_style": {
+      "type": "editorial product photography",
+      "lighting": "natural daylight, backlit elements",
+      "depth_of_field": "sharp on glass and product, soft background",
+      "color_grading": "warm, slightly desaturated background, saturated pink beverage"
+    },
+    "constraints": {
+      "must_keep": [
+        "shocking headline in massive black type",
+        "cocktail glass presentation (not medical)",
+        "vibrant pink beverage color",
+        "raspberry garnish detail",
+        "amber glass jar aesthetic",
+        "warm beige background tone",
+        "editorial photography quality"
+      ],
+      "avoid": [
+        "medical/clinical imagery",
+        "blue or green beverage colors",
+        "pill or capsule imagery",
+        "harsh lighting",
+        "product dominating over lifestyle imagery"
+      ]
+    },
+    "negative_prompt": [
+      "clinical imagery",
+      "toilet or bathroom imagery",
+      "blue beverage",
+      "green beverage",
+      "pills visible",
+      "harsh studio lighting",
+      "white background",
+      "medical aesthetic",
+      "supplement pills"
+    ]
+  },
+  {
+    "id": "052",
+    "filename": "SCR-20260313-bohi.jpeg",
+    "format_type": "shock-reframe",
+    "brand": "Happy Mammoth / Complete Gut Repair",
+    "schema": {
+      "layout": {
+        "structure": "provocative body-as-canvas with product reveal",
+        "dimensions": "vertical 4:5 or 9:16 (social feed format)",
+        "zones": {
+          "ad_copy_header": "top 12% (platform UI)",
+          "body_canvas": "12-85% (main image)",
+          "cta_footer": "bottom 15% (platform UI)"
+        }
+      },
+      "platform_context": {
+        "header": {
+          "ad_copy": "5 reasons why men are raving about Complete Gut Repair \ud83d\udc47 And why YOU will, too!",
+          "see_more_link": "...See more"
+        },
+        "footer": {
+          "url": "eu.happymammoth.com",
+          "headline": "5 reasons Why Men Love Complete Gut Repair",
+          "cta_button": "Shop now"
+        }
+      },
+      "hero_image": {
+        "subject": {
+          "type": "bare male back, photographed from behind",
+          "body_type": "average adult male, not fitness model",
+          "age_range": "30-50 years old"
+        },
+        "body_details": {
+          "skin": {
+            "color": "Caucasian, natural flesh tones",
+            "texture": "realistic skin texture, visible pores",
+            "imperfections": "natural moles, skin variation, body hair stubble",
+            "condition": "slightly flushed/pink from shower or natural"
+          },
+          "back_anatomy": {
+            "shoulder_blades": "visible but not athletic",
+            "spine": "natural curvature visible",
+            "width": "average male proportions"
+          },
+          "hair": {
+            "head": "short cropped/buzz cut, gray-brown",
+            "body": "visible stubble/hair on shoulders and upper back"
+          }
+        },
+        "framing": {
+          "crop": "shoulders to mid-back, head partially visible from behind",
+          "positioning": "centered in frame, filling most of image area"
+        }
+      },
+      "body_text_overlay": {
+        "text_line_1": "IT'S NOT FAT",
+        "text_line_2": "IT'S BACKED-UP",
+        "text_line_3": "POOP",
+        "typography": {
+          "style": "handwritten marker/paint style",
+          "case": "mixed case with intentional irregularity",
+          "color": "rust brown/maroon (#8B4513)",
+          "weight": "bold strokes, hand-drawn feel"
+        },
+        "placement": {
+          "surface": "directly ON the bare back skin",
+          "positioning": "centered on lower back/mid-back area",
+          "integration": "appears written on skin, follows body contours",
+          "effect": "like writing on yourself in mirror"
+        },
+        "text_behavior": {
+          "imperfection": "slight irregularity in letterforms",
+          "overlap": "text wraps around spine curve naturally"
+        }
+      },
+      "product_display": {
+        "container": {
+          "type": "cylindrical supplement tub",
+          "color": "white body with gray/silver lid",
+          "label": {
+            "brand_logo": "circular emblem/seal",
+            "product_name": "Complete Gut Repair",
+            "color_scheme": "white, gray, subtle earth tones"
+          }
+        },
+        "positioning": {
+          "location": "upper-right area, held at shoulder height",
+          "hand_visibility": "man's right hand holding tub, fingers visible",
+          "relationship": "product presented as solution to the problem written on body"
+        },
+        "gesture": "presenting/offering the product"
+      },
+      "disclaimer_text": {
+        "content": "Results may vary based on individual.",
+        "typography": "small sans-serif, muted gray",
+        "positioning": "below body text, subtle"
+      },
+      "color_story": {
+        "skin_tones": "natural flesh pink/tan",
+        "background": "neutral gray/white (edge of frame)",
+        "text_color": "rust brown/maroon (#8B4513)",
+        "product": "clinical white",
+        "contrast": "organic handwritten text against clinical product"
+      },
+      "psychological_mechanics": {
+        "shame_removal": "reframes fat as backed-up waste, not character flaw",
+        "taboo_engagement": "uses 'poop' not 'waste' to force engagement",
+        "body_intimacy": "text on skin = message to yourself in mirror",
+        "solution_presentation": "product held as answer after provocation"
+      },
+      "constraints": {
+        "must_keep": [
+          "handwritten text ON the body (not overlay)",
+          "bare back as canvas (shirtless male from behind)",
+          "crude but accurate language (POOP not waste)",
+          "rust/brown handwritten color",
+          "product held and presented",
+          "average body type, not fitness model",
+          "real skin texture with imperfections"
+        ],
+        "avoid": [
+          "athletic/fitness model physique",
+          "clean typed text overlays",
+          "front-facing exposure",
+          "clinical sterile aesthetic",
+          "euphemistic language",
+          "airbrushed perfect skin"
+        ]
+      },
+      "negative_prompt": [
+        "fitness model",
+        "athletic physique",
+        "typed font overlay",
+        "front facing",
+        "clean text",
+        "sterile clinical",
+        "airbrushed skin",
+        "perfect body",
+        "euphemistic language",
+        "white text overlay",
+        "sans-serif font"
+      ]
+    }
+  },
+  {
+    "id": "053",
+    "filename": "SCR-20260313-bomg.png",
+    "format_type": "ingredient-comparison",
+    "brand": "Turk Ultra Synergy",
+    "schema": {
+      "layout": {
+        "structure": "versus comparison with data table",
+        "dimensions": "vertical 4:5 or square",
+        "background": {
+          "color": "pure black (#000000)",
+          "texture": "flat matte black",
+          "gradient": "subtle vignette darker at edges optional"
+        },
+        "zones": {
+          "headline": "top 15%",
+          "product_comparison": "15-50%",
+          "data_table": "50-85%",
+          "credibility_badges": "bottom 15%"
+        }
+      },
+      "headline": {
+        "text": "CLINICAL DOSES vs. FAIRY DUST",
+        "typography": {
+          "font_family": "bold sans-serif, impact style",
+          "weight": "bold/heavy",
+          "case": "all caps"
+        },
+        "color_treatment": {
+          "CLINICAL": "white (#FFFFFF)",
+          "DOSES": "gold/amber (#D4AF37)",
+          "vs.": "white (#FFFFFF)",
+          "FAIRY_DUST": "white (#FFFFFF)"
+        },
+        "positioning": "centered, top 5-12%"
+      },
+      "product_comparison_visual": {
+        "layout": "side-by-side bottles, left vs right",
+        "our_product": {
+          "positioning": "left side, 25-45% horizontal",
+          "bottle": {
+            "shape": "premium supplement bottle",
+            "color": "black/dark with gold accents",
+            "label": {
+              "brand": "TURK ULTRA SYNERGY",
+              "subtitle": "ANABOLIC SUPPORT FORMULA",
+              "typography": "gold text on black",
+              "style": "premium, masculine, serious"
+            }
+          },
+          "size_in_frame": "approximately 30% of frame height"
+        },
+        "competitor_product": {
+          "positioning": "right side, 55-75% horizontal",
+          "bottle": {
+            "shape": "generic basic supplement bottle",
+            "color": "white/plain",
+            "label": {
+              "text": "Turkesterone",
+              "typography": "simple black text on white",
+              "style": "commodity, basic, forgettable"
+            }
+          },
+          "size_in_frame": "same height as our product for fair comparison"
+        },
+        "visual_hierarchy": "premium black vs generic white = obvious quality gap"
+      },
+      "comparison_table": {
+        "structure": "four rows, ingredient | our dose | their dose",
+        "background": "transparent/black",
+        "row_styling": {
+          "separator": "subtle horizontal lines between rows",
+          "hover_effect": "none (static image)"
+        },
+        "typography": {
+          "ingredient_names": "white sans-serif, medium weight, left-aligned",
+          "our_values": "gold/amber, bold, right side of left column",
+          "their_values": "gray/muted, regular weight, left side of right column"
+        },
+        "data_rows": [
+          {
+            "ingredient": "Turkesterone",
+            "us": "500mg",
+            "them": "250mg",
+            "us_color": "gold (#D4AF37)",
+            "them_color": "gray (#888888)"
+          },
+          {
+            "ingredient": "Tongkat Ali",
+            "us": "400mg",
+            "them": "0mg",
+            "us_color": "gold (#D4AF37)",
+            "them_color": "gray (#888888)"
+          },
+          {
+            "ingredient": "Apigenin",
+            "us": "50mg",
+            "them": "0mg",
+            "us_color": "gold (#D4AF37)",
+            "them_color": "gray (#888888)"
+          },
+          {
+            "ingredient": "BioPerine\u00ae",
+            "us": "5mg",
+            "them": "0mg",
+            "us_color": "gold (#D4AF37)",
+            "them_color": "gray (#888888)"
+          }
+        ],
+        "positioning": "centered, spanning 80% frame width"
+      },
+      "credibility_badges": {
+        "our_side": {
+          "badges": [
+            "Clinical Dosing",
+            "Third-Party Tested"
+          ],
+          "style": "checkmark + text, gold accent",
+          "positioning": "below our product column"
+        },
+        "their_side": {
+          "badges": [
+            "Third-Party Tested",
+            "Synergistic Formula"
+          ],
+          "style": "checkmark + text, gray/muted",
+          "positioning": "below their product column"
+        }
+      },
+      "color_story": {
+        "background": "pure black (#000000)",
+        "our_brand": "gold/amber (#D4AF37)",
+        "text_primary": "white (#FFFFFF)",
+        "competitor": "gray/muted (#888888)",
+        "our_product": "black with gold accents",
+        "their_product": "plain white",
+        "overall_vibe": "dark masculine premium vs generic commodity"
+      },
+      "visual_hierarchy": {
+        "eye_path": "headline (FAIRY DUST hooks) \u2192 product comparison (visual verdict) \u2192 data table (proof) \u2192 badges (validation)",
+        "dominance": "gold values POP against black, gray values recede"
+      },
+      "constraints": {
+        "must_keep": [
+          "FAIRY DUST devastating competitor framing",
+          "specific mg values for each ingredient",
+          "4-row comparison showing zeros for competitor",
+          "gold vs gray color coding for us vs them",
+          "premium black bottle vs generic white bottle",
+          "black background for masculine premium feel",
+          "BioPerine registered trademark"
+        ],
+        "avoid": [
+          "naming specific competitor brands",
+          "cluttered multiple bottles",
+          "light or colorful backgrounds",
+          "equal treatment of both products",
+          "feminine design elements",
+          "rounded soft shapes"
+        ]
+      },
+      "negative_prompt": [
+        "light background",
+        "colorful design",
+        "feminine aesthetic",
+        "rounded shapes",
+        "competitor brand name",
+        "equal positioning",
+        "soft colors",
+        "multiple product variations",
+        "cluttered layout",
+        "serif fonts"
+      ]
+    }
+  },
+  {
+    "id": "062",
+    "filename": "SCR-20260313-bqhj.jpeg",
+    "format_type": "native-advertorial-062",
+    "layout": {
+      "structure": "news article with hero image overlay",
+      "background_split": "right side medical environment photo, left side white content card",
+      "aspect_ratio": "portrait, approximately 4:5"
+    },
+    "masthead": {
+      "logo": {
+        "icon": "white starburst/flower shape with 6-8 petals",
+        "text": "AdMedika News",
+        "color": "white on translucent background",
+        "positioning": "upper-left, approximately 3% from top and left edges"
+      },
+      "category_badge": {
+        "text": "Health",
+        "color": "white text on bright green rounded pill",
+        "positioning": "left side, above headline card",
+        "shape": "rounded rectangle/pill"
+      }
+    },
+    "background_hero": {
+      "subject": {
+        "description": "Caucasian male doctor, approximately 55-60 years old",
+        "positioning": "right side of frame, face visible from nose to top of head",
+        "frame_coverage": "occupies roughly 40% of right side"
+      },
+      "face": {
+        "skin": "fair, natural texture with age-appropriate lines",
+        "expression": "warm professional smile, approachable",
+        "eyes": {
+          "color": "light, possibly blue or green",
+          "direction": "looking slightly off-camera left",
+          "energy": "confident, trustworthy"
+        },
+        "wrinkles": "natural crow's feet, forehead lines suggesting experience"
+      },
+      "hair": {
+        "color": "salt and pepper gray",
+        "style": "neatly combed back, professional",
+        "texture": "full, healthy looking"
+      },
+      "attire": {
+        "garment": "white doctor's coat",
+        "visible_elements": "collar and shoulder area",
+        "stethoscope": "visible around neck, reinforcing medical authority"
+      },
+      "environment": {
+        "setting": "blurred medical office or hospital",
+        "visible_elements": "out of focus medical equipment, name badge",
+        "lighting": "soft, diffused clinical lighting"
+      }
+    },
+    "circular_inset_images": {
+      "positioning": "overlapping, upper-left quadrant of frame",
+      "image_1": {
+        "subject": "same doctor in surgical attire",
+        "attire": "teal surgical scrubs, surgical cap, face mask pulled down",
+        "action": "holding blue orthotic insole, displaying it to camera",
+        "expression": "engaged, demonstrating product",
+        "background": "operating room or surgical suite, blurred",
+        "border": "thin white circular border",
+        "size": "larger of the two circles, approximately 25% of frame width"
+      },
+      "image_2": {
+        "subject": "technical diagram of insole",
+        "content": "blue insole with labeled pressure points and technical annotations",
+        "style": "product diagram with callout lines",
+        "positioning": "overlapping bottom of image_1",
+        "border": "thin white circular border",
+        "size": "smaller circle, approximately 20% of frame width"
+      }
+    },
+    "product": {
+      "item": "ergonomic insole",
+      "color": "blue/purple gradient",
+      "features_visible": [
+        "rounded massage nodes across surface",
+        "multiple pressure point zones",
+        "anatomical arch support shape"
+      ],
+      "appearance": "medical-grade, technical looking"
+    },
+    "content_card": {
+      "background": "white with slight transparency",
+      "positioning": "lower-left, extending to bottom of frame",
+      "shape": "rounded rectangle",
+      "width": "approximately 85% of frame width"
+    },
+    "typography_layer": {
+      "headline": {
+        "text": "The Surgeon's Invention Helping Doctors Stand 12+ Hours for Long Demanding Surgeries.",
+        "style": "black serif font",
+        "weight_variation": "'Helping Doctors Stand 12+ Hours' in bold weight",
+        "positioning": "inside white content card",
+        "size": "large, approximately 20% of frame height"
+      },
+      "pull_quote": {
+        "text": "\"What started as a fix for himself has quietly grown into a trusted secret\u2014now making its way into the routines of doctors, nurses, and anyone who spends long hours on their feet. Word is spreading fast, and what was once personal relief is becoming a professional go-to.\"",
+        "style": "gray text, regular weight",
+        "size": "small, approximately 8% of frame height"
+      },
+      "cta": {
+        "text": "Learn More",
+        "style": "white text on black rounded pill button",
+        "icon": "curved arrow before text",
+        "positioning": "bottom-left of content card"
+      },
+      "signature": {
+        "text": "Dr. Colliers",
+        "style": "cursive signature font",
+        "color": "dark gray/black",
+        "positioning": "bottom-right"
+      },
+      "domain": {
+        "text": "drcolliersinsoles.com",
+        "positioning": "below signature",
+        "style": "clean sans-serif"
+      }
+    },
+    "color_story": {
+      "dominant": "clean whites and soft grays creating clinical trust",
+      "accent_1": "bright green category pill for health association",
+      "accent_2": "blue/purple insole product creating medical tech feel",
+      "background": "neutral medical environment tones",
+      "overall": "medical credibility meets news article authenticity"
+    },
+    "the_vibe": {
+      "energy": "credible, authoritative, insider discovery",
+      "mood": "serious journalism uncovering a professional secret",
+      "aesthetic": "medical news publication layout",
+      "authenticity": "article format creates native advertising feel",
+      "story": "surgeon solves his own problem, word spreads organically"
+    },
+    "constraints": {
+      "must_keep": [
+        "News publication masthead design",
+        "Circular inset images overlapping",
+        "Surgeon in both professional and surgical contexts",
+        "White content card with article layout",
+        "Green 'Health' category badge",
+        "Signature and domain establishing authority"
+      ],
+      "avoid": [
+        "Direct product advertisement look",
+        "Studio product photography style",
+        "Multiple products shown",
+        "Aggressive promotional language",
+        "Non-medical settings"
+      ]
+    },
+    "negative_prompt": [
+      "advertisement layout",
+      "studio white background",
+      "product on white",
+      "non-medical setting",
+      "young doctor",
+      "aggressive sales copy",
+      "multiple products",
+      "non-circular image frames",
+      "without news publication masthead"
+    ]
+  },
+  {
+    "id": "063",
+    "filename": "SCR-20260313-bqjq.jpeg",
+    "format_type": "native-advertorial-063",
+    "layout": {
+      "structure": "news article with intimate product-in-use hero",
+      "background": "full-bleed product photography with overlay content",
+      "aspect_ratio": "portrait, approximately 4:5"
+    },
+    "masthead": {
+      "logo": {
+        "icon": "white starburst/flower shape",
+        "text": "AdMedika News",
+        "color": "white",
+        "positioning": "upper-right corner, approximately 3% from edges"
+      },
+      "category_badge": {
+        "text": "HEALTH",
+        "style": "black rectangle with white all-caps text",
+        "positioning": "lower-left of frame, above headline"
+      },
+      "date_stamp": {
+        "text": "August 24, 2025",
+        "icon": "small calendar icon",
+        "positioning": "to right of category badge",
+        "color": "white"
+      }
+    },
+    "hero_image": {
+      "composition": "intimate POV shot of feet soles facing camera",
+      "framing": "close-up, feet fill approximately 70% of frame",
+      "angle": "straight-on view of soles, as if subject is lying on back with feet raised"
+    },
+    "feet_details": {
+      "positioning": "center-right of frame, slightly overlapping",
+      "left_foot": {
+        "location": "left side of pair, slightly lower",
+        "patch_application": "white rectangular patch on ball/arch area",
+        "visibility": "full sole visible"
+      },
+      "right_foot": {
+        "location": "right side of pair, slightly higher",
+        "patch_application": "white rectangular patch on ball/arch area",
+        "visibility": "full sole visible"
+      },
+      "skin": {
+        "tone": "medium-fair Caucasian",
+        "texture": "realistic skin texture, visible wrinkles on soles",
+        "condition": "healthy, well-maintained feet",
+        "lighting_interaction": "soft illumination, natural skin appearance"
+      },
+      "toes": {
+        "visibility": "clearly visible, natural positioning",
+        "details": "natural toe shapes, no nail polish"
+      }
+    },
+    "product": {
+      "item": "detox foot patches",
+      "appearance": {
+        "shape": "rectangular with slightly rounded corners",
+        "color": "white/cream",
+        "texture": "visible woven/mesh texture on surface",
+        "size": "covers approximately 30% of sole area each"
+      },
+      "application": {
+        "location": "arch to ball of foot on each foot",
+        "adhesion": "flat against skin, conforming to foot contours"
+      }
+    },
+    "circular_authority_inset": {
+      "positioning": "upper-left quadrant, approximately 15% from top",
+      "size": "approximately 20% of frame width",
+      "border": "thin white circular border",
+      "subject": {
+        "description": "older Asian male doctor",
+        "age": "approximately 60-65",
+        "ethnicity": "East Asian, likely Japanese",
+        "attire": "white doctor's coat",
+        "accessories": "stethoscope around neck, glasses",
+        "expression": "engaged, speaking or explaining",
+        "gesture": "hand gesture suggesting explanation",
+        "hair": "gray, neatly styled"
+      },
+      "purpose": "establishes Japanese medical authority"
+    },
+    "background": {
+      "type": "blurred natural/organic setting",
+      "color": "soft green and brown tones",
+      "blur_level": "significant bokeh, abstract shapes",
+      "mood": "natural, wellness-oriented"
+    },
+    "typography_layer": {
+      "headline": {
+        "line_1": {
+          "text": "DISCOVERED IN JAPAN:",
+          "color": "bright green",
+          "style": "all-caps condensed sans-serif"
+        },
+        "line_2": {
+          "text": "GENTLE FOOT PATCHES THAT TARGET HEAVY METALS TO FEEL REFRESHED DAILY",
+          "color": "white",
+          "style": "all-caps condensed sans-serif"
+        },
+        "positioning": "lower third of frame",
+        "size": "large, occupies approximately 20% of frame height"
+      },
+      "swipe_cta": {
+        "text": "Swipe to read full",
+        "icon": "arrow pointing right inside pill shape",
+        "style": "white pill/capsule button",
+        "positioning": "bottom-left corner"
+      },
+      "domain": {
+        "text": "Metalology.com",
+        "color": "white",
+        "positioning": "bottom-right corner",
+        "style": "clean sans-serif"
+      }
+    },
+    "color_story": {
+      "dominant": "warm flesh tones of feet",
+      "accent_1": "bright green on 'DISCOVERED IN JAPAN:' for origin emphasis",
+      "accent_2": "white patches creating stark contrast against skin",
+      "background": "soft natural greens suggesting wellness/nature",
+      "overall": "intimate wellness moment with natural palette"
+    },
+    "the_vibe": {
+      "energy": "calm, restorative, discovery-oriented",
+      "mood": "wellness journalism uncovering Eastern wisdom",
+      "aesthetic": "intimate product demonstration meets news article",
+      "authenticity": "unusual POV creates curiosity and authenticity",
+      "story": "ancient Japanese wellness secret now accessible"
+    },
+    "constraints": {
+      "must_keep": [
+        "POV intimate angle of feet soles",
+        "White patches clearly visible on both feet",
+        "Asian doctor in circular authority inset",
+        "News publication masthead",
+        "Green highlight on Japan origin callout",
+        "Realistic skin texture on feet"
+      ],
+      "avoid": [
+        "Top-down product photography",
+        "Western doctor figure",
+        "Studio white background",
+        "Multiple product variants",
+        "Cartoon or illustration style"
+      ]
+    },
+    "negative_prompt": [
+      "studio photography",
+      "white background",
+      "top-down angle",
+      "western doctor",
+      "cartoon feet",
+      "illustration",
+      "multiple products",
+      "dirty feet",
+      "unprofessional appearance",
+      "no patches on feet"
+    ]
+  },
+  {
+    "id": "068",
+    "filename": "SCR-20260313-bqut.jpeg",
+    "format_type": "myth-buster-proof",
+    "scene_composition": {
+      "layout": "present-moment hero with historical proof element",
+      "primary_subject_position": "right 60% of frame, standing",
+      "proof_element_position": "left 25% of frame, framed B&W photo",
+      "text_overlay": "left side, overlapping both elements"
+    },
+    "subject": {
+      "type": "male",
+      "age_range": "late 60s to early 70s",
+      "ethnicity": "Caucasian",
+      "physique": {
+        "description": "remarkably fit for age, visible muscle definition",
+        "chest": "developed pectorals with natural age texture",
+        "shoulders": "broad, muscular deltoids visible",
+        "arms": "defined biceps, one holding dumbbell",
+        "abdomen": "visible abs, not bodybuilder extreme but clearly fit",
+        "skin_texture": "realistic older skin with natural spots, not plastic"
+      },
+      "face": {
+        "angle": "three-quarter view, slight smile",
+        "hair": {
+          "head": "silver-grey, full but receding naturally",
+          "facial": "grey-white mustache, full and well-groomed"
+        },
+        "expression": {
+          "eyes": {
+            "look": "confident, knowing, slightly defiant",
+            "direction": "toward camera with slight upturn"
+          },
+          "mouth": {
+            "position": "closed slight smile under mustache",
+            "energy": "satisfied, self-assured"
+          }
+        },
+        "skin": {
+          "texture": "natural age spots, visible pores, sun-touched",
+          "tone": "tanned, healthy glow"
+        }
+      },
+      "pose": {
+        "body_orientation": "torso facing slightly right of camera",
+        "right_arm": "holding dark dumbbell at side, bicep engaged",
+        "left_arm": "relaxed at side",
+        "stance": "confident, grounded, relaxed power"
+      },
+      "clothing": {
+        "shorts": {
+          "type": "black athletic shorts",
+          "fit": "standard workout shorts"
+        },
+        "shirtless": true
+      }
+    },
+    "historical_proof_element": {
+      "type": "framed black and white photograph",
+      "position": "left side of frame, hanging on wall behind subject",
+      "content": {
+        "description": "same man in younger years (40s-50s), shirtless, flexing",
+        "visual_connection": "clearly same person - proves lifetime of fitness",
+        "frame": "dark wooden frame with visible glass reflection",
+        "style": "professional bodybuilding or fitness photo"
+      },
+      "purpose": "visual proof this is a lifelong lifestyle, not recent transformation"
+    },
+    "headline_system": {
+      "challenger_prefix": {
+        "text": "still think",
+        "typography": "white italic script, small",
+        "position": "top-left"
+      },
+      "main_question": {
+        "text": "Age Has to Slow You Down?",
+        "typography": "large white bold serif with subtle shadow",
+        "position": "left side, spanning top third"
+      },
+      "layout": "stacked, prefix above main question"
+    },
+    "authority_claim": {
+      "text": "Clinically shown to boost vitality, support blood flow, and fuel lean muscle growth in men over 55+.",
+      "position": "lower-left, above CTA",
+      "typography": "small white sans-serif, regular weight"
+    },
+    "cta": {
+      "text": "Learn More",
+      "style": "white text with blue rounded pill border",
+      "position": "bottom-left corner",
+      "arrow": "curved arrow pointing right toward product"
+    },
+    "product": {
+      "position": "lower-right corner",
+      "product_jar": {
+        "type": "black cylindrical supplement jar",
+        "label": {
+          "brand": "XARA SHILAJIT in gold",
+          "product_name": "PURE SHILAJIT GUMMIES",
+          "sub_label": "HIMALAYAN SHILAJIT",
+          "details": "100% PURE SHILAJIT, MANUKA HONEY INFUSED, 30 GUMMIES"
+        }
+      },
+      "gummies": {
+        "appearance": "dark burgundy/red gummies scattered artfully",
+        "position": "in front of and beside jar",
+        "count": "4-5 visible gummies",
+        "texture": "gummy candy texture with subtle sheen"
+      }
+    },
+    "environment": {
+      "setting": "home gym or fitness space",
+      "elements": [
+        "rope visible in upper-right corner",
+        "window or light source behind subject",
+        "wall with framed photo"
+      ],
+      "lighting": {
+        "type": "natural with possible studio fill",
+        "direction": "from behind/right, creating rim light on shoulder",
+        "quality": "dramatic but not harsh"
+      }
+    },
+    "photography": {
+      "style": "fitness editorial meets lifestyle",
+      "angle": "slightly below eye level, heroic framing",
+      "depth_of_field": "subject and B&W photo in focus, edges slightly soft"
+    },
+    "color_story": {
+      "primary": "warm skin tones, gym browns and tans",
+      "accent": "gold from product label, burgundy gummies",
+      "contrast": "white text against darker background, B&W photo against color present"
+    },
+    "constraints": {
+      "must_keep": [
+        "fit older man physique - impressive but believable",
+        "black and white framed photo showing younger version",
+        "grey/white mustache as recognizable feature",
+        "dumbbell in hand showing active lifestyle",
+        "question format headline challenging belief",
+        "product jar in lower-right with gummies",
+        "natural older skin texture with age spots"
+      ],
+      "avoid": [
+        "bodybuilder competition physique - too extreme",
+        "overly posed or unnatural stance",
+        "hidden or obscured B&W historical photo",
+        "young or middle-aged model",
+        "smooth airbrushed skin removing character",
+        "competing background elements"
+      ]
+    },
+    "negative_prompt": [
+      "young man",
+      "smooth skin",
+      "bodybuilder extreme",
+      "studio backdrop",
+      "posed professional model",
+      "missing mustache",
+      "missing B&W photo",
+      "cartoon",
+      "illustration",
+      "overly muscular"
+    ]
+  },
+  {
+    "id": "071",
+    "filename": "SCR-20260313-brbu.jpeg",
+    "format_type": "testimonial-discovery",
+    "scene_composition": {
+      "layout": "intimate portrait with text overlay at bottom",
+      "subject_position": "center-right, occupying 60% of frame",
+      "text_zone": "bottom third, left-aligned",
+      "product_zone": "bottom-right corner, floating overlay"
+    },
+    "subject": {
+      "type": "male",
+      "age_range": "late 50s to early 60s (stated as 60)",
+      "ethnicity": "Caucasian",
+      "physique": {
+        "description": "healthy, naturally fit without being extreme",
+        "chest": "visible, healthy but not muscular",
+        "overall": "distinguished gentleman who takes care of himself"
+      },
+      "face": {
+        "angle": "three-quarter view, direct camera gaze",
+        "hair": {
+          "head": "silver-grey with darker highlights, natural waves, slightly messy/artistic",
+          "facial": "grey beard stubble, 2-3 day growth, well-groomed"
+        },
+        "glasses": {
+          "type": "large round prescription glasses",
+          "frame": "thin dark/tortoise frame",
+          "style": "intellectual, artistic vibe"
+        },
+        "expression": {
+          "eyes": {
+            "look": "confident, knowing, warm behind glasses",
+            "energy": "quiet self-assurance, earned wisdom",
+            "direction": "direct camera gaze"
+          },
+          "mouth": {
+            "position": "closed, subtle half-smile",
+            "energy": "calm confidence, not trying too hard"
+          },
+          "overall": "the distinguished man who knows something you don't"
+        },
+        "skin": {
+          "texture": "natural mature skin, visible pores, character lines",
+          "tone": "fair with light tan",
+          "lighting_interaction": "warm light creating soft shadows on face"
+        }
+      },
+      "pose": {
+        "body_orientation": "turned slightly, chest visible",
+        "arms": "one arm raised near head/face, relaxed pose",
+        "stance": "intimate, casual, at home"
+      },
+      "clothing": {
+        "shirtless": true,
+        "styling": "intentionally casual, not posed"
+      }
+    },
+    "testimonial_content": {
+      "headline": {
+        "text": "What I Discovered at 60 Made Me Feel 40 Again.",
+        "typography": "large white bold sans-serif",
+        "position": "bottom-left, over darkened overlay"
+      },
+      "authority_claim": {
+        "text": "Clinically shown to boost vitality, support blood flow, and fuel lean muscle growth in men over 55+.",
+        "typography": "small white sans-serif, regular weight",
+        "position": "below headline"
+      }
+    },
+    "cta": {
+      "text": "Learn More",
+      "style": "rounded pill button, yellow/gold outline with dark interior",
+      "position": "bottom-left, below claims",
+      "arrow": "small curved arrow pointing right"
+    },
+    "product": {
+      "position": "bottom-right corner, floating over image",
+      "product_jar": {
+        "type": "black cylindrical supplement jar",
+        "label": {
+          "brand": "XARA SHILAJIT in gold",
+          "product_name": "PURE SHILAJIT GUMMIES",
+          "sub_label": "HIMALAYAN SHILAJIT",
+          "details": "100% PURE SHILAJIT, 30 GUMMIES"
+        }
+      },
+      "gummies": {
+        "appearance": "dark burgundy/red gummies scattered artfully",
+        "position": "around and in front of jar",
+        "count": "5-6 visible gummies"
+      }
+    },
+    "environment": {
+      "setting": "sophisticated home interior",
+      "elements": {
+        "background": "warm neutral wall",
+        "art": "red abstract sculptural piece visible behind subject",
+        "atmosphere": "cultured, artistic home"
+      },
+      "lighting": {
+        "type": "warm natural or ambient light",
+        "direction": "from left side",
+        "quality": "soft, flattering, lifestyle magazine feel"
+      }
+    },
+    "text_overlay": {
+      "gradient": "dark gradient overlay on bottom 40% of image",
+      "purpose": "ensures white text readability"
+    },
+    "photography": {
+      "style": "lifestyle editorial portrait",
+      "angle": "eye level, intimate distance",
+      "depth_of_field": "shallow, face in focus, background soft",
+      "color_grade": "warm, sophisticated, high-end lifestyle magazine"
+    },
+    "color_story": {
+      "primary": "warm neutrals - beige, tan, soft grey, rich skin tones",
+      "accent": "gold from product and CTA, deep red from sculpture and gummies",
+      "contrast": "white text against darkened lower portion"
+    },
+    "constraints": {
+      "must_keep": [
+        "large round glasses as signature feature",
+        "grey hair and beard stubble combination",
+        "confident direct camera gaze",
+        "sophisticated home interior not gym",
+        "red sculptural element in background",
+        "dark gradient overlay for text readability",
+        "warm intimate lighting"
+      ],
+      "avoid": [
+        "gym or fitness setting",
+        "extreme physique",
+        "young or middle-aged model",
+        "missing glasses",
+        "harsh or clinical lighting",
+        "plain or sterile background"
+      ]
+    },
+    "negative_prompt": [
+      "young man",
+      "gym setting",
+      "bodybuilder",
+      "missing glasses",
+      "clean shaven",
+      "studio backdrop",
+      "harsh lighting",
+      "plastic skin",
+      "professional model pose"
+    ]
+  },
+  {
+    "id": "076",
+    "filename": "SCR-20260313-bsht.jpeg",
+    "format_type": "pattern-interrupt-paradox",
+    "visual_schema": {
+      "canvas": {
+        "aspect_ratio": "4:5",
+        "background": {
+          "primary_color": "#B8D9D4",
+          "character": "soft mint green, calming, dreamy",
+          "texture": "smooth gradient, slightly lighter toward center",
+          "lighting": "soft diffused, no harsh shadows"
+        }
+      },
+      "cognitive_hook_zone": {
+        "headline": {
+          "position": "top 12% of frame, centered",
+          "text": "what if coffee made you sleepy?",
+          "typography": {
+            "case": "all lowercase",
+            "font": "clean sans-serif",
+            "weight": "medium-bold",
+            "color": "#2A3A3A dark teal/charcoal",
+            "size": "approximately 6% of frame height",
+            "character": "conversational, casual question"
+          }
+        },
+        "claim_stack": {
+          "position": "below headline, 14-20% from top",
+          "structure": {
+            "intro": "we formulated the",
+            "primary_claim": "world's first sleep supporting coffee",
+            "comparison": "twice as powerful as melatonin",
+            "safety_claim": "with zero crash"
+          },
+          "typography": {
+            "base": {
+              "font": "sans-serif",
+              "weight": "regular",
+              "color": "#2A3A3A"
+            },
+            "emphasis": {
+              "worlds_first": "bold",
+              "twice": "bold italic with underline",
+              "zero_crash": "underlined"
+            }
+          }
+        }
+      },
+      "floating_sheep_system": {
+        "character_design": {
+          "style": "3D cartoon/Pixar-style",
+          "material": "soft woolly texture, fluffy white fleece",
+          "body": "round, plump, cute proportions",
+          "face": {
+            "expression": "sleepy, dreamy, content",
+            "eyes": "closed or half-lidded, peaceful",
+            "color": "cream/tan face, darker nose"
+          },
+          "legs": "small brown/tan legs, sometimes tucked"
+        },
+        "sheep_instances": [
+          {
+            "position": "upper left, 15% from left edge, 20% from top",
+            "size": "medium, approximately 18% frame width",
+            "rotation": "tilted right, appearing to jump/float",
+            "expression": "happy, eyes closed smile",
+            "depth": "midground, medium sharpness"
+          },
+          {
+            "position": "upper right, 85% from left, 25% from top",
+            "size": "medium-small, approximately 15% frame width",
+            "rotation": "facing left, floating",
+            "expression": "sleepy smile",
+            "depth": "background, slight blur"
+          },
+          {
+            "position": "left side, 5% from left, 50% from top",
+            "size": "large, approximately 22% frame width",
+            "rotation": "body facing right, head tilted",
+            "expression": "eyes closed, peaceful",
+            "depth": "foreground, sharp"
+          },
+          {
+            "position": "right side, 88% from left, 45% from top",
+            "size": "medium, approximately 16% frame width",
+            "rotation": "floating horizontally",
+            "expression": "dreamy",
+            "depth": "midground"
+          },
+          {
+            "position": "bottom left, 10% from left, 80% from top",
+            "size": "large partial, approximately 25% frame width",
+            "rotation": "head tilted up, mouth open (yawning)",
+            "expression": "yawning, sleepy",
+            "depth": "foreground, sharp, partially cropped"
+          },
+          {
+            "position": "bottom right, 80% from left, 85% from top",
+            "size": "medium partial",
+            "rotation": "looking up at product",
+            "expression": "curious/sleepy",
+            "depth": "foreground"
+          }
+        ],
+        "animation_implied": "sheep appear to be floating/jumping around product, counting sheep concept"
+      },
+      "floating_coffee_beans": {
+        "quantity": "6-8 scattered throughout",
+        "appearance": {
+          "color": "#4A2C1A glossy dark brown",
+          "texture": "realistic roasted coffee bean with center seam",
+          "size": "small, 2-4% of frame width"
+        },
+        "distribution": "interspersed with sheep, varying depths",
+        "motion": "some with subtle motion blur suggesting movement"
+      },
+      "product_zone": {
+        "position": "center of frame, approximately 40-75% from top",
+        "rotation": "dynamic tilt, approximately 15 degrees clockwise",
+        "bag": {
+          "type": "coffee bag, gusseted bottom",
+          "dimensions": "approximately 35% frame width, 40% frame height",
+          "design": {
+            "base_color": "#1F3D3A dark forest green",
+            "finish": "matte with subtle texture"
+          },
+          "branding": {
+            "logo": {
+              "type": "owl with spread wings",
+              "color": "#7CB9B0 mint/teal",
+              "position": "upper center of bag"
+            },
+            "brand_name": {
+              "text": "NOCTURNE",
+              "orientation": "vertical, reading bottom to top",
+              "position": "left side of bag",
+              "color": "#7CB9B0 mint"
+            },
+            "product_name": {
+              "text": "FOREST DECAF",
+              "position": "center of bag",
+              "color": "#7CB9B0 mint"
+            },
+            "details": {
+              "text": "100% SINGLE ORIGIN BEANS / Medium Roast / 100% Arabica",
+              "position": "below product name",
+              "size": "small"
+            },
+            "weight": {
+              "text": "Net Wt: 13oz / 340g",
+              "position": "bottom of bag"
+            }
+          }
+        },
+        "surrounding_elements": "sheep and coffee beans float around bag creating visual embrace"
+      }
+    },
+    "color_palette": {
+      "background": "#B8D9D4",
+      "text": "#2A3A3A",
+      "product_bag": "#1F3D3A",
+      "product_accents": "#7CB9B0",
+      "sheep_fleece": "#F5F0E8",
+      "sheep_face": "#E8D5C4",
+      "coffee_beans": "#4A2C1A"
+    },
+    "rendering_style": {
+      "sheep": "3D cartoon, Pixar-style, soft materials",
+      "coffee_beans": "photorealistic",
+      "product": "product photography, clean render",
+      "background": "flat/gradient, minimal texture",
+      "overall": "hybrid 3D cartoon elements with product photography"
+    },
+    "constraints": {
+      "must_keep": [
+        "lowercase casual question headline",
+        "cognitive dissonance of coffee + sleep concept",
+        "3D cartoon sheep floating around product",
+        "dark forest green coffee bag as anchor",
+        "owl logo as brand identifier",
+        "mixed cartoon/product photography style",
+        "scattered coffee beans throughout"
+      ],
+      "avoid": [
+        "realistic sheep - must be stylized 3D cartoon",
+        "sheep looking aggressive or alert - must be sleepy/peaceful",
+        "product getting lost among elements - must remain focal point",
+        "dark or nighttime background - mint/light keeps it approachable",
+        "cluttered composition - sheep should frame, not overwhelm"
+      ]
+    },
+    "negative_prompt": [
+      "realistic sheep",
+      "photorealistic animals",
+      "dark background",
+      "nighttime scene",
+      "aggressive expressions",
+      "wide-awake sheep",
+      "flat 2D illustration style",
+      "cluttered composition",
+      "product obscured",
+      "serious corporate aesthetic"
+    ]
+  },
+  {
+    "id": "083",
+    "filename": "SCR-20260313-btab.jpeg",
+    "format_type": "bathroom-mirror-handwritten-message",
+    "visual_anatomy": {
+      "overall_composition": {
+        "layout": "vertical frame showing bathroom vanity setup",
+        "mirror_position": "center-upper portion, 60% of frame",
+        "vanity_position": "bottom 40% of frame",
+        "framing": "environmental shot showing context"
+      },
+      "bathroom_environment": {
+        "walls": {
+          "color": "warm beige/cream",
+          "texture": "smooth painted drywall"
+        },
+        "vanity": {
+          "countertop": {
+            "material": "light marble or quartz",
+            "color": "cream/off-white",
+            "finish": "polished"
+          },
+          "sink": {
+            "type": "undermount rectangular",
+            "color": "white/cream"
+          },
+          "faucet": {
+            "style": "modern single-handle",
+            "finish": "chrome/silver"
+          }
+        },
+        "decor_accents": {
+          "plant": {
+            "type": "small green plant",
+            "position": "left side of counter",
+            "pot": "simple, minimal"
+          }
+        }
+      },
+      "led_mirror": {
+        "shape": "square/rectangular with rounded corners",
+        "frame": {
+          "type": "LED backlit strip",
+          "position": "perimeter of mirror",
+          "light_color": "white LED",
+          "glow_effect": "creates soft halo around mirror edge"
+        },
+        "reflection": {
+          "visible": "ceiling, opposite wall blur",
+          "quality": "clear but not the focus"
+        },
+        "size": "large, approximately 30x30 inches representation"
+      },
+      "handwritten_message": {
+        "surface": "written directly on mirror glass",
+        "tool_appearance": "dry-erase marker or lipstick",
+        "content": {
+          "line_1": {
+            "text": "Ladies!",
+            "style": "casual cursive, enthusiastic",
+            "color": "black"
+          },
+          "line_2": {
+            "text": "Time to disappeer",
+            "style": "casual cursive",
+            "color": "black",
+            "note": "intentional misspelling 'disappeer'"
+          },
+          "line_3": {
+            "text": "for month.",
+            "style": "casual cursive",
+            "color": "black"
+          },
+          "line_4": {
+            "text": "Face Yoga is Free now.",
+            "style": "mixed - 'Free now' emphasized",
+            "primary_color": "black",
+            "highlight_color": "red for 'Free now'",
+            "highlight_treatment": "underline or box around 'Free now'"
+          },
+          "line_5": {
+            "text": "New you",
+            "style": "casual cursive",
+            "color": "black"
+          },
+          "line_6": {
+            "text": "by May 31st",
+            "style": "casual cursive, bold",
+            "color": "black"
+          }
+        },
+        "overall_typography": {
+          "style": "girlfriend handwriting - casual, friendly, imperfect",
+          "slant": "natural right slant",
+          "size_variation": "some words larger for emphasis",
+          "alignment": "roughly centered on mirror",
+          "authenticity_details": "slight inconsistencies in letter sizes, natural flow"
+        }
+      }
+    },
+    "lighting": {
+      "primary_source": "LED strip around mirror perimeter",
+      "secondary_source": "bathroom ambient light",
+      "quality": "clean, bright, modern",
+      "shadow_behavior": "minimal shadows, even illumination"
+    },
+    "color_story": {
+      "walls": "warm beige/cream",
+      "countertop": "cream/off-white marble",
+      "mirror_frame": "white LED glow",
+      "text_primary": "black marker",
+      "text_accent": "red for emphasis",
+      "plant": "green pop of color",
+      "overall_palette": "warm neutrals with clean white accents"
+    },
+    "psychological_mechanics": {
+      "contextual_relevance": "mirror is where you examine your face - perfect for face yoga",
+      "personal_note_feeling": "handwritten bypasses ad blindness",
+      "urgency_elements": {
+        "deadline": "May 31st",
+        "timeframe": "month",
+        "price": "Free now"
+      },
+      "transformation_promise": "disappear for month, emerge as new you",
+      "authenticity_via_imperfection": "misspelling 'disappeer' adds realness"
+    },
+    "constraints": {
+      "must_keep": [
+        "LED-backlit square mirror specifically",
+        "handwritten text ON mirror surface",
+        "warm beige bathroom environment",
+        "marble/quartz countertop visible",
+        "black marker primary with red accent for 'Free now'",
+        "casual girlfriend handwriting style",
+        "May 31st deadline",
+        "misspelling 'disappeer' for authenticity",
+        "sink and faucet visible below mirror"
+      ],
+      "avoid": [
+        "typed/digital text",
+        "text floating off mirror",
+        "dark bathroom",
+        "oval mirror",
+        "no LED lighting",
+        "professional signage look",
+        "perfect/font-like handwriting",
+        "model in reflection"
+      ]
+    },
+    "negative_prompt": [
+      "typed text",
+      "digital overlay",
+      "dark bathroom",
+      "oval mirror",
+      "round mirror",
+      "no LED light",
+      "professional sign",
+      "perfect handwriting",
+      "font text",
+      "person in frame",
+      "model reflection"
+    ]
+  },
+  {
+    "id": "092",
+    "filename": "SCR-20260313-btki.png",
+    "format_type": "native-advertorial-092",
+    "brand": "Unknown (ADHD/Dopamine Detox)",
+    "product_category": "mental health / ADHD coaching",
+    "canvas": {
+      "background_color": "#FFFFFF pure white",
+      "layout": "Two-column editorial layout",
+      "aspect_ratio": "Square or near-square",
+      "overall_feel": "Magazine article, native content aesthetic"
+    },
+    "headline_block": {
+      "text": "HOW DOPAMINE DETOX CHANGED MY LIFE",
+      "typography": {
+        "font_family": "Sans-serif, likely geometric",
+        "weight": "Bold/Heavy",
+        "case": "ALL CAPS",
+        "tracking": "Slightly expanded letter-spacing"
+      },
+      "color": "#40E0D0 bright teal/cyan",
+      "positioning": {
+        "horizontal": "Left-aligned, starts at left margin",
+        "vertical": "Top of frame, approximately 5-8% from top",
+        "width": "Approximately 45% of canvas width, contained to left column"
+      },
+      "line_breaks": "Three lines: 'HOW DOPAMINE DETOX' / 'CHANGED' / 'MY LIFE'"
+    },
+    "body_copy_block": {
+      "content_structure": [
+        {
+          "type": "reframe_statement",
+          "text": "You see, ADHD is not the inability to focus. It is an inability to suppress internal and external noises.",
+          "function": "Core insight that shifts understanding"
+        },
+        {
+          "type": "consequence_explanation",
+          "text": "That's where the anxiety, stress and self-esteem might come. It might feel that life is out of control and daily tasks seem impossibly huge.",
+          "function": "Validates pain points without judgment"
+        },
+        {
+          "type": "solution_tease",
+          "text": "Once you learn the simple truth of where it comes from, what's actually happening in your brain and why things are always a mess, it dissolves almost instantly and you start to make way healthier and more empowering choices.",
+          "function": "Promise of transformation"
+        },
+        {
+          "type": "method_hint",
+          "text": "It works by first discovering your 'ADHD type' and then putting the system in place and letting the changes unfold naturally.",
+          "function": "Creates curiosity about typing system"
+        },
+        {
+          "type": "open_loop",
+          "text": "It's crazy how easily it works...",
+          "function": "Incomplete thought drives click-through"
+        }
+      ],
+      "typography": {
+        "font_family": "Clean sans-serif, possibly same family as headline",
+        "weight": "Regular",
+        "case": "Sentence case",
+        "size": "Body text size, approximately 12-14px equivalent"
+      },
+      "color": "#2C2C2C dark grey/black",
+      "positioning": {
+        "horizontal": "Left column, left-aligned",
+        "vertical": "Below headline, occupies majority of left 45%",
+        "paragraph_spacing": "Clear paragraph breaks between sections"
+      }
+    },
+    "visual_element": {
+      "description": "Abstract triangular/tree-shaped graphic composed of stacked wavy horizontal lines",
+      "construction": {
+        "shape": "Isoceles triangle pointing upward, like a stylized Christmas tree or brain wave visualization",
+        "internal_pattern": "Horizontal wavy lines stacked vertically",
+        "wave_characteristics": "Varying amplitudes, tighter waves at top, broader at base",
+        "line_count": "Approximately 20-25 distinct wave lines"
+      },
+      "color_gradient": {
+        "top": "#40E0D0 bright teal/cyan matching headline",
+        "bottom": "#E0FFFF lighter teal, almost white",
+        "transition": "Gradual fade from saturated to desaturated"
+      },
+      "positioning": {
+        "horizontal": "Right side of frame, right-aligned",
+        "vertical": "Centered vertically",
+        "size": "Approximately 40-45% of canvas width"
+      },
+      "symbolic_meaning": "Evokes brain waves, dopamine pathways, neural activity visualization",
+      "energy": "Pulsing, alive, rhythmic - suggests brain activity"
+    },
+    "spatial_relationship": {
+      "text_visual_balance": "50/50 split between text column and graphic",
+      "gutter": "Clear visual separation between text and graphic",
+      "breathing_room": "Generous margins around both elements"
+    },
+    "visual_hierarchy": {
+      "eye_path": [
+        "Teal headline captures attention first",
+        "Abstract wave graphic draws eye to right",
+        "Body copy provides explanation",
+        "Open loop ending '...' creates forward momentum"
+      ]
+    },
+    "authority_markers": {
+      "linguistic_patterns": [
+        "Reframe establishes expertise ('ADHD is not... it is...')",
+        "'ADHD type' implies diagnostic framework",
+        "'Simple truth' and 'what's actually happening in your brain' suggest insider knowledge"
+      ]
+    },
+    "color_story": {
+      "palette": [
+        "#FFFFFF",
+        "#40E0D0",
+        "#E0FFFF",
+        "#2C2C2C"
+      ],
+      "primary": "Pure white background - clean, scientific",
+      "accent": "Bright teal/cyan - energetic, hopeful, distinctive",
+      "text": "Dark grey/black - authoritative, readable",
+      "emotional_effect": "Clean, scientific but accessible, hopeful, modern"
+    },
+    "the_vibe": {
+      "energy": "Educational, reassuring, 'science-backed hope'",
+      "tone": "Informative but warm, knowledgeable friend explaining",
+      "authenticity": "Article format feels like content not ad",
+      "aesthetic": "Health tech, wellness app, modern psychology"
+    },
+    "constraints": {
+      "must_keep": [
+        "Two-column layout with text left, graphic right",
+        "Teal/cyan headline color",
+        "Abstract wave/brain visualization graphic",
+        "Article-length body copy structure",
+        "Open loop ending with '...'",
+        "Pure white background",
+        "ADHD reframe language"
+      ],
+      "avoid": [
+        "Photographs of people",
+        "Pills or supplement imagery",
+        "Clinical medical aesthetic",
+        "Hard CTA buttons",
+        "Urgency language",
+        "Discount pricing",
+        "Before/after imagery"
+      ]
+    },
+    "negative_prompt": [
+      "photographs",
+      "human faces",
+      "pills",
+      "supplements",
+      "brain diagrams",
+      "clinical aesthetic",
+      "medical imagery",
+      "CTA buttons",
+      "price tags",
+      "discount badges",
+      "before after",
+      "stock photography"
+    ]
+  },
+  {
+    "id": "103",
+    "filename": "SCR-20260313-bubh.png",
+    "format_type": "side-by-side-comparison",
+    "brand": "MUD\\WTR",
+    "layout": {
+      "structure": "two-column with shared header",
+      "header_zone": {
+        "position": "top 20% of frame",
+        "brand_logo": {
+          "text": "MUD\\WTR",
+          "font": "sans-serif, all caps, thin weight",
+          "position": "centered, top 5%",
+          "color": "black on white"
+        },
+        "headline": {
+          "text": "Better than coffee stronger than tea.",
+          "font": "serif, bold, title case",
+          "size": "largest text element in composition",
+          "position": "below logo, centered",
+          "line_break": "after 'coffee'"
+        }
+      },
+      "comparison_zone": {
+        "position": "middle 50% of frame",
+        "left_column": "MUD\\WTR products",
+        "right_column": "Starbucks cup",
+        "divider": "implied vertical center line, no visible separator"
+      },
+      "stats_zone": {
+        "position": "bottom 30% of frame",
+        "structure": "four rows of side-by-side metrics"
+      }
+    },
+    "left_column": {
+      "product_hero": {
+        "mug": {
+          "type": "handmade ceramic mug",
+          "color": "cream/off-white with brown speckles",
+          "texture": "artisanal stoneware, visible glaze variations",
+          "contents": "muddy brown liquid visible at rim",
+          "position": "left of center, tilted slightly toward viewer",
+          "size": "approximately 40% of column width"
+        },
+        "tin": {
+          "type": "cylindrical product container",
+          "color": "matte black",
+          "position": "behind and to the right of mug",
+          "size": "slightly taller than mug",
+          "lighting": "subtle highlight on left edge"
+        }
+      },
+      "stats": {
+        "price": {
+          "value": "$1.33",
+          "label": "per cup",
+          "value_style": "large black bold",
+          "label_style": "small gray italic"
+        },
+        "caffeine": {
+          "value": "35mg",
+          "label": "of caffeine"
+        },
+        "adaptogens": {
+          "value": "2.24g",
+          "label": "of adaptogens"
+        },
+        "organic": {
+          "value": "100%",
+          "label": "Organic"
+        }
+      }
+    },
+    "right_column": {
+      "product_hero": {
+        "cup": {
+          "type": "disposable paper cup with lid",
+          "brand": "Starbucks",
+          "color": "white cup, green siren logo",
+          "logo_detail": "classic Starbucks mermaid/siren circular emblem",
+          "position": "centered in right column",
+          "size": "approximately same height as mug",
+          "visual_treatment": "slightly desaturated, less vibrant than left side",
+          "texture": "mass-produced, corrugated sleeve visible"
+        }
+      },
+      "stats": {
+        "price": {
+          "value": "$3.25",
+          "label": "per cup"
+        },
+        "caffeine": {
+          "value": "235mg",
+          "label": "of caffeine"
+        },
+        "adaptogens": {
+          "value": "0g",
+          "label": "of adaptogens"
+        },
+        "organic": {
+          "value": "Nope",
+          "label": "Organic",
+          "tone": "conversational sass, breaks formal data pattern"
+        }
+      }
+    },
+    "typography": {
+      "stat_values": {
+        "font": "sans-serif bold",
+        "color": "black",
+        "size": "large, dominant"
+      },
+      "stat_labels": {
+        "font": "sans-serif light italic",
+        "color": "medium gray",
+        "size": "small, secondary"
+      },
+      "alignment": "centered within each column"
+    },
+    "color_story": {
+      "background": "pure white, clean editorial",
+      "brand_side": "warm cream and black tones, artisanal",
+      "competitor_side": "white and green, corporate",
+      "contrast_narrative": "handmade warmth vs corporate disposability"
+    },
+    "photography": {
+      "style": "product photography, studio lighting",
+      "lighting": "soft diffused, even across frame",
+      "shadows": "minimal, clean white background",
+      "aspect_ratio": "approximately 1:1 or 4:5"
+    },
+    "psychological_mechanics": {
+      "price_flip": "positions Starbucks as overpriced despite premium perception",
+      "caffeine_reframe": "high caffeine presented as negative",
+      "precision_authority": "2.24g creates scientific credibility",
+      "sass_pattern_break": "'Nope' disrupts formal comparison grid"
+    },
+    "constraints": {
+      "must_keep": [
+        "side-by-side column structure",
+        "artisanal mug vs disposable cup contrast",
+        "stat values larger than labels",
+        "'Nope' casual language for organic row",
+        "Starbucks green logo visible but not dominant",
+        "clean white background",
+        "serif headline font"
+      ],
+      "avoid": [
+        "equal visual treatment of both products",
+        "formal 'No' instead of 'Nope'",
+        "round numbers that feel made up",
+        "colorful or busy background",
+        "product packaging text visible"
+      ]
+    },
+    "negative_prompt": [
+      "equal prominence for competitor",
+      "bright colorful design",
+      "round numbers like $1.00 or 200mg",
+      "formal data table styling",
+      "plastic looking products",
+      "visible text on packaging",
+      "busy background patterns"
+    ]
+  },
+  {
+    "id": "116",
+    "filename": "SCR-20260313-bvmm.jpeg",
+    "format_type": "native-advertorial-116",
+    "scene": {
+      "composition": "editorial magazine layout, hero portrait left with text right",
+      "aspect_ratio": "1:1 square",
+      "visual_language": "health publication article, native advertising"
+    },
+    "hero_portrait": {
+      "position": "left 50% of frame, face positioned upper-left quadrant",
+      "framing": "portrait crop from mid-chest up, slight angle showing profile",
+      "subject": {
+        "description": "woman in late 50s, silver-gray hair, serene outdoor expression",
+        "ethnicity": "Caucasian/Nordic appearance",
+        "age_presentation": "aspirational aging - fit, active, confident"
+      },
+      "face": {
+        "expression": {
+          "eyes": {
+            "direction": "looking off into distance, upper-left",
+            "energy": "serene, peaceful, content",
+            "quality": "soft crow's feet, natural aging"
+          },
+          "mouth": {
+            "position": "closed, slight natural smile",
+            "energy": "calm confidence"
+          },
+          "overall": "peaceful wisdom, healthy vitality"
+        },
+        "skin": {
+          "texture": "realistic mature skin, visible fine lines, healthy glow",
+          "tone": "fair with light tan, outdoorsy",
+          "lighting_interaction": "soft natural light, no harsh shadows"
+        }
+      },
+      "hair": {
+        "color": "silver-gray with white highlights",
+        "style": "pulled back, swept away from face",
+        "texture": "natural healthy shine, not styled heavily"
+      },
+      "clothing": {
+        "top": "olive/sage green outdoor jacket, hiking/athletic wear",
+        "accessories": "backpack straps visible on shoulders",
+        "fabric_behavior": "technical outdoor fabric, matte finish"
+      }
+    },
+    "background": {
+      "left_side": "soft-focus green foliage, outdoor mountain/hiking setting",
+      "right_side": "transitions to white/cream for text area",
+      "atmosphere": "natural daylight, fresh outdoor air"
+    },
+    "publication_header": {
+      "text": "HEALTH-TIME.COM",
+      "position": "upper-right corner, small boxed treatment",
+      "style": "underlined, editorial masthead format"
+    },
+    "headline": {
+      "text": "She's 57 From Norway \u2014 Here's Why She Has Zero Belly Fat",
+      "position": "right side, top third of frame",
+      "typography": {
+        "font": "large bold serif, black color",
+        "treatment": "editorial headline style, right-aligned",
+        "line_breaks": "natural breaks after '57 From Norway \u2014'"
+      }
+    },
+    "body_copy": {
+      "intro": "Most women over 50 eat healthy and stay active \u2014 yet still can't lose fat.",
+      "authority_quote": "Dr. Ingrid Larsson, MD, explains why \u2014 and the Nordic workout that reignites metabolism naturally.",
+      "testimonial": "\"I've seen women lose up to 40 lbs in just 4-6 weeks with this Nordic method \u2014 and feel more energized, calm, and confident than ever.\"",
+      "position": "right side, middle section below headline",
+      "typography": {
+        "style": "article excerpt format",
+        "emphasis": "key phrases in bold/italic (Nordic method, 40 lbs, 4-6 weeks)"
+      }
+    },
+    "navigation_arrow": {
+      "position": "right edge, aligned with intro paragraph",
+      "style": "circular outline with right arrow, white on gray"
+    },
+    "cta": {
+      "text": "Read this 3-minute article.",
+      "position": "bottom of text area",
+      "style": "bold black text, underlined, editorial link format"
+    },
+    "disclaimer": {
+      "text": "Results may vary due to personal features",
+      "position": "very bottom, fine print",
+      "style": "small gray text, legal requirement"
+    },
+    "color_palette": {
+      "background": "natural greens from outdoor setting, cream/white text area",
+      "text": "black editorial typography",
+      "accents": "sage green jacket, silver-gray hair"
+    },
+    "authority_signals": {
+      "publication_name": "HEALTH-TIME.COM implies editorial credibility",
+      "doctor_reference": "Dr. Ingrid Larsson, MD",
+      "geographic_specificity": "Norway, Nordic method",
+      "numeric_claims": "57 years old, 40 lbs, 4-6 weeks, 3-minute article"
+    },
+    "the_vibe": {
+      "energy": "calm discovery, finally an answer that makes sense",
+      "aesthetic": "health editorial, trustworthy journalism",
+      "emotional_trigger": "relatable aspirational aging, she looks like success",
+      "scroll_stop": "beautiful healthy older woman in outdoor setting"
+    },
+    "constraints": {
+      "must_keep": [
+        "editorial publication format",
+        "silver-gray hair with youthful energy",
+        "outdoor hiking setting",
+        "Nordic/Norwegian specificity",
+        "doctor authority reference",
+        "specific numbers in claims",
+        "serene confident expression"
+      ],
+      "avoid": [
+        "obvious advertisement styling",
+        "product imagery",
+        "before/after format",
+        "flashy colors or graphics",
+        "young model",
+        "gym/indoor fitness setting"
+      ]
+    },
+    "negative_prompt": [
+      "banner ad format",
+      "product shots",
+      "young woman",
+      "gym interior",
+      "bright colors",
+      "promotional graphics",
+      "social media format",
+      "obvious advertising",
+      "studio photography",
+      "posed model look"
+    ]
+  },
+  {
+    "id": 298,
+    "filename": "fb57375a-8f20-4747-80a9-a713b24b832b.jpeg",
+    "format_type": "seminar-presentation-authority",
+    "schema": {
+      "layout": {
+        "structure": "candid seminar photo with projection screen as focal point",
+        "dimensions": "vertical 9:16",
+        "zones": {
+          "projection_screen": "upper-left to center, ~60% of frame",
+          "presenter": "right side, standing beside screen",
+          "audience_silhouette": "bottom foreground, out of focus"
+        }
+      },
+      "projection_screen": {
+        "content": "THESE ARE WARNING SIGNS OF BAD COLLAGEN",
+        "typography": {
+          "font": "heavy bold sans-serif, Impact-style",
+          "case": "all caps",
+          "color": "black on white projection",
+          "weight": "extra bold",
+          "alignment": "left-aligned, stacked 5 lines"
+        },
+        "screen_type": "pull-down projector screen on tripod stand",
+        "screen_color": "bright white with slight warm cast from room lighting"
+      },
+      "presenter": {
+        "gender": "female",
+        "age_range": "55-65",
+        "ethnicity": "Caucasian",
+        "hair": "blonde shoulder-length, side-parted",
+        "glasses": "rectangular dark frames",
+        "clothing": {
+          "blazer": "black structured blazer",
+          "top": "white/cream underneath",
+          "style": "professional, authority figure"
+        },
+        "pose": {
+          "stance": "standing beside screen, facing audience",
+          "gesture": "right hand pointing/gesturing toward screen text",
+          "holding": "small presentation remote/clicker in hand",
+          "energy": "mid-sentence, educational authority"
+        },
+        "expression": "serious, concerned, conveying importance"
+      },
+      "audience": {
+        "visible": "back of one person's head in bottom foreground",
+        "hair": "blonde, shoulder-length",
+        "role": "creates voyeuristic 'you are in the room' perspective",
+        "focus": "blurred, out of focus"
+      },
+      "setting": {
+        "type": "upscale hotel conference/meeting room",
+        "details": [
+          "round table with white tablecloth visible",
+          "glass water on table",
+          "notepad on table",
+          "pendant ceiling light fixture"
+        ],
+        "walls": "warm beige/tan",
+        "flooring": "not visible",
+        "ambiance": "intimate workshop, not large conference"
+      },
+      "photography": {
+        "shot_type": "candid event photo, not staged",
+        "angle": "audience POV, slightly low, looking up at presenter",
+        "depth_of_field": "medium - screen and presenter sharp, foreground audience soft",
+        "lighting": {
+          "type": "warm interior ambient + projector glow",
+          "quality": "natural room lighting, not studio",
+          "color_temp": "warm, slightly yellow"
+        }
+      },
+      "color_story": {
+        "dominant": "warm neutrals - beige walls, white screen, black blazer",
+        "accent": "warm yellow from ceiling light",
+        "palette": [
+          "white",
+          "black",
+          "warm beige",
+          "blonde",
+          "amber"
+        ]
+      },
+      "the_vibe": {
+        "energy": "insider knowledge being shared in exclusive setting",
+        "mood": "educational urgency - 'pay attention to this'",
+        "aesthetic": "candid seminar capture, health authority",
+        "scroll_stop_factor": "looks like a real photo from an event you missed - FOMO + curiosity about 'warning signs'",
+        "psychological_hook": "authority figure + bold claim on screen = must-know information"
+      },
+      "constraints": {
+        "must_keep": [
+          "projector screen with bold text as primary focus",
+          "professional female presenter gesturing at screen",
+          "audience member in foreground for perspective",
+          "warm intimate room setting (not corporate stage)",
+          "candid unstaged photo feel",
+          "9:16 vertical format"
+        ],
+        "avoid": [
+          "studio lighting",
+          "stock photo polish",
+          "large auditorium setting",
+          "multiple screens or tech",
+          "branded product visible"
+        ]
+      },
+      "negative_prompt": [
+        "professional studio lighting",
+        "corporate stage",
+        "large audience",
+        "microphone visible",
+        "branded slides with logos",
+        "polished marketing materials on screen",
+        "stock photo aesthetic"
+      ]
+    }
+  },
+  {
+    "id": 299,
+    "filename": "045465c8-0a0f-48b8-953c-248115b625ab.jpeg",
+    "format_type": "protest-sign-street-portrait",
+    "schema": {
+      "layout": {
+        "structure": "street portrait with subject holding handwritten sign as focal text",
+        "dimensions": "vertical 9:16",
+        "zones": {
+          "subject_face": "upper 40%",
+          "sign_with_message": "center to lower 60%",
+          "urban_backdrop": "full frame behind subject"
+        }
+      },
+      "subject": {
+        "gender": "female",
+        "age_range": "45-55",
+        "ethnicity": "Caucasian",
+        "build": "slim",
+        "hair": {
+          "color": "silver-blonde, natural gray transition",
+          "length": "long, past shoulders",
+          "style": "loose, straight with slight wave",
+          "parting": "center-parted"
+        },
+        "face": {
+          "expression": "calm, direct, slightly defiant",
+          "eye_contact": "direct to camera",
+          "makeup": "minimal natural, subtle",
+          "skin": "healthy, natural aging, light tan"
+        },
+        "clothing": {
+          "jacket": "olive/army green utility jacket",
+          "style": "casual, relatable, everywoman"
+        }
+      },
+      "sign": {
+        "type": "white card/poster held at chest level with both hands",
+        "text": "STOP SPENDING ON COLLAGENS THAT LIE ABOUT THEIR BENEFITS",
+        "typography": {
+          "font_style": "hand-drawn marker style, all caps",
+          "color": "black on white",
+          "weight": "heavy, thick strokes",
+          "alignment": "centered, stacked 5 lines",
+          "character": "slightly imperfect, authentic handwritten feel"
+        },
+        "size": "roughly 12x16 inches, held at chest/waist level",
+        "grip": "both hands holding bottom corners"
+      },
+      "background": {
+        "setting": "urban city street, downtown",
+        "depth_of_field": "heavily blurred bokeh",
+        "elements": [
+          "tall buildings receding into distance",
+          "city lights bokeh",
+          "street/sidewalk"
+        ],
+        "color": "muted warm tones, desaturated city colors",
+        "purpose": "urban backdrop gives 'real person, real opinion' feel"
+      },
+      "photography": {
+        "shot_type": "medium portrait, waist up",
+        "angle": "eye level, straight on",
+        "depth_of_field": "shallow - subject sharp, background heavily bokeh'd",
+        "lighting": {
+          "type": "overcast natural daylight",
+          "direction": "frontal, even",
+          "quality": "soft, diffused, no harsh shadows",
+          "skin_rendering": "natural, flattering"
+        },
+        "style": "AI-generated photo-realistic, slightly too perfect skin"
+      },
+      "color_story": {
+        "dominant": "muted earth tones - olive green, silver hair, warm skin",
+        "sign_contrast": "bright white sign pops against muted palette",
+        "palette": [
+          "olive green",
+          "silver-blonde",
+          "warm beige skin",
+          "white",
+          "muted gray-brown city"
+        ]
+      },
+      "the_vibe": {
+        "energy": "quiet protest, consumer advocacy",
+        "mood": "empowered frustration - 'I'm done being lied to'",
+        "aesthetic": "street portrait activism meets health ad",
+        "scroll_stop_factor": "handwritten sign format is inherently eye-catching - you read it before you realize it's an ad",
+        "psychological_hook": "aligns viewer with subject's frustration, creates 'us vs them' against lying brands"
+      },
+      "constraints": {
+        "must_keep": [
+          "handwritten-style text on white sign",
+          "direct eye contact with camera",
+          "urban street background with bokeh",
+          "silver/gray hair on mature woman",
+          "olive/utility jacket for everywoman credibility",
+          "confrontational but calm expression",
+          "9:16 vertical format"
+        ],
+        "avoid": [
+          "smiling or happy expression",
+          "product placement",
+          "indoor setting",
+          "typed/printed text on sign",
+          "multiple people"
+        ]
+      },
+      "negative_prompt": [
+        "smiling",
+        "product in frame",
+        "indoor",
+        "printed text",
+        "studio background",
+        "corporate setting",
+        "young model"
+      ]
+    }
+  },
+  {
+    "id": 305,
+    "filename": "d9375446-1c53-4708-bfab-59a213fd7b13.jpeg",
+    "format_type": "native-news-advertorial",
+    "schema": {
+      "layout": {
+        "structure": "fake news article layout with bold headline, subheadline, date, image, and CTA button",
+        "dimensions": "vertical 9:16",
+        "zones": {
+          "headline_block": "top 35%, bold text on white background",
+          "article_image": "middle 40%, editorial photo",
+          "cta_button": "bottom-right of image area"
+        }
+      },
+      "headline_block": {
+        "background": "clean white",
+        "red_top_bar": {
+          "position": "very top, thin horizontal line",
+          "color": "red (#CC0000)",
+          "width": "full width",
+          "purpose": "mimics news site header/accent bar"
+        },
+        "main_headline": {
+          "text": "WHY THOUSANDS OF AMERICANS ARE TURNING TO KRILL OIL",
+          "typography": {
+            "font": "bold serif, Times/Georgia style, newspaper headline",
+            "case": "all caps",
+            "color": "black",
+            "size": "very large, fills width",
+            "weight": "extra bold"
+          }
+        },
+        "subheadline": {
+          "text": "Over 50? If You Have Swelling, You Need This Product",
+          "typography": {
+            "font": "bold sans-serif",
+            "case": "title case",
+            "color": "black",
+            "size": "medium, smaller than headline",
+            "weight": "bold"
+          }
+        },
+        "date_stamp": {
+          "text": "November 14, 2025",
+          "typography": {
+            "font": "sans-serif, italic",
+            "color": "gray (#666)",
+            "size": "small"
+          },
+          "purpose": "adds journalistic authenticity"
+        }
+      },
+      "article_image": {
+        "subject": "pile of fresh krill (small crustaceans) on blue fishing net",
+        "style": "editorial/stock photo, close-up nature shot",
+        "krill_detail": {
+          "appearance": "translucent pink-orange small shrimp-like creatures",
+          "quantity": "large pile, abundant",
+          "texture": "wet, glistening, fresh-caught"
+        },
+        "net": {
+          "color": "bright blue/teal fishing net",
+          "visibility": "visible beneath and around krill"
+        },
+        "lighting": "bright natural daylight, outdoors",
+        "framing": "close-up, fills frame width"
+      },
+      "cta_button": {
+        "text": "Learn More",
+        "typography": {
+          "font": "serif, italic",
+          "color": "white",
+          "size": "medium"
+        },
+        "background": {
+          "color": "red (#CC0000)",
+          "shape": "rounded rectangle pill button"
+        },
+        "position": "bottom-right corner of image, overlapping",
+        "shadow": "subtle drop shadow"
+      },
+      "white_space": {
+        "bottom_padding": "large white area below image, implies article body continues below fold",
+        "purpose": "makes it look like a real article page you'd scroll down"
+      },
+      "color_story": {
+        "dominant": "white background, black text \u2014 newspaper aesthetic",
+        "accent": "red bar and CTA button",
+        "image_tones": "blue net, pink-orange krill, natural daylight",
+        "palette": [
+          "white",
+          "black",
+          "red",
+          "blue",
+          "orange-pink",
+          "gray"
+        ]
+      },
+      "the_vibe": {
+        "energy": "authoritative news reporting, informational urgency",
+        "mood": "trusted journalism \u2014 'this is news, not advertising'",
+        "aesthetic": "native ad disguised as health news article",
+        "scroll_stop_factor": "looks like a real news article in your feed, not an ad \u2014 lowers guard",
+        "psychological_hook": "newspaper authority + specific demographic targeting ('Over 50') + urgency ('You Need This')"
+      },
+      "native_ad_techniques": [
+        "serif headline mimics newspaper typography",
+        "date stamp adds recency/authenticity",
+        "red accent bar mimics news site branding",
+        "editorial-style photography (not product shot)",
+        "white space below suggests full article",
+        "'Learn More' instead of 'Buy Now' \u2014 softer CTA"
+      ],
+      "constraints": {
+        "must_keep": [
+          "newspaper/news article layout format",
+          "bold serif headline in all caps",
+          "date stamp for authenticity",
+          "red accent bar and red CTA button",
+          "editorial photo (not product photo)",
+          "white background with clean typography",
+          "9:16 vertical format"
+        ],
+        "avoid": [
+          "product packaging visible",
+          "brand logo prominently displayed",
+          "discount/price messaging",
+          "multiple CTA buttons",
+          "busy design elements",
+          "social media-style formatting"
+        ]
+      },
+      "negative_prompt": [
+        "product packaging",
+        "brand logo",
+        "discount text",
+        "social media layout",
+        "colorful background",
+        "multiple images",
+        "sans-serif headline",
+        "casual/playful tone"
+      ]
+    }
+  }
+]
