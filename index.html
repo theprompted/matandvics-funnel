@@ -753,82 +753,56 @@
       <h2>Step 3 — Generate ad images</h2>
     </div>
     <div class="card-content">
-      <p style="color:var(--text-muted);">50 ad image concepts have already been written for you — based on your funnel headline, avatar, and the 5 villain reasons. You generate them, review them, and keep the best ones.</p>
+      <p style="color:var(--text-muted);">50 ad image concepts have already been written for you — built around your funnel headline, your avatar, and the 5 cotton villain reasons. All you need to do is talk to Claude Code and it handles the rest.</p>
 
-      <div class="info-box">
-        <strong>Before generating:</strong> The concepts are written in English. Since you're running ads in Germany and Austria, you need to switch the language to German first. This is a one-line instruction to Claude — see Step 1 below.
+      <div class="cost-box">
+        <strong>💳 Cost:</strong> fal.ai is pay-per-use — <strong>no subscription, no monthly fee</strong>. Each image = <strong>$0.08</strong> (8 cents). All 50 = $4.00. A test batch of 10 = $0.80. Credits draw down only as you generate.
       </div>
 
-      <div class="step-card step-card-yellow">
+      <div class="step-card step-card-blue" style="margin-top:1rem;">
         <div class="step-header">
           <span class="num-badge">1</span>
-          <span class="step-title">Make sure your FAL_KEY is set</span>
+          <span class="step-title">Start by asking Claude to walk you through the concepts</span>
         </div>
-        <p>If you've opened a new Claude Code session, run this first:</p>
-        <div class="code-wrap">
-          <div class="code-block">! export FAL_KEY=YOUR_KEY_HERE</div>
-          <button class="copy-btn" onclick="copyCode(this)">COPY</button>
-        </div>
-        <div class="cost-box">
-          <strong>💳 Cost reminder:</strong> fal.ai is pay-per-use, no subscription. Each image = <strong>$0.08</strong>. All 50 = <strong>$4.00</strong>. 20 at a time = <strong>$1.60</strong>. Credits draw down as you generate — you won't be charged anything beyond what you use.
-        </div>
-      </div>
-
-      <div class="step-card step-card-blue">
-        <div class="step-header">
-          <span class="num-badge">2</span>
-          <span class="step-title">Switch the prompts to German</span>
-        </div>
-        <p>The concepts are in <code>funnel/generate_ad_images.py</code>. Tell Claude to update all the prompts so the headline text and any in-image copy is in German:</p>
+        <p>Paste this into Claude Code. It will read the concept file, show you all 50 ideas, and switch the language to German — all without you running any commands.</p>
         <div class="prompt-box">
           <div class="prompt-label">Type into Claude Code</div>
-          <div class="prompt-text">Update funnel/generate_ad_images.py so that all image prompts use German language — translate the HEADLINE variable and any in-image text descriptions to German. Keep everything else the same.</div>
+          <div class="prompt-text">I want to generate ad images for the Mat &amp; Vic's funnel. The 50 ad concepts are in <code>funnel/generate_ad_images.py</code>. Can you read that file, show me a summary of all the concepts, and then translate all the in-image text and headline copy to German so they're ready to run for our DACH market? Don't generate anything yet — just show me what we've got and make the translation.</div>
         </div>
-        <p>Claude translates the headline and any text-in-image references. The visual descriptions, format types, and settings stay as-is.</p>
+        <p>Claude will read the file, list all 50 concepts with their descriptions, and update the German copy. You can then review them and swap out any concepts you don't like before spending anything.</p>
+      </div>
+
+      <div class="step-card step-card-white">
+        <div class="step-header">
+          <span class="num-badge">2</span>
+          <span class="step-title">Tell Claude which ones to generate</span>
+        </div>
+        <p>Once you've reviewed the concepts, tell Claude which ones to run — by number, by description, or all at once. Plain language works:</p>
+        <div class="prompt-box">
+          <div class="prompt-label">Examples — type whichever fits</div>
+          <div class="prompt-text" style="white-space:pre-line;">Generate the first 10 concepts so I can check the quality before doing all of them.
+
+Generate all 50 concepts.
+
+Generate concepts c01, c05, and c12 — skip the rest for now.</div>
+        </div>
+        <p>Images save to <code>funnel/generated_images/ad-concepts/</code> as they complete. Claude will let you know when each batch is done.</p>
       </div>
 
       <div class="step-card step-card-white">
         <div class="step-header">
           <span class="num-badge">3</span>
-          <span class="step-title">See all 50 concepts before generating</span>
+          <span class="step-title">Review and refine</span>
         </div>
-        <p>Before spending anything, list the concepts to see what you're working with:</p>
-        <div class="code-wrap">
-          <div class="code-block">! python3 funnel/generate_ad_images.py --list</div>
-          <button class="copy-btn" onclick="copyCode(this)">COPY</button>
-        </div>
-        <p>This shows all 50 concept IDs (c01–c50) with their descriptions. No images generated, no cost. If any concepts look wrong, tell Claude to swap them out before proceeding.</p>
-      </div>
+        <p>After generating, ask Claude to open the output folder so you can see the images. If any aren't right, just describe what you want changed:</p>
+        <div class="prompt-box">
+          <div class="prompt-label">Examples</div>
+          <div class="prompt-text" style="white-space:pre-line;">Open the generated images folder so I can review them.
 
-      <div class="step-card step-card-blue">
-        <div class="step-header">
-          <span class="num-badge">4</span>
-          <span class="step-title">Generate in batches</span>
-        </div>
-        <p>You don't have to generate all 50 at once. Start with a batch to check quality:</p>
-        <div class="code-wrap">
-          <div class="code-block">! python3 funnel/generate_ad_images.py --ids c01,c02,c03,c04,c05,c06,c07,c08,c09,c10</div>
-          <button class="copy-btn" onclick="copyCode(this)">COPY</button>
-        </div>
-        <p>Images save to <code>funnel/generated_images/ad-concepts/</code>. When done, tell Claude to open the folder so you can review them.</p>
-        <p style="margin-top:0.75rem;">To generate all 50 at once:</p>
-        <div class="code-wrap">
-          <div class="code-block">! python3 funnel/generate_ad_images.py --ids all</div>
-          <button class="copy-btn" onclick="copyCode(this)">COPY</button>
-        </div>
-      </div>
+c03 doesn't look right — the sock should be slipping off the heel, make it more dramatic. Regenerate just that one.
 
-      <div class="step-card step-card-white">
-        <div class="step-header">
-          <span class="num-badge">5</span>
-          <span class="step-title">Regenerate specific images</span>
+I like c01, c04, and c07. Regenerate c02 and c09 with a tighter crop and more contrast.</div>
         </div>
-        <p>If certain images don't look right, regenerate only those by ID:</p>
-        <div class="code-wrap">
-          <div class="code-block">! python3 funnel/generate_ad_images.py --ids c03,c07,c15</div>
-          <button class="copy-btn" onclick="copyCode(this)">COPY</button>
-        </div>
-        <p>Or ask Claude to adjust the concept first before regenerating: <em>"c03 shows the sock slipping — make it more dramatic, tighter crop on the heel. Then regenerate c03."</em></p>
         <div style="margin-top:0.75rem;"><span class="tag">✓ Ad images ready for Meta</span></div>
       </div>
 
