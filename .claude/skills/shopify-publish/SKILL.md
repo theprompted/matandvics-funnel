@@ -108,6 +108,25 @@ print("Pixel ID updated in both pages.")
 
 Then continue with deployment.
 
+**Check buy button URLs are configured:**
+```bash
+grep -c "YOUR_PRODUCT_URL" "[FUNNEL_DIR]/offer-v2.html"
+```
+
+If the file still contains `YOUR_PRODUCT_URL`, stop and tell the user:
+> "Your offer page buy buttons still have a placeholder URL. What's the product page URL on your Shopify store — the page where customers can actually buy? (e.g. `matandvics.com/products/cotton-classics-6-pack`)"
+
+Once they give you the URL, replace all occurrences in the offer page:
+```python
+from pathlib import Path
+product_url = "USER_PROVIDED_URL"
+p = Path("[FUNNEL_DIR]/offer-v2.html")
+p.write_text(p.read_text().replace("YOUR_PRODUCT_URL", product_url))
+print("Buy button URLs updated.")
+```
+
+Then continue with deployment.
+
 ---
 
 ## Step 3 — Run the Deploy Script
