@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mat & Vic's — Meta API Token Setup</title>
+  <style>
+    :root {
+      --bg-page: #F8F8F7;
+      --bg-white: #ffffff;
+      --bg-blue: #EBF9FF;
+      --bg-purple: #F7F1FF;
+      --bg-yellow: #FFFDE7;
+      --bg-green: #E8F5E9;
+      --accent-teal: #53DBC9;
+      --accent-yellow: #FFDE00;
+      --accent-purple: #9D4EDD;
+      --text-black: #000000;
+      --text-dark: #1a1a1a;
+      --text-gray: #4a4a4a;
+      --text-muted: #6b6b6b;
+      --shadow-lg: -0.31rem 0.31rem 0 0 #383838;
+      --shadow-sm: -0.19rem 0.19rem 0 0 #383838;
+      --border: 2px solid black;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text-dark);
+      background: var(--bg-page);
+      padding: 0;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-weight: 700;
+      color: var(--text-black);
+    }
+
+    h1 { font-size: 2.25rem; line-height: 1.2; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.125rem; }
+    h4 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-gray);
+    }
+
+    p { margin-bottom: 0.85rem; }
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol { margin: 0.75rem 0; padding-left: 1.5rem; }
+    li { margin-bottom: 0.5rem; }
+
+    strong { font-weight: 600; }
+
+    code {
+      background: var(--bg-white);
+      border: 1px solid #ccc;
+      padding: 0.125rem 0.5rem;
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.875rem;
+    }
+
+    /* Sticky progress header */
+    .progress-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: var(--bg-white);
+      border-bottom: var(--border);
+      padding: 1.25rem 1.5rem;
+      box-shadow: 0 4px 0 0 #383838;
+    }
+
+    .progress-inner {
+      max-width: 960px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+    }
+
+    .step-badge {
+      flex-shrink: 0;
+      background: var(--accent-teal);
+      border: var(--border);
+      box-shadow: var(--shadow-sm);
+      padding: 0.6rem 1rem;
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-weight: 700;
+      line-height: 1;
+      text-align: center;
+      min-width: 120px;
+    }
+    .step-badge .label {
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dark);
+      opacity: 0.75;
+    }
+    .step-badge .number {
+      font-size: 1.5rem;
+      margin-top: 0.2rem;
+      display: block;
+    }
+
+    .progress-right {
+      flex: 1;
+      min-width: 240px;
+    }
+
+    .progress-stage-name {
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 0.55rem;
+      color: var(--text-dark);
+    }
+    .progress-stage-name .stage-num {
+      background: var(--accent-yellow);
+      border: 1.5px solid black;
+      padding: 0.05rem 0.45rem;
+      margin-right: 0.4rem;
+      font-size: 0.85rem;
+    }
+
+    .progress-bar-wrap {
+      width: 100%;
+      height: 18px;
+      background: var(--bg-page);
+      border: var(--border);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      height: 100%;
+      background: var(--accent-teal);
+      width: 0%;
+      transition: width 0.25s ease;
+    }
+
+    .stage-pills {
+      display: flex;
+      gap: 0.4rem;
+      margin-top: 0.85rem;
+      flex-wrap: wrap;
+    }
+
+    .stage-pill {
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.35rem 0.7rem;
+      border: var(--border);
+      background: var(--bg-page);
+      cursor: pointer;
+      transition: transform 0.1s;
+    }
+    .stage-pill:hover { transform: translate(1px, -1px); }
+    .stage-pill.active {
+      background: var(--accent-teal);
+      box-shadow: var(--shadow-sm);
+    }
+    .stage-pill.done { background: var(--bg-green); }
+
+    @media (max-width: 600px) {
+      .progress-header { padding: 0.85rem 1rem; }
+      .step-badge { min-width: 90px; padding: 0.5rem 0.75rem; }
+      .step-badge .number { font-size: 1.2rem; }
+      .progress-stage-name { font-size: 0.8rem; }
+      .stage-pill { font-size: 0.65rem; padding: 0.25rem 0.5rem; }
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 6rem;
+    }
+
+    /* Step card */
+    .step {
+      display: none;
+      background: var(--bg-white);
+      border: var(--border);
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 2rem;
+    }
+    .step.active { display: block; }
+
+    .step-head {
+      padding: 1.25rem 1.75rem;
+      border-bottom: var(--border);
+      background: var(--bg-page);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .step-num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      background: var(--accent-teal);
+      border: var(--border);
+      border-radius: 50%;
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .step-head h2 { font-size: 1.25rem; }
+    .step-head .stage-tag {
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      letter-spacing: 0.05em;
+    }
+
+    .step-body {
+      padding: 1.75rem;
+    }
+
+    .step-body > p:not(:last-child),
+    .step-body > ul:not(:last-child),
+    .step-body > ol:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    /* Screenshot */
+    .shot {
+      border: var(--border);
+      box-shadow: var(--shadow-sm);
+      margin: 1.25rem 0;
+      cursor: zoom-in;
+      background: var(--bg-page);
+      display: block;
+      width: 100%;
+    }
+
+    .shot img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .shot-caption {
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: -0.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Callouts */
+    .callout {
+      border: var(--border);
+      padding: 1rem 1.25rem;
+      margin: 1.25rem 0;
+      box-shadow: var(--shadow-sm);
+    }
+    .callout-blue { background: var(--bg-blue); }
+    .callout-purple { background: var(--bg-purple); }
+    .callout-yellow { background: var(--bg-yellow); }
+    .callout-green { background: var(--bg-green); }
+
+    .callout h4 { margin-bottom: 0.4rem; }
+
+    .callout-icon {
+      display: inline-block;
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-weight: 700;
+      margin-right: 0.4rem;
+    }
+
+    /* Permissions list */
+    .perm-list {
+      list-style: none;
+      padding: 0;
+      margin: 0.75rem 0;
+    }
+
+    .perm-list li {
+      background: var(--bg-page);
+      border: var(--border);
+      padding: 0.6rem 0.9rem;
+      margin-bottom: 0.5rem;
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.875rem;
+      font-weight: 700;
+    }
+
+    /* Nav buttons */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 1.25rem 1.75rem;
+      border-top: var(--border);
+      background: var(--bg-page);
+    }
+
+    .btn {
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-weight: 700;
+      font-size: 0.9rem;
+      padding: 0.7rem 1.25rem;
+      border: var(--border);
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      background: var(--bg-white);
+      transition: transform 0.1s;
+    }
+
+    .btn:hover { transform: translate(2px, -2px); box-shadow: -0.4rem 0.4rem 0 0 #383838; }
+    .btn:active { transform: translate(-2px, 2px); box-shadow: -0.1rem 0.1rem 0 0 #383838; }
+    .btn[disabled] { opacity: 0.4; cursor: not-allowed; }
+    .btn[disabled]:hover { transform: none; box-shadow: var(--shadow-sm); }
+
+    .btn-next { background: var(--accent-teal); }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      z-index: 100;
+      cursor: zoom-out;
+      padding: 2rem;
+      overflow: auto;
+    }
+    .lightbox.open { display: flex; align-items: flex-start; justify-content: center; }
+    .lightbox img {
+      max-width: 100%;
+      height: auto;
+      border: var(--border);
+      box-shadow: var(--shadow-lg);
+      background: white;
+    }
+
+    /* Final */
+    .final-card {
+      background: var(--bg-green);
+      border: var(--border);
+      box-shadow: var(--shadow-lg);
+      padding: 2rem 2rem;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      .container { padding: 1rem 1rem 5rem; }
+      .step-body { padding: 1.25rem; }
+      .step-head { padding: 1rem 1.25rem; }
+      .nav-buttons { padding: 1rem 1.25rem; flex-direction: row; }
+      .btn { padding: 0.6rem 0.9rem; font-size: 0.8rem; }
+      h1 { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="progress-header">
+  <div class="progress-inner">
+    <div class="step-badge">
+      <span class="label">Step</span>
+      <span class="number"><span id="step-num">0</span> / 14</span>
+    </div>
+    <div class="progress-right">
+      <div class="progress-stage-name">
+        <span class="stage-num" id="stage-num">1</span><span id="stage-name">System User</span>
+      </div>
+      <div class="progress-bar-wrap"><div class="progress-bar" id="progress-bar"></div></div>
+      <div class="stage-pills">
+        <div class="stage-pill" data-stage="1">1 · System User</div>
+        <div class="stage-pill" data-stage="2">2 · Create App</div>
+        <div class="stage-pill" data-stage="3">3 · Connect App</div>
+        <div class="stage-pill" data-stage="4">4 · Ad Account</div>
+        <div class="stage-pill" data-stage="5">5 · Generate Token</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- =========================================================
+       STEP 0 — Intro
+       ========================================================= -->
+  <div class="step active" data-step="0" data-stage="0">
+    <div class="step-head">
+      <span class="step-num">0</span>
+      <div>
+        <div class="stage-tag">Welcome</div>
+        <h2>Meta Marketing API — Access Token Setup</h2>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>Hi Nadja — this walks you through getting a Meta access token so you can load up ads through Claude Code without having to go through the Meta UI every time.</p>
+      <p>Once you have the token, you'll paste it into your Claude Code session and it'll handle the rest.</p>
+      <p>Click through one step at a time. Click any screenshot to zoom in.</p>
+    </div>
+    <div class="nav-buttons">
+      <button class="btn btn-back" disabled>← Back</button>
+      <button class="btn btn-next">Start →</button>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       STEP 1 — Create System User
+       ========================================================= -->
+  <div class="step" data-step="1" data-stage="1">
+    <div class="step-head">
+      <span class="step-num">1</span>
+      <div>
+        <div class="stage-tag">Stage 1 · System User</div>
+        <h2>Create the System User</h2>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>Go to <strong>business.facebook.com</strong> → Settings → <strong>Users → System users</strong>. Click <strong>Add</strong> in the top right.</p>
+      <p>Name it something you'll recognise — for example <code>API Ads Loader</code>. Set the role to <strong>Employee access</strong>.</p>
+
+      <div class="shot" data-src="meta-api-screenshots/SCR-20260506-ufqb.png">
+        <img src="meta-api-screenshots/SCR-20260506-ufqb.png" alt="Create system user modal">
+      </div>
+
+      <div class="callout callout-blue">
+        <h4><span class="callout-icon">i</span> What's a System User?</h4>
+        <p>It's a non-human user that exists only to issue API tokens.</p>
+      </div>
+    </div>
+    <div class="nav-buttons">
+      <button class="btn btn-back">← Back</button>
+      <button class="btn btn-next">Next →</button>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       STEP 2 — Create App: start
+       ========================================================= -->
+  <div class="step" data-step="2" data-stage="2">
+    <div class="step-head">
+      <span class="step-num">2</span>
+      <div>
+        <div class="stage-tag">Stage 2 · Create App</div>
+        <h2>Open Meta for Developers and create a new App</h2>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>Click <strong>Create new app ID</strong>.</p>
+
+      <div class="shot" data-src="meta-api-screenshots/SCR-20260506-ugde.png">
+        <img src="meta-api-screenshots/SCR-20260506-ugde.png" alt="Create new app ID button">
+      </div>
+
+      <div class="callout callout-blue">
+        <h4><span class="callout-icon">i</span> Why a separate "App"?</h4>
+        <p>Meta's API access is granted at the <strong>App</strong> level, not at the business level. The app is the container for the API permissions — and the token we'll generate at the end is bound to that app + the system user from Step 1.</p>
+      </div>
+    </div>
+    <div class="nav-buttons">
+      <button class="btn btn-back">← Back</button>
+      <button class="btn btn-next">Next →</button>
+    </div>
+  </div>
+
+  <!-- STEP 3 — App details -->
+  <div class="step" data-step="3" data-stage="2">
+    <div class="step-head">
+      <span class="step-num">3</span>
+      <div>
+        <div class="stage-tag">Stage 2 · Create App</div>
+        <h2>Name the App</h2>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>Give the app a name — <code>API Ads Loader</code> is fine. Add your contact email. Click <strong>Next</strong>.</p>
+
+      <div class="shot" data-src="meta-api-screenshots/SCR-20260506-ugia.png">
+        <img src="meta-api-screenshots/SCR-20260506-ugia.png" alt="App details — name and email">
+      </div>
+    </div>
+    <div class="nav-buttons">
+      <button class="btn btn-back">← Back</button>
+      <button class="btn btn-next">Next →</button>
+    </div>
+  </div>
+
+  <!-- STEP 4 — Use case -->
+  <div class="step" data-step="4" data-stage="2">
+    <div class="step-head">
+      <span class="step-num">4</span>
+      <div>
+        <div class="stage-tag">Stage 2 · Create App</div>
+        <h2>Pick the use case: "Create and manage ads with Marketing API"</h2>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>On the use cases screen, click <strong>"Create and manage ads with Marketing API"</strong>. This is the one that unlocks ad account access.</p>
+
+      <div class="shot" data-src="meta-api-screenshots/SCR-20260506-ugpr.png">
+        <img src="meta-api-screenshots/SCR-20260506-ugpr.png" alt="Use cases screen — Marketing API">
+      </div>
+    </div>
+    <div class="nav-buttons">
+      <button class="btn btn-back">← Back</button>
+      <button class="btn btn-next">Next →</button>
+    </div>
+  </div>
+
+  <!-- STEP 5 — Business -->
+  <div class="step" data-step="5" data-stage="2">
+    <div class="step-head">
+      <span class="step-num">5</span>
+      <div>
+        <div class="stage-tag">Stage 2 · Create App</div>
+        <h2>Connect the app to your Business</h2>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>Pick your Business from the dropdown — the one that owns your Mat & Vic's ad account. Click <strong>Next</strong>.</p>
+
+      <div class="shot" data-src="meta-api-screenshots/SCR-20260506-ugtu.png">
+        <img src="meta-api-screenshots/SCR-20260506-ugtu.png" alt="Business selection screen">
+      </div>
+
+      <div class="callout callout-yellow">
+        <h4><span class="callout-icon">!</span> Important</h4>
+        <p>You <strong>must</strong> attach the app to your Business at this step. If you skip it, the system user from Step 1 won't be able to install the app later, and the token won't have access to ad accounts.</p>
+      </div>
+    </div>
+    <div class="nav-buttons">
+      <button class="btn btn-back">← Back</button>
+      <button class="btn btn-next">Next →</button>
+    </div>
+  </div>
+
+  <!-- STEP 6 — Requirements + Create -->
+  <div class="step" data-step="6" data-stage="2">
+    <div class="step-head">
+      <span class="step-num">6</span>
+      <div>
+        <div class="stage-tag">Stage 2 · Create App</div>
+        <h2>Confirm requirements and create the App</h2>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>Meta will show a "Requirements" page. For Marketing API there are usually <strong>no requirements identified</strong> — just click <strong>Next</strong>.</p>
+
+      <div class="shot" data-src="meta-api-screenshots/SCR-20260506-ugwj.png">
+        <img src="meta-api-screenshots/SCR-20260506-ugwj.png" alt="Requirements screen — none identified">
+      </div>
+
+      <p>Then on the Overview screen, click <strong>Create app</strong>.</p>
+
+      <div class="shot" data-src="meta-api-screenshots/SCR-20260506-uhab.png">
+        <img src="meta-api-screenshots/SCR-20260506-uhab.png" alt="Overview screen with Create app button">
+      </div>
+    </div>
+    <div class="nav-buttons">
+      <button class="btn btn-back">← Back</button>
+      <button class="btn btn-next">Next →</button>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       STAGE 3 — Wire system user to app
+       ========================================================= -->
+  <!-- STEP 7 — Back to Business Suite, find apps -->
+  <div class="step" data-step="7" data-stage="3">
+    <div class="step-head">
+      <span class="step-num">7</span>
+      <div>
+        <div class="stage-tag">Stage 3 · Connect App to System User</div>
+        <h2>Switch back to Business Suite and open Apps</h2>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>Now switch back to <strong>business.facebook.com</strong>. In the left sidebar under <strong>Accounts</strong>, click <strong>Apps</strong>.</p>
+
+      <div class="shot" data-src="meta-api-screenshots/SCR-20260506-uhhz.png">
+        <img src="meta-api-screenshots/SCR-20260506-uhhz.png" alt="Business Suite Apps section in sidebar">
+      </div>
+
+      <p>You should see the app you just created in the list.</p>
+
+      <div class="shot" data-src="meta-api-screenshots/SCR-20260506-uhmh.png">
+        <img src="meta-api-screenshots/SCR-20260506-uhmh.png" alt="App appears in Business Suite apps list">
+      </div>
+    </div>
+    <div class="nav-buttons">
+      <button class="btn btn-back">← Back</button>
+      <button class="btn btn-next">Next →</button>
+    </div>
+  </div>
+
+  <!-- STEP 8 — Assign access -->
+  <div class="step" data-step="8" data-stage="3">
+    <div class="step-head">
+      <span class="step-num">8</span>
+      <div>
+        <div class="stage-tag">Stage 3 · Connect App to System User</div>
+        <h2>Click "Assign Access" on the app</h2>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>Click into the app, then click the <strong>Assign Access</strong> button.</p>
+
+      <div class="shot" data-src="meta-api-screenshots/SCR-20260506-uhpb.png">
+        <img src="meta-api-screenshots/SCR-20260506-uhpb.png" alt="Assign Access button on app page">
+      </div>
+    </div>
+    <div class="nav-buttons">
+      <button class="btn btn-back">← Back</button>
+      <button class="btn btn-next">Next →</button>
+    </div>
+  </div>
+
+  <!-- STEP 9 — Toggle 4 permissions, assign system user -->
+  <div class="step" data-step="9" data-stage="3">
+    <div class="step-head">
+      <span class="step-num">9</span>
+      <div>
+        <div class="stage-tag">Stage 3 · Connect App to System User</div>
+        <h2>Pick the System User and toggle 4 permissions on</h2>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>In the assignment dialog, select the <strong>System User</strong> you created in Step 1. Then toggle these <strong>4 app permissions</strong> on:</p>
+
+      <ul class="perm-list">
+        <li>✓ Develop app</li>
+        <li>✓ View insights</li>
+        <li>✓ Test app</li>
+        <li>✓ Manage app</li>
+      </ul>
+
+      <div class="shot" data-src="meta-api-screenshots/SCR-20260506-uhur.png">
+        <img src="meta-api-screenshots/SCR-20260506-uhur.png" alt="Toggle 4 permissions and assign to system user">
+      </div>
+
+      <p>Click <strong>Save changes</strong>.</p>
+    </div>
+    <div class="nav-buttons">
+      <button class="btn btn-back">← Back</button>
+      <button class="btn btn-next">Next →</button>
+    </div>
+  </div>
+
+  <!-- STEP 10 — Verify under System Users -->
+  <div class="step" data-step="10" data-stage="3">
+    <div class="step-head">
+      <span class="step-num">10</span>
+      <div>
+        <div class="stage-tag">Stage 3 · Connect App to System User</div>
+        <h2>Verify the app is installed on the System User</h2>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>Go back to <strong>Users → System users</strong>. Click your system user, then click the <strong>Installed apps</strong> tab. You should see the app listed there with <strong>Full control</strong>.</p>
+
+      <div class="shot" data-src="meta-api-screenshots/SCR-20260506-uimr.png">
+        <img src="meta-api-screenshots/SCR-20260506-uimr.png" alt="Back to System users in left nav">
+      </div>
+
+      <div class="shot" data-src="meta-api-screenshots/SCR-20260506-uipy.png">
+        <img src="meta-api-screenshots/SCR-20260506-uipy.png" alt="Installed apps tab showing the app">
+      </div>
+
+      <div class="callout callout-green">
+        <h4><span class="callout-icon">✓</span> Checkpoint</h4>
+        <p>If you see your app under <strong>Installed apps</strong>, the wiring is correct. Move on.</p>
+      </div>
+    </div>
+    <div class="nav-buttons">
+      <button class="btn btn-back">← Back</button>
+      <button class="btn btn-next">Next →</button>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       STAGE 4 — Ad account
+       ========================================================= -->
+  <!-- STEP 11 — Open ad account, Assign access, pick system user -->
+  <div class="step" data-step="11" data-stage="4">
+    <div class="step-head">
+      <span class="step-num">11</span>
+      <div>
+        <div class="stage-tag">Stage 4 · Ad Account Access</div>
+        <h2>Give the System User access to the Mat & Vic's ad account</h2>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>Still in Business Suite. In the left sidebar under <strong>Accounts</strong>, click <strong>Ad accounts</strong>, then click into the <strong>Mat & Vic's</strong> ad account.</p>
+
+      <p>Click <strong>Assign access</strong>, then add the <strong>System User</strong> you created.</p>
+
+      <div class="shot" data-src="meta-api-screenshots/SCR-20260506-ukfk.png">
+        <img src="meta-api-screenshots/SCR-20260506-ukfk.png" alt="Mat & Vic's ad account — assign access to system user">
+      </div>
+    </div>
+    <div class="nav-buttons">
+      <button class="btn btn-back">← Back</button>
+      <button class="btn btn-next">Next →</button>
+    </div>
+  </div>
+
+  <!-- STEP 12 — Toggle Manage campaigns -->
+  <div class="step" data-step="12" data-stage="4">
+    <div class="step-head">
+      <span class="step-num">12</span>
+      <div>
+        <div class="stage-tag">Stage 4 · Ad Account Access</div>
+        <h2>Toggle "Manage campaigns (ads)" ON</h2>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>In the permissions panel, under <strong>Partial access</strong>, turn <strong>Manage campaigns (ads)</strong> on. Leave the others off — that's all the token needs.</p>
+
+      <div class="shot" data-src="meta-api-screenshots/SCR-20260506-uktu.png">
+        <img src="meta-api-screenshots/SCR-20260506-uktu.png" alt="Toggle Manage campaigns (ads) on">
+      </div>
+
+      <p>Click <strong>Save changes</strong>.</p>
+    </div>
+    <div class="nav-buttons">
+      <button class="btn btn-back">← Back</button>
+      <button class="btn btn-next">Next →</button>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       STAGE 5 — Generate token
+       ========================================================= -->
+  <!-- STEP 13 — Generate token: app, expiration, permissions -->
+  <div class="step" data-step="13" data-stage="5">
+    <div class="step-head">
+      <span class="step-num">13</span>
+      <div>
+        <div class="stage-tag">Stage 5 · Generate Token</div>
+        <h2>Generate the access token</h2>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>Back to <strong>Users → System users</strong>. Click your system user. In the top right, click <strong>Generate token</strong>.</p>
+
+      <div class="shot" data-src="meta-api-screenshots/SCR-20260506-uizj.png">
+        <img src="meta-api-screenshots/SCR-20260506-uizj.png" alt="Generate token button on system user page">
+      </div>
+
+      <p><strong>Pick the app</strong> you created (the one we wired up in Stages 2 and 3).</p>
+
+      <div class="shot" data-src="meta-api-screenshots/SCR-20260506-ujdb.png">
+        <img src="meta-api-screenshots/SCR-20260506-ujdb.png" alt="Select app modal">
+      </div>
+
+      <p><strong>Set expiration to 60 days</strong> (Meta's recommended option).</p>
+
+      <div class="shot" data-src="meta-api-screenshots/SCR-20260506-ujfc.png">
+        <img src="meta-api-screenshots/SCR-20260506-ujfc.png" alt="Set expiration to 60 days recommended">
+      </div>
+
+      <p><strong>Pick these 4 permissions</strong> in the permission picker:</p>
+
+      <ul class="perm-list">
+        <li>✓ ads_management</li>
+        <li>✓ ads_read</li>
+        <li>✓ pages_manage_ads</li>
+        <li>✓ pages_read_engagement</li>
+      </ul>
+
+      <div class="shot" data-src="meta-api-screenshots/SCR-20260506-ujkq.png">
+        <img src="meta-api-screenshots/SCR-20260506-ujkq.png" alt="Permission checkbox grid — pick 4">
+      </div>
+    </div>
+    <div class="nav-buttons">
+      <button class="btn btn-back">← Back</button>
+      <button class="btn btn-next">Next →</button>
+    </div>
+  </div>
+
+  <!-- STEP 14 — The two paths -->
+  <div class="step" data-step="14" data-stage="5">
+    <div class="step-head">
+      <span class="step-num">14</span>
+      <div>
+        <div class="stage-tag">Stage 5 · Generate Token</div>
+        <h2>What happens after you click Generate</h2>
+      </div>
+    </div>
+    <div class="step-body">
+
+      <p>Click <strong>Generate token</strong>. <strong>One of two things</strong> will happen — and which one depends on how your business is set up:</p>
+
+      <div class="callout callout-green">
+        <h4><span class="callout-icon">→</span> Path A — Token appears immediately (most likely your case)</h4>
+        <p>The screen will show you a long string starting with <code>E…</code> (usually <code>EAC</code> or <code>EAA</code>). <strong>This is the token.</strong> Copy it right away — Meta will only show it once.</p>
+        <p>Save the token somewhere safe and paste it into your Claude Code session when it asks for the Meta access token. That's what unlocks Claude Code to load ads for you without going through the UI.</p>
+        <p style="margin-top:0.5rem; font-size:0.9rem; color:var(--text-gray);">There's no screenshot for this path because Andrew's own business hit Path B — but for most setups (including yours) the token generates on the spot.</p>
+      </div>
+
+      <div class="callout callout-yellow">
+        <h4><span class="callout-icon">⚠</span> Path B — "Someone else needs to approve" warning</h4>
+        <p>If your business has admin gating turned on, you'll see a yellow banner that reads:</p>
+        <p style="background:var(--bg-white); border:1px solid #ccc; padding:0.75rem; font-size:0.9rem;">"Someone else needs to approve request to generate an access token."</p>
+
+        <div class="shot" data-src="meta-api-screenshots/SCR-20260506-ukbu.png">
+          <img src="meta-api-screenshots/SCR-20260506-ukbu.png" alt="Approval-pending yellow warning — Path B">
+        </div>
+
+        <p>If this happens, Meta has already sent the request to another admin in your business. Wait for them to approve, then come back to this same screen — the token will appear. Save it and paste it into your Claude Code session when prompted.</p>
+      </div>
+
+      <div class="callout callout-blue">
+        <h4><span class="callout-icon">i</span> Other things you might also need to check</h4>
+        <p>Earlier in your sidebar you may have seen <strong>System users</strong> showing the assigned assets and app warnings (screenshot below). That's normal — once Stages 3 and 4 are saved, the warnings on these panels should clear.</p>
+        <div class="shot" data-src="meta-api-screenshots/SCR-20260506-ufil.png">
+          <img src="meta-api-screenshots/SCR-20260506-ufil.png" alt="System users panel — assigned assets / installed apps">
+        </div>
+        <div class="shot" data-src="meta-api-screenshots/SCR-20260506-ufvl.png">
+          <img src="meta-api-screenshots/SCR-20260506-ufvl.png" alt="Apps section in left nav">
+        </div>
+        <div class="shot" data-src="meta-api-screenshots/SCR-20260506-ugag.png">
+          <img src="meta-api-screenshots/SCR-20260506-ugag.png" alt="People section — Add button">
+        </div>
+      </div>
+
+      <div class="final-card" style="margin-top:1.5rem;">
+        <h2>That's it — thank you!</h2>
+        <p style="margin-top:0.75rem;">Save the token (the long <code>E…</code> string) somewhere safe and paste it into your Claude Code session when it asks. If anything was unclear or didn't match what you saw on screen, send Andrew a screenshot and he'll figure it out.</p>
+      </div>
+
+    </div>
+    <div class="nav-buttons">
+      <button class="btn btn-back">← Back</button>
+      <button class="btn btn-next" disabled>Done ✓</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <img id="lightbox-img" src="" alt="">
+</div>
+
+<script>
+  const TOTAL_STEPS = 14;
+  const STAGE_NAMES = {
+    0: 'Welcome',
+    1: 'System User',
+    2: 'Create App',
+    3: 'Connect App to System User',
+    4: 'Ad Account Access',
+    5: 'Generate Token'
+  };
+  let currentStep = 0;
+
+  const stepEls = document.querySelectorAll('.step');
+  const progressBar = document.getElementById('progress-bar');
+  const stepNumEl = document.getElementById('step-num');
+  const stageNumEl = document.getElementById('stage-num');
+  const stageNameEl = document.getElementById('stage-name');
+  const stageNumWrap = stageNumEl.parentElement;
+  const stagePills = document.querySelectorAll('.stage-pill');
+
+  function showStep(n) {
+    n = Math.max(0, Math.min(TOTAL_STEPS, n));
+    currentStep = n;
+    stepEls.forEach(el => {
+      el.classList.toggle('active', Number(el.dataset.step) === n);
+    });
+    progressBar.style.width = ((n / TOTAL_STEPS) * 100) + '%';
+    stepNumEl.textContent = n;
+
+    const activeStage = Number(document.querySelector(`.step[data-step="${n}"]`).dataset.stage);
+    if (activeStage === 0) {
+      stageNumEl.style.display = 'none';
+      stageNameEl.textContent = STAGE_NAMES[0];
+    } else {
+      stageNumEl.style.display = '';
+      stageNumEl.textContent = activeStage;
+      stageNameEl.textContent = STAGE_NAMES[activeStage];
+    }
+    stagePills.forEach(p => {
+      const s = Number(p.dataset.stage);
+      p.classList.toggle('active', s === activeStage);
+      p.classList.toggle('done', activeStage > 0 && s < activeStage);
+    });
+
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  document.querySelectorAll('.btn-next').forEach(btn => {
+    btn.addEventListener('click', () => { if (!btn.disabled) showStep(currentStep + 1); });
+  });
+  document.querySelectorAll('.btn-back').forEach(btn => {
+    btn.addEventListener('click', () => { if (!btn.disabled) showStep(currentStep - 1); });
+  });
+
+  stagePills.forEach(p => {
+    p.addEventListener('click', () => {
+      const stage = Number(p.dataset.stage);
+      const firstStepOfStage = document.querySelector(`.step[data-stage="${stage}"]`);
+      if (firstStepOfStage) showStep(Number(firstStepOfStage.dataset.step));
+    });
+  });
+
+  // Lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  document.querySelectorAll('.shot').forEach(shot => {
+    shot.addEventListener('click', () => {
+      lightboxImg.src = shot.dataset.src;
+      lightbox.classList.add('open');
+    });
+  });
+  lightbox.addEventListener('click', () => {
+    lightbox.classList.remove('open');
+    lightboxImg.src = '';
+  });
+
+  // Keyboard nav
+  document.addEventListener('keydown', e => {
+    if (lightbox.classList.contains('open')) {
+      if (e.key === 'Escape') { lightbox.classList.remove('open'); lightboxImg.src = ''; }
+      return;
+    }
+    if (e.key === 'ArrowRight') showStep(currentStep + 1);
+    if (e.key === 'ArrowLeft') showStep(currentStep - 1);
+  });
+
+  showStep(0);
+</script>
+
+</body>
+</html>
