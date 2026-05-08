@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mat & Vic's — Publish Ads to Meta with Claude Code</title>
+  <style>
+    :root {
+      --bg-page: #F8F8F7;
+      --bg-white: #ffffff;
+      --bg-blue: #EBF9FF;
+      --bg-purple: #F7F1FF;
+      --bg-yellow: #FFFDE7;
+      --bg-green: #E8F5E9;
+      --accent-teal: #53DBC9;
+      --accent-yellow: #FFDE00;
+      --accent-purple: #9D4EDD;
+      --text-black: #000000;
+      --text-dark: #1a1a1a;
+      --text-gray: #4a4a4a;
+      --text-muted: #6b6b6b;
+      --shadow-lg: -0.31rem 0.31rem 0 0 #383838;
+      --shadow-sm: -0.19rem 0.19rem 0 0 #383838;
+      --border: 2px solid black;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text-dark);
+      background: var(--bg-page);
+      padding: 2rem 1.5rem 5rem;
+    }
+
+    .container { max-width: 860px; margin: 0 auto; }
+
+    h1, h2, h3, h4 {
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-weight: 700;
+      color: var(--text-black);
+    }
+
+    h1 { font-size: 2.25rem; line-height: 1.2; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+    h4 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-gray);
+      margin-bottom: 0.4rem;
+    }
+
+    p { margin-bottom: 0.85rem; }
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol { margin: 0.75rem 0 0.75rem 1.25rem; }
+    li { margin-bottom: 0.4rem; }
+
+    strong { font-weight: 700; }
+
+    code {
+      background: var(--bg-white);
+      border: 1px solid #ccc;
+      padding: 0.125rem 0.5rem;
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.875rem;
+    }
+
+    .hero {
+      background: var(--bg-yellow);
+      border: var(--border);
+      box-shadow: var(--shadow-lg);
+      padding: 2rem 1.75rem;
+      margin-bottom: 2.5rem;
+    }
+    .hero .lede { font-size: 1.1rem; color: var(--text-gray); margin-top: 0.6rem; }
+    .hero .tag-row { margin-top: 1.1rem; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .hero-tag {
+      background: var(--accent-teal);
+      border: var(--border);
+      box-shadow: var(--shadow-sm);
+      padding: 0.3rem 0.7rem;
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+    .hero-tag.purple { background: var(--bg-purple); }
+    .hero-tag.green { background: var(--bg-green); }
+
+    .section {
+      background: var(--bg-white);
+      border: var(--border);
+      box-shadow: var(--shadow-lg);
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .callout {
+      border: var(--border);
+      box-shadow: var(--shadow-sm);
+      padding: 1.1rem 1.25rem;
+      margin: 1rem 0;
+    }
+    .callout-blue { background: var(--bg-blue); }
+    .callout-purple { background: var(--bg-purple); }
+    .callout-yellow { background: var(--bg-yellow); }
+    .callout-green { background: var(--bg-green); }
+
+    .flow {
+      list-style: none;
+      padding: 0;
+      counter-reset: step;
+    }
+    .flow li {
+      position: relative;
+      padding: 0.85rem 0 0.85rem 3.25rem;
+      border-bottom: 1px solid #eee;
+      counter-increment: step;
+    }
+    .flow li:last-child { border-bottom: 0; }
+    .flow li::before {
+      content: counter(step);
+      position: absolute;
+      left: 0;
+      top: 0.85rem;
+      width: 2.4rem;
+      height: 2.4rem;
+      background: var(--accent-teal);
+      border: var(--border);
+      border-radius: 50%;
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .flow .q {
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.85rem;
+      color: var(--text-gray);
+      background: var(--bg-page);
+      border: 1px solid #ddd;
+      padding: 0.45rem 0.7rem;
+      margin-top: 0.4rem;
+      display: inline-block;
+    }
+
+    .install-step {
+      background: var(--bg-page);
+      border: 1px solid #ccc;
+      padding: 0.9rem 1.1rem;
+      margin: 0.75rem 0;
+    }
+    .install-step pre {
+      background: var(--text-dark);
+      color: var(--accent-teal);
+      border: var(--border);
+      box-shadow: var(--shadow-sm);
+      padding: 0.85rem 1rem;
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.8rem;
+      overflow-x: auto;
+      margin-top: 0.6rem;
+      white-space: pre-wrap;
+      word-break: break-all;
+    }
+
+    .btn-link {
+      display: inline-block;
+      background: var(--accent-teal);
+      border: var(--border);
+      box-shadow: var(--shadow-sm);
+      padding: 0.7rem 1.25rem;
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: var(--text-black);
+      margin: 0.5rem 0.5rem 0.5rem 0;
+      transition: transform 0.1s;
+    }
+    .btn-link:hover { transform: translate(2px, -2px); box-shadow: -0.4rem 0.4rem 0 0 #383838; }
+    .btn-link:active { transform: translate(-2px, 2px); box-shadow: -0.1rem 0.1rem 0 0 #383838; }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 600px) {
+      .grid-2 { grid-template-columns: 1fr; }
+      h1 { font-size: 1.7rem; }
+    }
+
+    .key-rules { padding-left: 1rem; }
+    .key-rules li {
+      list-style: none;
+      padding-left: 1.5rem;
+      position: relative;
+      margin-bottom: 0.6rem;
+    }
+    .key-rules li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: 700;
+      color: #2e7d32;
+    }
+
+    a { color: var(--accent-purple); }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="hero">
+    <h4>Step 2 of 2 — Publishing Ads</h4>
+    <h1>Publish your ads to Meta — guided by Claude Code</h1>
+    <p class="lede">You did Step 1 (got the Meta API token). This is the skill that uses it. Drop in your image or video ad assets, answer a few questions, Claude Code does the rest.</p>
+    <div class="tag-row">
+      <span class="hero-tag">Image ads</span>
+      <span class="hero-tag">Video ads</span>
+      <span class="hero-tag purple">Flexible Ad Format</span>
+      <span class="hero-tag green">Cost Cap or ROAS</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>What this skill does</h2>
+    <p>It handles every step of putting a Facebook/Instagram ad live via Meta's Marketing API:</p>
+    <ul>
+      <li><strong>Uploads your images or videos</strong> to your ad account.</li>
+      <li><strong>Picks the right structure</strong> — Meta's <em>Flexible Ad Format</em>, where one ad contains multiple images/videos × multiple texts × multiple headlines, and Meta's algorithm picks the best combinations.</li>
+      <li><strong>Drafts ad copy from your landing page</strong> if you don't have any yet — or accepts copy you've written.</li>
+      <li><strong>Creates a new ad set</strong> if you need one (with sensible Cost Cap or ROAS defaults), or publishes into an existing one.</li>
+      <li><strong>Generates a Python publish script</strong> for the batch, runs it, and saves it on disk so you can re-run or audit it later.</li>
+      <li><strong>Activates and verifies</strong> all three levels (campaign + ad set + ad) — Meta's activation doesn't cascade, so this matters.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>The guided flow</h2>
+    <p>You type <code>/meta-ad-publish</code> in Claude Code. It asks you these, in order:</p>
+    <ol class="flow">
+      <li>
+        <strong>First-run config</strong> (asked once, then saved)
+        <span class="q">"What's your ad account ID? Page ID? Pixel? Instagram?"</span>
+      </li>
+      <li>
+        <strong>Image ad or video ad?</strong>
+        <span class="q">One type per ad — match what works in production.</span>
+      </li>
+      <li>
+        <strong>Where are your assets?</strong>
+        <span class="q">Folder of PNGs/JPGs, or path to MP4 files.</span>
+      </li>
+      <li>
+        <strong>Existing ad set, or create a new one?</strong>
+        <span class="q">If new: Cost Cap, ROAS, or both? What cap (suggests AOV÷2.2)? What ROAS floor?</span>
+      </li>
+      <li>
+        <strong>Landing page URL + CTA?</strong>
+        <span class="q">"Learn More", "Shop Now", "Sign Up", "Get Offer"</span>
+      </li>
+      <li>
+        <strong>Image clusters</strong> (only if you have &gt;10 images — Meta caps at 10/ad)
+        <span class="q">Skill proposes 1 or 2 thematic clusters; you approve, swap, or split differently.</span>
+      </li>
+      <li>
+        <strong>Have copy ready, or want me to draft?</strong>
+        <span class="q">"I'll paste my own", "Draft 5 angles per cluster from my LP", or mix.</span>
+      </li>
+      <li>
+        <strong>Review the generated Python script</strong> + run it
+        <span class="q">All ads created PAUSED — nothing live yet.</span>
+      </li>
+      <li>
+        <strong>Activate?</strong>
+        <span class="q">Skill activates campaign + ad set + ads, then verifies effective_status on all three.</span>
+      </li>
+    </ol>
+  </div>
+
+  <div class="section">
+    <h2>Install — one time</h2>
+
+    <div class="install-step">
+      <h3>1. Get the skill</h3>
+      <p>Clone the repo into your project folder, or copy the <code>.claude/skills/meta-ad-publish/</code> directory into your project's <code>.claude/skills/</code>:</p>
+<pre>git clone https://github.com/theprompted/meta-ad-publish-skill.git
+cd meta-ad-publish-skill
+chmod +x scripts/*.sh</pre>
+    </div>
+
+    <div class="install-step">
+      <h3>2. Drop your token in <code>.env</code></h3>
+      <p>You already generated this in <a href="../meta-api-setup/">Step 1 — the Meta API setup guide</a>. Save it to a <code>.env</code> file at your project root:</p>
+<pre>META_ACCESS_TOKEN=EAC...your-long-token...</pre>
+      <p>Make sure <code>.env</code> is listed in your <code>.gitignore</code>. The skill warns you if it isn't.</p>
+    </div>
+
+    <div class="install-step">
+      <h3>3. Run it in Claude Code</h3>
+<pre>/meta-ad-publish</pre>
+      <p>The first run asks for your ad account ID, page ID, Instagram User ID (optional), and Pixel ID. It saves them — you won't be asked again.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Why a generated script, not direct API calls?</h2>
+    <div class="callout callout-blue">
+      <h4>The skill writes a Python script for each batch, then runs it</h4>
+      <p>Reasons:</p>
+      <ul>
+        <li><strong>Re-runnable.</strong> If something fails halfway, fix the script and re-run — without re-answering all the questions.</li>
+        <li><strong>Auditable.</strong> The exact payload sent to Meta is on disk. If Meta rejects something, the script is what you debug.</li>
+        <li><strong>Survives interrupts.</strong> A crashed Claude Code session doesn't lose your batch.</li>
+        <li><strong>Matches what works.</strong> Every successful publish across thousands of ads followed this pattern.</li>
+      </ul>
+      <p>Each run lands at <code>./publish-runs/publish-&lt;date&gt;-&lt;batch&gt;.py</code> — yours to keep.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Locked rules the skill follows</h2>
+    <p>You don't need to remember any of these — the skill enforces them. Listed here so you know the guardrails:</p>
+    <ul class="key-rules">
+      <li>Every ad created PAUSED. Activation is a deliberate, verified step.</li>
+      <li>Uses <strong>Flexible Ad Format</strong>, not Dynamic Creative (which only allows 1 ad per ad set).</li>
+      <li>Activation does <em>not</em> cascade — campaign, ad set, and ad each verified separately via <code>effective_status</code>.</li>
+      <li>ROAS ad sets reuse the Cost Cap creative ID (preserves Meta's learning).</li>
+      <li>Hard limits per ad: 10 images / 10 videos, 5 primary texts, 5 headlines.</li>
+      <li>API version v25.0 throughout.</li>
+    </ul>
+    <p style="margin-top:1rem; font-size:0.9rem; color:var(--text-gray);">If you're curious why each rule exists: 13 documented Meta API failure modes are captured in <a href="https://github.com/theprompted/meta-ad-publish-skill/blob/main/.claude/skills/meta-ad-publish/references/failures-and-fixes.md">the skill's failures-and-fixes reference</a>. Every one of them has burned someone before.</p>
+  </div>
+
+  <div class="section">
+    <h2>Open the repo</h2>
+    <p>Source, install instructions, and full API reference:</p>
+    <a class="btn-link" href="https://github.com/theprompted/meta-ad-publish-skill">github.com/theprompted/meta-ad-publish-skill</a>
+    <a class="btn-link" href="../meta-api-setup/">← Back to Step 1 (Token Setup)</a>
+  </div>
+
+</div>
+
+</body>
+</html>
