@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mat & Vic's — Metafields & Reviews</title>
+  <style>
+    :root {
+      --bg-page: #F8F8F7;
+      --bg-white: #ffffff;
+      --bg-blue: #EBF9FF;
+      --bg-purple: #F7F1FF;
+      --bg-yellow: #FFFDE7;
+      --bg-green: #E8F5E9;
+      --accent-teal: #53DBC9;
+      --accent-yellow: #FFDE00;
+      --accent-purple: #9D4EDD;
+      --accent-red: #E53935;
+      --text-black: #000000;
+      --text-dark: #1a1a1a;
+      --text-gray: #4a4a4a;
+      --text-muted: #6b6b6b;
+      --shadow-lg: -0.31rem 0.31rem 0 0 #383838;
+      --shadow-sm: -0.19rem 0.19rem 0 0 #383838;
+      --border: 2px solid black;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 1rem;
+      line-height: 1.7;
+      color: var(--text-dark);
+      background: var(--bg-page);
+      padding: 2rem 1.5rem 5rem;
+    }
+
+    .container { max-width: 860px; margin: 0 auto; }
+
+    h1, h2, h3, h4 {
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-weight: 700;
+      color: var(--text-black);
+    }
+
+    h1 { font-size: 2.25rem; line-height: 1.2; margin-bottom: 0.5rem; }
+    h2 { font-size: 1.5rem; margin-bottom: 0.75rem; }
+    h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+    h4 {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--text-gray);
+      margin-bottom: 0.4rem;
+    }
+
+    p { margin-bottom: 0.85rem; }
+    p:last-child { margin-bottom: 0; }
+
+    ul, ol { margin: 0.75rem 0 0.75rem 1.25rem; }
+    li { margin-bottom: 0.5rem; }
+
+    strong { font-weight: 700; }
+
+    code {
+      background: var(--bg-white);
+      border: 1px solid #ccc;
+      padding: 0.125rem 0.5rem;
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.875rem;
+    }
+
+    a {
+      color: var(--accent-purple);
+      font-weight: 600;
+    }
+    a:hover { color: var(--accent-teal); }
+
+    .hero {
+      background: var(--bg-yellow);
+      border: var(--border);
+      box-shadow: var(--shadow-lg);
+      padding: 1.75rem;
+      margin-bottom: 2.5rem;
+    }
+    .hero .lede {
+      color: var(--text-gray);
+      margin-top: 0.6rem;
+      font-size: 1.05rem;
+    }
+
+    .section {
+      background: var(--bg-white);
+      border: var(--border);
+      box-shadow: var(--shadow-lg);
+      padding: 1.75rem;
+      margin-bottom: 2rem;
+    }
+    .section h2 {
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .callout {
+      border: var(--border);
+      box-shadow: var(--shadow-sm);
+      padding: 1.1rem 1.25rem;
+      margin: 1rem 0;
+    }
+    .callout-blue { background: var(--bg-blue); }
+    .callout-purple { background: var(--bg-purple); }
+    .callout-yellow { background: var(--bg-yellow); }
+    .callout-green { background: var(--bg-green); }
+
+    .recommendation {
+      background: var(--bg-green);
+      border: var(--border);
+      box-shadow: var(--shadow-sm);
+      padding: 1rem 1.25rem;
+      margin: 1.2rem 0 0.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+    .recommendation .label {
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      background: var(--accent-teal);
+      border: 1.5px solid black;
+      padding: 0.25rem 0.55rem;
+      flex-shrink: 0;
+    }
+    .recommendation .text {
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .btn-link {
+      display: inline-block;
+      background: var(--accent-teal);
+      border: var(--border);
+      box-shadow: var(--shadow-sm);
+      padding: 0.65rem 1.1rem;
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-decoration: none;
+      color: var(--text-black);
+      margin: 0.5rem 0.5rem 0.5rem 0;
+      transition: transform 0.1s;
+    }
+    .btn-link:hover {
+      transform: translate(2px, -2px);
+      box-shadow: -0.4rem 0.4rem 0 0 #383838;
+      color: var(--text-black);
+    }
+    .btn-link:active {
+      transform: translate(-2px, 2px);
+      box-shadow: -0.1rem 0.1rem 0 0 #383838;
+    }
+    .btn-link.alt { background: var(--bg-white); }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    .comparison-table th, .comparison-table td {
+      border: 1.5px solid black;
+      padding: 0.7rem 0.85rem;
+      text-align: left;
+      vertical-align: top;
+    }
+    .comparison-table th {
+      background: var(--bg-page);
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.85rem;
+    }
+    .comparison-table td.winner {
+      background: var(--bg-green);
+      font-weight: 600;
+    }
+    .verdict-row td {
+      background: var(--text-dark);
+      color: var(--accent-teal);
+      font-family: ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, monospace;
+      font-size: 0.85rem;
+    }
+
+    .closer {
+      background: var(--bg-purple);
+      border: var(--border);
+      box-shadow: var(--shadow-lg);
+      padding: 1.5rem 1.75rem;
+      margin-top: 2.5rem;
+    }
+    .closer h3 { margin-bottom: 0.6rem; }
+
+    @media (max-width: 600px) {
+      body { padding: 1rem 1rem 4rem; }
+      h1 { font-size: 1.75rem; }
+      .comparison-table { font-size: 0.85rem; }
+      .comparison-table th, .comparison-table td { padding: 0.5rem 0.6rem; }
+      .recommendation { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="hero">
+    <h4>For Stefan + Nadja</h4>
+    <h1>Metafields & Reviews — Quick Answers</h1>
+    <p class="lede">You asked two things on May 10 — which app to use for metafields, and which reviews app + how we treat real vs imported reviews. Here's the short version of both.</p>
+  </div>
+
+  <!-- ============================================================
+       METAFIELDS
+       ============================================================ -->
+  <div class="section">
+    <h2>1 · Metafields</h2>
+
+    <div class="recommendation">
+      <span class="label">Our pick</span>
+      <span class="text">Matrixify — but try the Shopify API first</span>
+    </div>
+
+    <p>Our go-to app is <strong>Matrixify</strong> (formerly Excelify) for bulk import/export of metafields via CSV. <strong>Alfred has used it extensively</strong> across our client work — he's a master with it, so if you or Nadja get stuck, you can ask him directly.</p>
+
+    <a class="btn-link" href="https://apps.shopify.com/excel-export-import" target="_blank" rel="noopener">↗ Matrixify on Shopify App Store</a>
+
+    <div class="callout callout-blue">
+      <h4>Worth trying first</h4>
+      <p>Before subscribing to anything, I'd have Nadja try doing it through the <strong>Shopify Admin API</strong> with Claude Code first. Most metafield work — creating definitions, bulk-updating values across products, syncing from a sheet — is straightforward through the API and doesn't need a paid app. You'd save the subscription cost.</p>
+    </div>
+
+    <p style="margin-top:1rem;"><strong>If you let me know what specifically you're trying to accomplish</strong> with the metafields (the actual job — pricing tiers per variant, custom product specs, fulfillment data, sizing, etc.), I can test it on my end against the Shopify API and confirm whether it's doable without an app. If it's not, Matrixify is the answer.</p>
+  </div>
+
+  <!-- ============================================================
+       REVIEWS
+       ============================================================ -->
+  <div class="section">
+    <h2>2 · Reviews</h2>
+
+    <div class="recommendation">
+      <span class="label">Our pick</span>
+      <span class="text">Judge.me + post-purchase email from day one</span>
+    </div>
+
+    <p>We've tested all the major ones over the years. <strong>Judge.me</strong> is our default — by far the most cost-effective and scales fine. The others have stronger marketing but the subscription cost is hard to justify against margin, and the actual review-collection mechanics aren't meaningfully better.</p>
+
+    <a class="btn-link" href="https://apps.shopify.com/judgeme" target="_blank" rel="noopener">↗ Judge.me on Shopify App Store</a>
+    <a class="btn-link alt" href="https://judge.me/" target="_blank" rel="noopener">↗ judge.me</a>
+
+    <h3 style="margin-top:1.5rem;">What we've actually tested</h3>
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>App</th>
+          <th>Why we landed where we did</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="winner"><strong>Judge.me</strong></td>
+          <td class="winner">Most cost-effective. Post-purchase email built in. Scales fine. <strong>Our default.</strong></td>
+        </tr>
+        <tr>
+          <td>Yotpo</td>
+          <td>More expensive than Judge.me. Marketing is louder than the actual benefit. Not worth the margin hit.</td>
+        </tr>
+        <tr>
+          <td>Loox</td>
+          <td>Same story. Pretty product, but pricing isn't justified against what Judge.me already does.</td>
+        </tr>
+        <tr>
+          <td>Trustpilot</td>
+          <td>Subscription model is just not a good use of margin. We don't recommend.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top:1.75rem;">Real vs imported reviews</h3>
+    <p>Strong bias toward <strong>real custom reviews</strong>. They're more trustworthy on-page, they don't fade in credibility, and they compound as you collect more. Turn on <strong>Judge.me's post-purchase email day one</strong> — that's the engine.</p>
+
+    <div class="callout callout-yellow">
+      <h4>About importing Amazon reviews onto Shopify</h4>
+      <p>Had my agent look into this for you and the short answer is <strong>don't</strong>. Amazon's Conditions of Use prohibit copying or republishing review content for commercial use on another site, and the reviewer (not Amazon, not you) owns the copyright on what they wrote. That's why Judge.me itself refuses to build a native Amazon importer.</p>
+      <p style="margin-top:0.6rem;">Keep things clean and skip the Amazon-to-Shopify review pull.</p>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       CLOSER
+       ============================================================ -->
+  <div class="closer">
+    <h3>Next step</h3>
+    <p>Let me know <strong>what you're trying to do with the metafields</strong> — the actual job — and I'll see if the Shopify API can handle it cleanly so you can skip the subscription. Otherwise, Matrixify + Judge.me and you're set.</p>
+  </div>
+
+</div>
+
+</body>
+</html>
