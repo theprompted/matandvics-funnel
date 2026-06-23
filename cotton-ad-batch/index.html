@@ -22,7 +22,13 @@
   .how code{font-size:0.8rem;background:#f0f0e8;padding:0.1rem 0.3rem;}
   .auto{background:#EAF7FF;border:var(--border);box-shadow:var(--shadow-sm);padding:1rem 1.25rem;margin-bottom:1.75rem;font-size:0.9rem;}
   .auto b{font-family:ui-monospace,monospace;}
-  .auto pre{background:#0f1115;color:#e8eaed;padding:0.9rem;margin:0.6rem 0 0;border-radius:6px;font-size:0.74rem;line-height:1.45;white-space:pre-wrap;overflow-x:auto;}
+  .auto .steps{margin:0.6rem 0 0.4rem 1.1rem;padding:0;font-size:0.9rem;}
+  .auto .steps li{margin-bottom:0.3rem;}
+  .auto .prompt-label{display:flex;align-items:center;gap:0.6rem;flex-wrap:wrap;margin:0.9rem 0 0.35rem;font-family:ui-monospace,monospace;font-size:0.8rem;font-weight:700;color:#0a3d2e;}
+  .auto .prompt-copy{background:var(--accent-teal);color:#000;border:2px solid #000;box-shadow:var(--shadow-sm);border-radius:4px;padding:0.3rem 0.7rem;font-family:ui-monospace,monospace;font-size:0.7rem;font-weight:700;cursor:pointer;}
+  .auto .prompt-copy:hover{background:#3dbdb5;}
+  .auto .prompt-copy.copied{background:#2a9d8f;color:#fff;}
+  .auto pre{background:#0f1115;color:#e8eaed;padding:0.9rem;margin:0;border-radius:6px;font-size:0.74rem;line-height:1.45;white-space:pre-wrap;overflow-x:auto;border:2px solid #000;}
   .auto .dlzip{display:inline-block;background:var(--accent-teal);border:var(--border);box-shadow:var(--shadow-sm);color:#000;text-decoration:none;font-family:ui-monospace,monospace;font-weight:700;font-size:0.82rem;padding:0.5rem 1rem;margin-top:0.4rem;}
   .section-header{background:#000;color:var(--accent-teal);padding:0.6rem 1rem;margin:2rem 0 1rem;font-family:ui-monospace,monospace;font-weight:700;font-size:0.95rem;text-transform:uppercase;letter-spacing:0.04em;box-shadow:var(--shadow-sm);}
   .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.25rem;}
@@ -52,9 +58,15 @@
     <code>https://matandvics.com/pages/baumwoll-socken-ratgeber</code>
   </div>
   <div class="auto">
-    <b>Faster route (use your existing Meta ad-loading skill):</b> The ZIP has the image creatives plus a file with the matching ad text, headline, and description for each one — all pointing at the Baumwoll Ratgeber funnel. Download it, unzip it, open the folder in Claude Code, and paste the prompt below. Let your own skill handle the upload (paused, for review). No manual Ads-Manager work.
+    <b>Faster route — let Claude Code load them for you:</b> Skip Ads Manager entirely. Three steps:
+    <ol class="steps">
+      <li><b>Download the ZIP below</b> and unzip it.</li>
+      <li><b>Open that folder in Claude Code.</b></li>
+      <li><b>Copy the prompt below and paste it into Claude Code.</b> It'll use your Meta ad-loading skill to load all the ads into your account for you, paused, so you can review before anything goes live.</li>
+    </ol>
     <a class="dlzip" href="matandvics-cotton-ads.zip" download>⬇ Download ZIP (images + copy + manifest)</a>
-    <pre>This folder has a batch of new Meta image ads for my Mat &amp; Vic's account — the creative images plus the matching ad text, headline, and description for each one. The copy is in German on purpose, use it as-is. They all point to the same funnel: https://matandvics.com/pages/baumwoll-socken-ratgeber
+    <div class="prompt-label">👇 Copy-and-paste this prompt into Claude Code <button class="prompt-copy" onclick="copyPrompt(this)">COPY PROMPT</button></div>
+    <pre id="cc-prompt">This folder has a batch of new Meta image ads for my Mat &amp; Vic's account — the creative images plus the matching ad text, headline, and description for each one. The copy is in German on purpose, use it as-is. They all point to the same funnel: https://matandvics.com/pages/baumwoll-socken-ratgeber
 
 Use the skill we have for loading ads into Meta to upload all of these, paused, so I can review them before anything goes live.</pre>
   </div>
@@ -543,6 +555,16 @@ Es liegt nicht an dir. Es liegt am Aufbau der Socke.
 function copyCard(btn){
   var box=btn.parentElement;
   var text=box.querySelector('.copy-text').textContent.trim();
+  var ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.left='-9999px';
+  document.body.appendChild(ta);ta.select();
+  try{document.execCommand('copy');}catch(e){}
+  if(navigator.clipboard){navigator.clipboard.writeText(text).catch(function(){});}
+  document.body.removeChild(ta);
+  var orig=btn.textContent;btn.textContent='COPIED ✓';btn.classList.add('copied');
+  setTimeout(function(){btn.textContent=orig;btn.classList.remove('copied');},1500);
+}
+function copyPrompt(btn){
+  var text=document.getElementById('cc-prompt').textContent.trim();
   var ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.left='-9999px';
   document.body.appendChild(ta);ta.select();
   try{document.execCommand('copy');}catch(e){}
